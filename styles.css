@@ -7,16 +7,20 @@ body {
 }
 
 header {
-    background-color: transparent;
-    color: #000; /* Black text for contrast */
+    background-color: #333;
+    color: #fff; /* White text for contrast */
     padding: 20px 0;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    padding-bottom: 20px; /* Add padding below the heading */
     font-size: 2em;
+}
+
+header h2 {
+    margin: 10px 0 20px 0; /* Margin to separate from h1 and other content */
+    font-size: 1.5em;
 }
 
 nav {
@@ -50,8 +54,8 @@ nav ul li a {
     margin: 0 auto;
     padding: 15px 0;
     text-align: center;
-    background-color: transparent;
-    color: #000; /* Black text for contrast */
+    background-color: #000;
+    color: #fff; /* White text for contrast */
     text-decoration: none;
     border-radius: 25px; /* Squircles */
     transition: background-color 0.3s ease;
@@ -65,9 +69,6 @@ main {
     margin-left: 220px; /* Adjust based on nav width */
     padding: 20px;
     text-align: center; /* Center the text within the main area */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .property-gallery {
@@ -76,6 +77,7 @@ main {
     justify-content: center;
     gap: 20px;
     max-width: 1000px; /* Adjust to control gallery width */
+    margin: 0 auto; /* Center the gallery */
 }
 
 .property-item {
@@ -99,8 +101,8 @@ main {
 }
 
 footer {
-    background-color: transparent;
-    color: #000; /* Black text for contrast */
+    background-color: #333;
+    color: #fff; /* White text for contrast */
     text-align: center;
     padding: 10px 0;
     position: fixed;
