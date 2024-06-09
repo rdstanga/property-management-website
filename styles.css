@@ -21,7 +21,7 @@ nav {
     left: 0;
     height: 100%;
     width: 200px; /* Adjust width as needed */
-    background-color: #ccc; /* Light gray background for nav */
+    background-color: #fff; /* White background for sidebar */
     padding-top: 60px; /* Space from top */
     display: flex;
     flex-direction: column;
@@ -46,15 +46,15 @@ nav ul li a {
     margin: 0 auto;
     padding: 15px 0;
     text-align: center;
-    background-color: #fff; /* White background for nav links */
-    color: #000; /* Black text for nav links */
+    background-color: #000; /* Black background for nav links */
+    color: #fff; /* White text for nav links */
     text-decoration: none;
     border-radius: 25px; /* Squircles */
     transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #ddd; /* Light gray background on hover */
+    background-color: #555; /* Darker gray background on hover */
 }
 
 main {
@@ -95,4 +95,7 @@ main {
 footer {
     padding: 10px 0;
     text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
