@@ -23,6 +23,7 @@ nav {
     width: 100px; /* Adjust width as needed */
     background-color: #fff; /* White background for sidebar */
     padding-top: 60px; /* Space from top */
+    padding-left: 10px; /* Add padding to the left side */
     display: flex;
     flex-direction: column;
     align-items: center;
