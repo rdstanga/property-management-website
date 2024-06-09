@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: transparent; /* Trasparent background */
     color: #fff; /* White text for contrast */
     padding: 20px 0;
     text-align: center;
@@ -28,7 +28,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    background-color: #444; /* Darker background for nav */
+    background-color: transparent; /* Transparent background for nav */
     margin: 0;
 }
 
@@ -81,8 +81,8 @@ main {
 }
 
 footer {
-    background-color: #333;
-    color: #fff; /* White text for contrast */
+    background-color: transparent;
+    color: #000; /* Black text for contrast */
     text-align: center;
     padding: 10px 0;
     position: fixed;
