@@ -7,20 +7,12 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: #fff; /* White text for contrast */
     padding: 20px 0;
     text-align: center;
 }
 
-header h1 {
+header h1, header h2 {
     margin: 0;
-    font-size: 2em;
-}
-
-header h2 {
-    margin: 10px 0 20px 0; /* Margin to separate from h1 and other content */
-    font-size: 1.5em;
 }
 
 nav {
@@ -29,7 +21,7 @@ nav {
     left: 0;
     height: 100%;
     width: 200px; /* Adjust width as needed */
-    background-color: #444; /* Darker background for nav */
+    background-color: #ccc; /* Light gray background for nav */
     padding-top: 60px; /* Space from top */
     display: flex;
     flex-direction: column;
@@ -54,15 +46,15 @@ nav ul li a {
     margin: 0 auto;
     padding: 15px 0;
     text-align: center;
-    background-color: #000;
-    color: #fff; /* White text for contrast */
+    background-color: #fff; /* White background for nav links */
+    color: #000; /* Black text for nav links */
     text-decoration: none;
     border-radius: 25px; /* Squircles */
     transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #555; /* Slightly lighter on hover */
+    background-color: #ddd; /* Light gray background on hover */
 }
 
 main {
@@ -101,11 +93,6 @@ main {
 }
 
 footer {
-    background-color: #333;
-    color: #fff; /* White text for contrast */
-    text-align: center;
     padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    text-align: center;
 }
