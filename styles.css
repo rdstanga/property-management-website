@@ -59,8 +59,8 @@ nav ul li a:hover {
 
 main {
     margin-left: 220px; /* Adjust based on nav width */
-    padding: 20px;
-    text-align: left; /* Push text left within the main area */
+    padding: 50px;
+    text-align: center; /* Push text left within the main area */
 }
 
 .property-gallery {
