@@ -62,7 +62,7 @@ nav ul li a:hover {
 
 main {
     margin-left: 220px; /* Adjust based on nav width */
-    padding: 25px;
+    padding: 25px 15px;
     text-align: center; /* Push text center within the main area */
 }
 
