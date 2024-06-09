@@ -113,3 +113,22 @@ footer {
     height: auto; /* Maintains the aspect ratio of the image */
     margin-top: 20px; /* Add some top margin for spacing */
 }
+
+.cardo-bold {
+    font-family: "Cardo", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .cardo-regular-italic {
+    font-family: "Cardo", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .cardo-regular {
+    font-family: "Cardo", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
