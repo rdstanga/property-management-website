@@ -7,15 +7,15 @@ body {
 }
 
 header {
-    background-color: transparent;
-    color: #000; /* Set text color to black */
-    padding: 10px 0;
+    background-color: #333;
+    color: #fff; /* White text for contrast */
+    padding: 20px 0;
+    text-align: center;
 }
 
 header h1 {
     margin: 0;
-    text-align: center;
-    color: #000; /* Set text color to black */
+    font-size: 2em;
 }
 
 nav ul {
@@ -23,7 +23,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    background-color: transparent; /* Transparent background */
+    background-color: #444; /* Darker background for nav */
     margin: 0;
 }
 
@@ -32,22 +32,53 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #000; /* Set text color to black */
+    color: #fff; /* White text for contrast */
     text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Slightly darker on hover */
 }
 
 main {
     padding: 20px;
     text-align: center;
-    color: #000; /* Ensure text color is black in the main content */
+}
+
+.property-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.property-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: left;
+}
+
+.property-item img {
+    width: 100%;
+    height: auto;
+}
+
+.property-item p {
+    padding: 10px 15px;
+    margin: 0;
 }
 
 footer {
-    background-color: transparent;
-    color: #000; /* Set text color to black */
+    background-color: #333;
+    color: #fff; /* White text for contrast */
     text-align: center;
     padding: 10px 0;
     position: fixed;
-    width: 100%;
-    bottom: 0;
-}
+    width:​⬤
