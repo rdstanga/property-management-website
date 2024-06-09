@@ -3,19 +3,19 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #333;
+    color: #000; /* Set text color to black */
 }
 
 header {
-    background-color: transparent; /* Change this header to transparent */
-    color: #fff;
+    background-color: transparent;
+    color: #000; /* Set text color to black */
     padding: 10px 0;
 }
 
 header h1 {
     margin: 0;
     text-align: center;
-    color: #fff;
+    color: #000; /* Set text color to black */
 }
 
 nav ul {
@@ -23,7 +23,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    background-color: transparent; /* Change this to transparent */
+    background-color: transparent; /* Transparent background */
     margin: 0;
 }
 
@@ -32,18 +32,19 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #000; /* Set text color to black */
     text-decoration: none;
 }
 
 main {
     padding: 20px;
     text-align: center;
+    color: #000; /* Ensure text color is black in the main content */
 }
 
 footer {
-    background-color: transparent; /* Change this header to transparent */
-    color: #fff;
+    background-color: transparent;
+    color: #000; /* Set text color to black */
     text-align: center;
     padding: 10px 0;
     position: fixed;
