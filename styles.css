@@ -7,8 +7,8 @@ body {
 }
 
 header {
-    background-color: transparent; /* Trasparent background */
-    color: #000; /* Black text for contrast */
+    background-color: #333;
+    color: #fff; /* White text for contrast */
     padding: 20px 0;
     text-align: center;
 }
@@ -20,35 +20,49 @@ header h1 {
 }
 
 nav {
-    margin-bottom: 20px; /* Add margin below the nav bar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px; /* Adjust width as needed */
+    background-color: #444; /* Darker background for nav */
+    padding-top: 60px; /* Space from top */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    background-color: transparent; /* Transparent background for nav */
     margin: 0;
+    width: 100%;
 }
 
 nav ul li {
-    margin: 0 15px;
+    width: 100%;
+    margin-bottom: 20px; /* Space between buttons */
 }
 
 nav ul li a {
-    color: #000; /* Black text for contrast */
-    text-decoration: none;
-    padding: 10px 15px;
     display: block;
+    width: 90%; /* Adjust width to fit nicely within nav */
+    margin: 0 auto;
+    padding: 15px 0;
+    text-align: center;
+    background-color: #000;
+    color: #fff; /* White text for contrast */
+    text-decoration: none;
+    border-radius: 25px; /* Squircles */
     transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #555; /* Slightly darker on hover */
+    background-color: #555; /* Slightly lighter on hover */
 }
 
 main {
+    margin-left: 220px; /* Adjust based on nav width */
     padding: 20px;
     text-align: center;
 }
@@ -81,8 +95,8 @@ main {
 }
 
 footer {
-    background-color: transparent;
-    color: #000; /* Black text for contrast */
+    background-color: #333;
+    color: #fff; /* White text for contrast */
     text-align: center;
     padding: 10px 0;
     position: fixed;
