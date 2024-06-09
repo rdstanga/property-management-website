@@ -99,3 +99,9 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Added styling for "Welcome Home" */
+.welcome-section {
+    text-align: center;
+    margin-top: 20px; /* Adjust spacing as needed */
+}
