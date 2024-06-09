@@ -8,7 +8,7 @@ body {
 
 header {
     background-color: transparent; /* Trasparent background */
-    color: #fff; /* White text for contrast */
+    color: #000; /* Black text for contrast */
     padding: 20px 0;
     text-align: center;
 }
@@ -37,7 +37,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff; /* White text for contrast */
+    color: #000; /* Black text for contrast */
     text-decoration: none;
     padding: 10px 15px;
     display: block;
