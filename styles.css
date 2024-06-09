@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #fff; /* White background for body */
     color: #000; /* Set text color to black */
 }
 
@@ -20,7 +20,7 @@ nav {
     top: 0;
     left: 0;
     height: 100%;
-    width: 200px; /* Adjust width as needed */
+    width: 100px; /* Adjust width as needed */
     background-color: #fff; /* White background for sidebar */
     padding-top: 60px; /* Space from top */
     display: flex;
@@ -60,7 +60,7 @@ nav ul li a:hover {
 main {
     margin-left: 220px; /* Adjust based on nav width */
     padding: 20px;
-    text-align: center; /* Center the text within the main area */
+    text-align: left; /* Push text left within the main area */
 }
 
 .property-gallery {
