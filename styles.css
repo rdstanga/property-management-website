@@ -44,7 +44,7 @@ nav ul li a {
     display: block;
     width: 90%; /* Adjust width to fit nicely within nav */
     margin: 0 auto;
-    padding: 15px 0;
+    padding: 50px 0;
     text-align: center;
     background-color: #000; /* Black background for nav links */
     color: #fff; /* White text for nav links */
