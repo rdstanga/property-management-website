@@ -12,20 +12,21 @@
             justify-content: center;
             margin-top: 20px;
         }
-        .property-thumbnails a {
-            margin: 0 10px; /* Adjust spacing between thumbnails */
+        .property-thumbnails .property-container {
+            margin: 0 10px; /* Adjust spacing between properties */
             text-align: center; /* Center text */
-            text-decoration: none; /* Remove underline from links */
-            color: #000; /* Set text color to black */
-            display: block; /* Make the whole block clickable */
+            padding: 20px; /* Add padding inside the container */
+            border: 2px solid black; /* Outline of the squircle */
+            border-radius: 25px; /* Squircles */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .property-address {
-            text-align: center; /* Center text */
-            margin-bottom: 10px; /* Add some margin between thumbnails and addresses */
+            margin-bottom: 10px; /* Add some margin between address and image */
         }
         .property-price {
-            text-align: center; /* Center text */
-            margin-top: 10px; /* Add some margin between thumbnails and prices */
+            margin-top: 10px; /* Add some margin between image and price */
         }
     </style>
 </head>
@@ -45,12 +46,12 @@
             <p>Available Properties</p>
             <p>Browse through our available properties to find your next home:</p>
             <div class="property-thumbnails">
-                <a href="property1-gallery.html">
+                <a href="property1-gallery.html" class="property-container">
                     <p class="property-address">123 Main St</p> <!-- Generic address for Property 1 -->
                     <img src="Available House 1.png" alt="Property 1 Thumbnail">
                     <p class="property-price">$1000/month</p> <!-- Generic price for Property 1 -->
                 </a>
-                <a href="property2-gallery.html">
+                <a href="property2-gallery.html" class="property-container">
                     <p class="property-address">456 Elm St</p> <!-- Generic address for Property 2 -->
                     <img src="Available House 2.png" alt="Property 2 Thumbnail">
                     <p class="property-price">$1200/month</p> <!-- Generic price for Property 2 -->
