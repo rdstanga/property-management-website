@@ -65,42 +65,18 @@ nav ul li a:hover {
 main {
     max-width: 1200px; /* Set max-width */
     width: 100%; /* Set width to 100% */
-    margin: 20px auto; /* Center main content */
+    margin: 20px; /* Add some margin for spacing */
     padding: 50px;
     text-align: center; /* Push text center within the main area */
 }
 
-.property-grid {
-    display: flex; /* Display galleries side by side */
-    justify-content: center; /* Center the galleries horizontally */
-    gap: 20px; /* Gap between galleries */
-    margin-top: 20px;
-}
-
 .property-gallery {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-    width: 300px; /* Keep the same width */
-}
-
-.property-gallery img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.property-gallery a {
-    display: block;
-    text-align: center;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-}
-
-.property-gallery a:hover {
-    background-color: #0056b3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px; /* Adjust to control gallery width */
+    margin: 0 auto; /* Center the gallery */
 }
 
 .property-item {
@@ -172,11 +148,10 @@ footer {
 
 .info-grid div {
     background-color: #f9f9f9;
-    padding: 30px 20px 20px 20px; /* Add top padding to make space for the asterisk */
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: left;
-    position: relative; /* Make the container relative for absolute positioning of the asterisk */
 }
 
 .info-grid h3 {
@@ -191,8 +166,70 @@ footer {
 .info-grid h3::before {
     content: '*';
     font-size: 36px; /* Make the asterisks larger */
-    color: #555; /* Set color to a darker gray */
+    color: #666; /* Set color */
     position: absolute;
-    top: -30px; /* Adjust vertical position */
-    left: 0; /* Align the asterisk with the beginning of the text */
+    top: -28px; /* Adjust vertical position */
+    left: -20px; /* Adjust horizontal position */
+}
+
+.info-grid p {
+    font-family: "Cardo", serif; /* Apply the Cardo font */
+    font-weight: 400; /* Regular weight */
+    line-height: 1.6; /* Increase line height for readability */
+    margin-bottom: 0;
+    text-align: left; /* Left align text */
+}
+
+.centered-section {
+    margin: 0 auto;
+    max-width: 800px; /* Adjust max-width as needed */
+    text-align: center;
+}
+
+.header-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Adjust the size for the Welcome Home text */
+.header-section p.welcome-message {
+    font-size: 2em; /* Adjust this value as needed */
+    font-weight: bold; /* Optional: Make the text bold */
+}
+
+/* Adjust the size for the Available Properties text */
+.header-section p.available-properties-title {
+    font-size: 2em; /* Match the size with Welcome Home text */
+    font-weight: bold; /* Optional: Make the text bold */
+}
+
+.header-section p.available-properties-description {
+    font-size: 1.2em; /* Slightly smaller size for the description */
+}
+
+/* Additional CSS for centering thumbnails */
+.property-thumbnails {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.property-thumbnails .property-container {
+    margin: 0 10px; /* Adjust spacing between properties */
+    text-align: center; /* Center text */
+    padding: 20px; /* Add padding inside the container */
+    border: 2px solid black; /* Outline of the squircle */
+    border-radius: 25px; /* Squircles */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.property-address {
+    margin-bottom: 10px; /* Add some margin between address and image */
+}
+
+.property-price {
+    margin-top: 10px; /* Add some margin between image and price */
 }
