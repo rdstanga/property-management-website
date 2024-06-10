@@ -4,11 +4,15 @@ body {
     padding: 0;
     background-color: #fff; /* White background for body */
     color: #000; /* Set text color to black */
+    display: flex; /* Flexbox for body */
+    flex-direction: column; /* Column direction */
+    align-items: center; /* Center content horizontally */
 }
 
 header {
     padding: 20px 0;
     text-align: center;
+    width: 100%; /* Ensure header spans full width */
 }
 
 header h1, header h2 {
@@ -59,7 +63,9 @@ nav ul li a:hover {
 }
 
 main {
-    margin-left: 220px; /* Adjust based on nav width */
+    max-width: 1200px; /* Set max-width */
+    width: 100%; /* Set width to 100% */
+    margin: 20px; /* Add some margin for spacing */
     padding: 50px;
     text-align: center; /* Push text center within the main area */
 }
