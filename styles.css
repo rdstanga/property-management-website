@@ -169,7 +169,7 @@ footer {
     color: #666; /* Set color */
     position: absolute;
     top: -28px; /* Adjust vertical position */
-    left: -20px; /* Adjust horizontal position */
+    left: -50px; /* Adjust horizontal position */
 }
 
 .info-grid p {
@@ -194,8 +194,8 @@ footer {
 
 /* Adjust the size for the Welcome Home text */
 .header-section p.welcome-message {
-    font-size: 2em; /* Adjust this value as needed */
-    font-weight: bold; /* Optional: Make the text bold */
+    font-size: 12px; /* Adjust this value as needed */
+    font-weight: 400;
 }
 
 /* Adjust the size for the Available Properties text */
