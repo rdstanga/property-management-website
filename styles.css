@@ -65,13 +65,14 @@ nav ul li a:hover {
 main {
     max-width: 1200px; /* Set max-width */
     width: 100%; /* Set width to 100% */
-    margin: 20px; /* Add some margin for spacing */
+    margin: 20px auto; /* Center main content */
     padding: 50px;
     text-align: center; /* Push text center within the main area */
 }
 
 .property-grid {
     display: flex; /* Display galleries side by side */
+    justify-content: center; /* Center the galleries horizontally */
     gap: 20px; /* Gap between galleries */
     margin-top: 20px;
 }
@@ -80,6 +81,7 @@ main {
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
+    width: 300px; /* Keep the same width */
 }
 
 .property-gallery img {
@@ -174,4 +176,11 @@ footer {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: left;
-    position: relative; /*
+    position: relative; /* Make the container relative for absolute positioning of the asterisk */
+}
+
+.info-grid h3 {
+    margin-top: 0;
+    font-family: "Cardo", serif; /* Apply the Cardo font */
+    font-weight: 700; /* Bold */
+    position: relative; /* Ensure
