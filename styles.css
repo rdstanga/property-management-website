@@ -70,33 +70,40 @@ main {
     text-align: center; /* Push text center within the main area */
 }
 
-.property-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    max-width: 1000px; /* Adjust to control gallery width */
-    margin: 0 auto; /* Center the gallery */
+    margin-top: 20px;
 }
 
-.property-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
+.property-card {
+    border: 1px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 300px;
-    text-align: left;
 }
 
-.property-item img {
+.property-card img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
-.property-item p {
-    padding: 10px 15px;
+.property-details {
+    padding: 10px;
+}
+
+.property-details p {
     margin: 0;
+}
+
+.address {
+    font-weight: bold;
+}
+
+.price {
+    color: #007bff;
+    font-weight: bold;
 }
 
 footer {
