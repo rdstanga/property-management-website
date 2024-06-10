@@ -169,7 +169,7 @@ footer {
     color: #666; /* Set color */
     position: absolute;
     top: -26px; /* Adjust vertical position */
-    left: -18px; /* Adjust horizontal position */
+    left: -30px; /* Adjust horizontal position */
 }
 
 .info-grid p {
