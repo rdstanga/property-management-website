@@ -61,7 +61,6 @@ nav ul li a:hover {
 main {
     margin-left: 220px; /* Adjust based on nav width */
     padding: 50px;
-    text-align: center; /* Push text center within the main area */
 }
 
 .property-gallery {
@@ -132,6 +131,7 @@ footer {
     font-style: normal;
 }
 
+/* CSS Grid styling for the new section */
 .info-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -141,34 +141,35 @@ footer {
 
 .info-grid div {
     background-color: #f9f9f9;
-    padding: 20px;
+    padding: 40px 20px; /* Increase padding to add space for asterisks and titles */
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left; /* Align text to the left */
+    text-align: left;
 }
 
 .info-grid h3 {
-    margin-top: 0;
-    font-family: "Cardo", serif;
-    font-weight: 700;
+    margin-top: 20px;
+    font-family: "Cardo", serif; /* Apply the Cardo font */
+    font-weight: 700; /* Bold */
     position: relative; /* Ensure pseudo-element positioning is relative to the title */
-    text-align: left; /* Align title text to the left */
+    text-align: left; /* Left align text */
 }
 
 /* Update the asterisk position */
 .info-grid h3::before {
-    font-size: 30px;
-    color: #AAAAAA;
-    content: '* '; /* Add asterisk before each title */
+    content: "*";
+    font-size: 36px; /* Make the asterisks larger */
+    color: #000; /* Set color */
     position: absolute;
-    top: -30px; /* Adjust vertical position */
-    left: 1px; /* Adjust horizontal position - swapped from 10 to 2 to test*/
+    top: -50px; /* Adjust vertical position to be above the title */
+    left: 0; /* Position to the left of the first letter */
+    transform: translateX(-50%); /* Adjust horizontal position to center it */
 }
 
 .info-grid p {
-    font-family: "Cardo", serif;
-    font-weight: 400;
-    line-height: 1.6;
+    font-family: "Cardo", serif; /* Apply the Cardo font */
+    font-weight: 400; /* Regular weight */
+    line-height: 1.6; /* Increase line height for readability */
     margin-bottom: 0;
-    text-align: left; /* Align paragraph text to the left */
+    text-align: left; /* Left align text */
 }
