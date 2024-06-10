@@ -168,7 +168,7 @@ footer {
     font-size: 24px; /* Adjust the font size to fit within the box */
     color: #666; /* Set the color to a darker gray */
     position: absolute;
-    top: -12px; /* Adjust vertical position of the asterisk to fit within the padding */
+    top: -20px; /* Adjust vertical position of the asterisk to fit within the padding */
     left: 0; /* Align with the left of the heading */
 }
 
