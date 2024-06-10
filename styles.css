@@ -183,4 +183,16 @@ footer {
     margin-top: 0;
     font-family: "Cardo", serif; /* Apply the Cardo font */
     font-weight: 700; /* Bold */
-    position: relative; /* Ensure
+    position: relative; /* Ensure pseudo-element positioning is relative to the title */
+    text-align: left; /* Left align text */
+}
+
+/* Update the asterisk position */
+.info-grid h3::before {
+    content: '*';
+    font-size: 36px; /* Make the asterisks larger */
+    color: #555; /* Set color to a darker gray */
+    position: absolute;
+    top: -15px; /* Adjust vertical position */
+    left: 0; /* Align the asterisk with the beginning of the text */
+}
