@@ -156,14 +156,15 @@ footer {
     text-align: center; /* Center align text */
 }
 
+/* Update the asterisk position */
 .info-grid h3::before {
-    content: "*"; /* Display an asterisk */
-    font-size: 36px; /* Adjust size as needed */
+    /* No changes needed for content, font-size, and color */
+    font-size: 36px; /* Make the asterisks larger */
     color: #000; /* Set color */
     position: absolute;
     top: -40px; /* Adjust vertical position */
-    left: 50%;
-    transform: translateX(-50%); /* Center horizontally */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Move left by half of the width */
 }
 
 .info-grid p {
