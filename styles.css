@@ -152,6 +152,7 @@ footer {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: left;
+    position: relative; /* Make the container relative for absolute positioning of the asterisk */
 }
 
 .info-grid h3 {
@@ -165,12 +166,12 @@ footer {
 /* Update the asterisk position */
 .info-grid h3::before {
     content: '*';
-    font-size: 36px; /* Make the asterisks larger */
-    color: #000; /* Set color */
+    font-size: 24px; /* Adjust the font size to fit within the box */
+    color: #666; /* Set the color to a darker gray */
     position: absolute;
-    top: -40px; /* Adjust vertical position */
-    left: 10px; /* Adjust horizontal position */
-    transform: translateX(-50%); /* Move left by half of the width */
+    top: 0; /* Align with the top of the heading */
+    left: -30px; /* Position it to the left of the heading */
+    transform: translateY(0); /* Center vertically if needed */
 }
 
 .info-grid p {
