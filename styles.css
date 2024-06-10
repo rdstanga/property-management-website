@@ -141,18 +141,19 @@ footer {
 
 .info-grid div {
     background-color: #f9f9f9;
-    padding: 40px 20px; /* Increase padding to add space for asterisks and titles */
+    padding: 60px 20px 20px 20px; /* Increase padding to add space for asterisks and titles */
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: left;
 }
 
 .info-grid h3 {
-    margin-top: 20px;
+    margin-top: 0;
     font-family: "Cardo", serif; /* Apply the Cardo font */
     font-weight: 700; /* Bold */
     position: relative; /* Ensure pseudo-element positioning is relative to the title */
     text-align: left; /* Left align text */
+    padding-left: 20px; /* Add padding to move the text to the right */
 }
 
 /* Update the asterisk position */
@@ -161,9 +162,8 @@ footer {
     font-size: 36px; /* Make the asterisks larger */
     color: #000; /* Set color */
     position: absolute;
-    top: -50px; /* Adjust vertical position to be above the title */
-    left: 0; /* Position to the left of the first letter */
-    transform: translateX(-50%); /* Adjust horizontal position to center it */
+    top: -40px; /* Adjust vertical position to be above the title */
+    left: 20px; /* Position to the left of the first letter */
 }
 
 .info-grid p {
@@ -172,4 +172,5 @@ footer {
     line-height: 1.6; /* Increase line height for readability */
     margin-bottom: 0;
     text-align: left; /* Left align text */
+    padding-left: 20px; /* Add padding to move the text to the right */
 }
