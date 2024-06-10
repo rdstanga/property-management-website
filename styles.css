@@ -166,4 +166,52 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    margin-top:
+    margin-top: 50px;
+}
+
+.info-grid div {
+    background-color: #f9f9f9;
+    padding: 30px 20px 20px 20px; /* Add top padding to make space for the asterisk */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative; /* Make the container relative for absolute positioning of the asterisk */
+}
+
+.info-grid h3 {
+    margin-top: 0;
+    font-family: "Cardo", serif; /* Apply the Cardo font */
+    font-weight: 700; /* Bold */
+    position: relative; /* Ensure pseudo-element positioning is relative to the title */
+    text-align: left; /* Left align text */
+}
+
+/* Update the asterisk position */
+.info-grid h3::before {
+    content: '*';
+    font-size: 24px; /* Adjust the font size to fit within the box */
+    color: #666; /* Set the color to a darker gray */
+    position: absolute;
+    top: -10px; /* Adjust vertical position to fit within the padding */
+    left: 0; /* Align with the left of the heading */
+}
+
+.info-grid p {
+    font-family: "Cardo", serif; /* Apply the Cardo font */
+    font-weight: 400; /* Regular weight */
+    line-height: 1.6; /* Increase line height for readability */
+    margin-bottom: 0;
+    text-align: left; /* Left align text */
+}
+
+.centered-section {
+    margin: 0 auto;
+    max-width: 800px; /* Adjust max-width as needed */
+    text-align: center;
+}
+
+.header-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
