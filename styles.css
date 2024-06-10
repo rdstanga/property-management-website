@@ -61,12 +61,7 @@ nav ul li a:hover {
 main {
     margin-left: 220px; /* Adjust based on nav width */
     padding: 50px;
-}
-
-/* Center alignment for specific sections */
-.centered-section {
-    text-align: center;
-    margin: 0 auto;
+    text-align: center; /* Push text center within the main area */
 }
 
 .property-gallery {
@@ -147,7 +142,7 @@ footer {
 
 .info-grid div {
     background-color: #f9f9f9;
-    padding: 60px 20px 20px 20px; /* Increase padding to add space for asterisks and titles */
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: left;
@@ -159,17 +154,17 @@ footer {
     font-weight: 700; /* Bold */
     position: relative; /* Ensure pseudo-element positioning is relative to the title */
     text-align: left; /* Left align text */
-    padding-left: 20px; /* Add padding to move the text to the right */
 }
 
 /* Update the asterisk position */
 .info-grid h3::before {
-    content: "*";
+    content: '*';
     font-size: 36px; /* Make the asterisks larger */
     color: #000; /* Set color */
     position: absolute;
-    top: -40px; /* Adjust vertical position to be above the title */
-    left: 20px; /* Position to the left of the first letter */
+    top: -40px; /* Adjust vertical position */
+    left: 10px; /* Adjust horizontal position */
+    transform: translateX(-50%); /* Move left by half of the width */
 }
 
 .info-grid p {
@@ -178,5 +173,16 @@ footer {
     line-height: 1.6; /* Increase line height for readability */
     margin-bottom: 0;
     text-align: left; /* Left align text */
-    padding-left: 20px; /* Add padding to move the text to the right */
+}
+
+.centered-section {
+    margin: 0 auto;
+    max-width: 800px; /* Adjust max-width as needed */
+    text-align: center;
+}
+
+.header-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
