@@ -168,8 +168,8 @@ footer {
     font-size: 36px; /* Make the asterisks larger */
     color: #666; /* Set color */
     position: absolute;
-    top: -28px; /* Adjust vertical position */
-    left: -22px; /* Adjust horizontal position */
+    top: -26px; /* Adjust vertical position */
+    left: -18px; /* Adjust horizontal position */
 }
 
 .info-grid p {
