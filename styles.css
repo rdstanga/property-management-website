@@ -157,12 +157,12 @@ footer {
 
 /* Update the asterisk position */
 .info-grid h3::before {
-    font-size: 32px;
-    color: #142;
+    font-size: 30px;
+    color: #D5D5D5;
     content: '* '; /* Add asterisk before each title */
     position: absolute;
     top: -30px; /* Adjust vertical position */
-    left: 8px; /* Adjust horizontal position */
+    left: 2px; /* Adjust horizontal position - swapped from 10 to 2 to test*/
 }
 
 .info-grid p {
