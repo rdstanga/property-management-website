@@ -63,6 +63,12 @@ main {
     padding: 50px;
 }
 
+/* Center alignment for specific sections */
+.centered-section {
+    text-align: center;
+    margin: 0 auto;
+}
+
 .property-gallery {
     display: flex;
     flex-wrap: wrap;
