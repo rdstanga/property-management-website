@@ -11,18 +11,57 @@
     <!-- Add your CSS styles here -->
     <style>
         /* Your existing CSS styles */
-        /* Add CSS for hidden sidebar on smaller screens */
-        @media screen and (max-width: 768px) {
-            #sidebar {
-                display: none;
-            }
+        /* Add CSS for minimalist hidden sidebar on smaller screens */
+        #sidebar {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        #menu-toggle {
+            display: block;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        #menu-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: #000;
+            margin: 6px auto;
+            transition: background-color 0.3s ease;
+        }
+        #menu-toggle.open span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        #menu-toggle.open span:nth-child(2) {
+            opacity: 0;
+        }
+        #menu-toggle.open span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Stanga & Sons LLC</h1>
-        <button id="menu-toggle">Menu</button> <!-- Button to toggle the sidebar -->
+        <button id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button> <!-- Hamburger menu icon to toggle the sidebar -->
         <nav id="sidebar">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -43,10 +82,13 @@
     <script>
         document.getElementById('menu-toggle').addEventListener('click', function() {
             var sidebar = document.getElementById('sidebar');
+            var menuToggle = document.getElementById('menu-toggle');
             if (sidebar.style.display === 'none' || sidebar.style.display === '') {
                 sidebar.style.display = 'block';
+                menuToggle.classList.add('open');
             } else {
                 sidebar.style.display = 'none';
+                menuToggle.classList.remove('open');
             }
         });
     </script>
