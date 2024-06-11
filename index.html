@@ -24,44 +24,66 @@
             z-index: 1000;
         }
         #menu-toggle {
-            display: block;
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            width: 40px;
-            height: 40px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            z-index: 1001;
+            display: none; /* Hide the menu toggle button by default */
         }
-        #menu-toggle span {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background-color: #000;
-            margin: 6px auto;
-            transition: background-color 0.3s ease;
+        #menu-toggle-label {
+            display: none; /* Hide the menu toggle button label by default */
         }
-        #menu-toggle.open span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
+        #menu-toggle:checked + #menu-toggle-label + #sidebar {
+            display: block; /* Show the sidebar when the menu toggle button is checked */
         }
-        #menu-toggle.open span:nth-child(2) {
-            opacity: 0;
-        }
-        #menu-toggle.open span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
+        @media screen and (max-width: 768px) {
+            /* Show the menu toggle button on smaller screens */
+            #menu-toggle {
+                display: block;
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                width: 40px;
+                height: 40px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                z-index: 1001;
+            }
+            #menu-toggle-label {
+                display: block;
+                width: 40px;
+                height: 40px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                z-index: 1001;
+            }
+            #menu-toggle span {
+                display: block;
+                width: 24px;
+                height: 2px;
+                background-color: #000;
+                margin: 6px auto;
+                transition: background-color 0.3s ease;
+            }
+            #menu-toggle.open span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            #menu-toggle.open span:nth-child(2) {
+                opacity: 0;
+            }
+            #menu-toggle.open span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Stanga & Sons LLC</h1>
-        <button id="menu-toggle">
+        <input type="checkbox" id="menu-toggle"> <!-- Checkbox for menu toggle -->
+        <label for="menu-toggle" id="menu-toggle-label">
             <span></span>
             <span></span>
             <span></span>
-        </button> <!-- Hamburger menu icon to toggle the sidebar -->
+        </label> <!-- Hamburger menu icon to toggle the sidebar -->
         <nav id="sidebar">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -78,19 +100,5 @@
     <footer>
         <!-- Footer content goes here -->
     </footer>
-    <!-- JavaScript to toggle sidebar -->
-    <script>
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            var sidebar = document.getElementById('sidebar');
-            var menuToggle = document.getElementById('menu-toggle');
-            if (sidebar.style.display === 'none' || sidebar.style.display === '') {
-                sidebar.style.display = 'block';
-                menuToggle.classList.add('open');
-            } else {
-                sidebar.style.display = 'none';
-                menuToggle.classList.remove('open');
-            }
-        });
-    </script>
 </body>
 </html>
