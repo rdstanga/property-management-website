@@ -168,7 +168,7 @@ footer {
     font-size: 22px; /* Make the asterisks larger */
     color: #666; /* Set color */
     position: absolute;
-    top: -20px; /* Adjust vertical position */
+    top: -18px; /* Adjust vertical position */
     left: -2px; /* Adjust horizontal position */
 }
 
