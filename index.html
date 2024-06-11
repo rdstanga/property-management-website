@@ -2,34 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=home.html">
-    <title>Redirecting...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stanga & Sons LLC</title>
     <!-- Include the font link tags -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <!-- Optional: Add CSS for your redirection page -->
+    <!-- Add your CSS styles here -->
     <style>
-        body {
-            font-family: 'Cardo', serif; /* Apply the Cardo font to the body */
-            margin: 0;
-            padding: 0;
-            background-color: #fff; /* White background */
-            color: #000; /* Black text color */
-            text-align: center; /* Center text */
-            padding-top: 100px; /* Add some padding for vertical centering */
-        }
-        p {
-            margin-top: 20px; /* Add spacing between paragraphs */
-        }
-        a {
-            color: #007bff; /* Link color */
-            text-decoration: none; /* Remove underline from links */
+        /* Your existing CSS styles */
+        /* Add CSS for hidden sidebar on smaller screens */
+        @media screen and (max-width: 768px) {
+            #sidebar {
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Optional: You can provide a message for users who don't have JavaScript enabled -->
-    <p>If you are not redirected automatically, <a href="home.html">click here</a>.</p>
+    <header>
+        <h1>Stanga & Sons LLC</h1>
+        <button id="menu-toggle">Menu</button> <!-- Button to toggle the sidebar -->
+        <nav id="sidebar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pay-rent.html">Pay Rent</a></li>
+                <li><a href="available-properties.html">Available Properties</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Your main content here -->
+    <main>
+        <!-- Content goes here -->
+    </main>
+    <!-- Your footer here -->
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+    <!-- JavaScript to toggle sidebar -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            var sidebar = document.getElementById('sidebar');
+            if (sidebar.style.display === 'none' || sidebar.style.display === '') {
+                sidebar.style.display = 'block';
+            } else {
+                sidebar.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
