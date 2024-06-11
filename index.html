@@ -2,103 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stanga & Sons LLC</title>
+    <meta http-equiv="refresh" content="0; url=home.html">
+    <title>Redirecting...</title>
     <!-- Include the font link tags -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <!-- Add your CSS styles here -->
+    <!-- Optional: Add CSS for your redirection page -->
     <style>
-        /* Your existing CSS styles */
-        /* Add CSS for minimalist hidden sidebar on smaller screens */
-        #sidebar {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
+        body {
+            font-family: 'Cardo', serif; /* Apply the Cardo font to the body */
+            margin: 0;
+            padding: 0;
+            background-color: #fff; /* White background */
+            color: #000; /* Black text color */
+            text-align: center; /* Center text */
+            padding-top: 100px; /* Add some padding for vertical centering */
         }
-        #menu-toggle {
-            display: none; /* Hide the menu toggle button by default */
+        p {
+            margin-top: 20px; /* Add spacing between paragraphs */
         }
-        #menu-toggle-label {
-            display: none; /* Hide the menu toggle button label by default */
-        }
-        #menu-toggle:checked + #menu-toggle-label + #sidebar {
-            display: block; /* Show the sidebar when the menu toggle button is checked */
-        }
-        @media screen and (max-width: 768px) {
-            /* Show the menu toggle button on smaller screens */
-            #menu-toggle {
-                display: block;
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                width: 40px;
-                height: 40px;
-                background: none;
-                border: none;
-                cursor: pointer;
-                z-index: 1001;
-            }
-            #menu-toggle-label {
-                display: block;
-                width: 40px;
-                height: 40px;
-                background: none;
-                border: none;
-                cursor: pointer;
-                z-index: 1001;
-            }
-            #menu-toggle span {
-                display: block;
-                width: 24px;
-                height: 2px;
-                background-color: #000;
-                margin: 6px auto;
-                transition: background-color 0.3s ease;
-            }
-            #menu-toggle.open span:nth-child(1) {
-                transform: rotate(45deg) translate(5px, 5px);
-            }
-            #menu-toggle.open span:nth-child(2) {
-                opacity: 0;
-            }
-            #menu-toggle.open span:nth-child(3) {
-                transform: rotate(-45deg) translate(7px, -7px);
-            }
+        a {
+            color: #007bff; /* Link color */
+            text-decoration: none; /* Remove underline from links */
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Stanga & Sons LLC</h1>
-        <input type="checkbox" id="menu-toggle"> <!-- Checkbox for menu toggle -->
-        <label for="menu-toggle" id="menu-toggle-label">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label> <!-- Hamburger menu icon to toggle the sidebar -->
-        <nav id="sidebar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pay-rent.html">Pay Rent</a></li>
-                <li><a href="available-properties.html">Available Properties</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- Your main content here -->
-    <main>
-        <!-- Content goes here -->
-    </main>
-    <!-- Your footer here -->
-    <footer>
-        <!-- Footer content goes here -->
-    </footer>
+    <!-- Optional: You can provide a message for users who don't have JavaScript enabled -->
+    <p>If you are not redirected automatically, <a href="home.html">click here</a>.</p>
 </body>
 </html>
