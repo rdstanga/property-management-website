@@ -165,10 +165,10 @@ footer {
 /* Update the asterisk position */
 .info-grid h3::before {
     content: '*';
-    font-size: 28px; /* Make the asterisks larger */
+    font-size: 22px; /* Make the asterisks larger */
     color: #666; /* Set color */
     position: absolute;
-    top: -26px; /* Adjust vertical position */
+    top: -20px; /* Adjust vertical position */
     left: -2px; /* Adjust horizontal position */
 }
 
