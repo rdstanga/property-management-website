@@ -12,11 +12,11 @@ body {
 header {
     padding: 20px 0;
     text-align: center;
-    width: 100%; /* Ensure header spans full width */
+    width: 100%; /* Ensures header spans full width */
 }
 
 header h1, header h2 {
-    margin: 0;
+    margin-bottom: 10px; /* Adjust this value as needed */
 }
 
 nav {
@@ -107,9 +107,10 @@ footer {
     width: 100%;
 }
 
-.welcome-section {
+.welcome-message {
     text-align: center;
-    margin-top: 50px; /* Adjust spacing as needed */
+    margin-top: 25px; /* Controls spacing between header and middle section*/
+    font-weight: 400;
 }
 
 .header-section img {
