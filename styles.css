@@ -109,7 +109,7 @@ footer {
 
 .welcome-message {
     text-align: center;
-    margin-top: 25px; /* Controls spacing between header and middle section*/
+    margin-top: 15px; /* Controls spacing between header and middle section*/
     font-weight: 400;
 }
 
