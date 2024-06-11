@@ -12,11 +12,11 @@ body {
 header {
     padding: 20px 0;
     text-align: center;
-    width: 100%; /* Ensures header spans full width */
+    width: 100%; /* Ensure header spans full width */
 }
 
 header h1, header h2 {
-    margin-bottom: 10px; /* Adjust this value as needed */
+    margin: 0;
 }
 
 nav {
@@ -107,10 +107,9 @@ footer {
     width: 100%;
 }
 
-.welcome-message {
+.welcome-section {
     text-align: center;
-    margin-top: -15px; /* Controls spacing between header and middle section*/
-    font-weight: 400;
+    margin-top: 50px; /* Adjust spacing as needed */
 }
 
 .header-section img {
@@ -166,11 +165,11 @@ footer {
 /* Update the asterisk position */
 .info-grid h3::before {
     content: '*';
-    font-size: 22px; /* Make the asterisks larger */
+    font-size: 28px; /* Make the asterisks larger */
     color: #666; /* Set color */
     position: absolute;
-    top: -18px; /* Adjust vertical position */
-    left: 0px; /* Adjust horizontal position */
+    top: -26px; /* Adjust vertical position */
+    left: -2px; /* Adjust horizontal position */
 }
 
 .info-grid p {
@@ -233,4 +232,33 @@ footer {
 
 .property-price {
     margin-top: 10px; /* Add some margin between image and price */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    header h1 {
+        font-size: 24px;
+    }
+    .welcome-message {
+        font-size: 20px;
+    }
+    nav ul li a {
+        padding: 8px 16px;
+    }
+    .property-item {
+        width: 100%; /* Make property items take full width on smaller screens */
+    }
+    .property-item img {
+        width: 100%; /* Make property images take full width on smaller screens */
+    }
+    .header-section p.welcome-message {
+        font-size: 20px; /* Adjust this value as needed */
+    }
+    .header-section p.available-properties-title {
+        font-size: 1.5em; /* Adjust the size for smaller screens */
+    }
+    .header-section p.available-properties-description {
+        font-size: 1em; /* Adjust the size for smaller screens */
+    }
 }
