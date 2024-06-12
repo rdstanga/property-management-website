@@ -9,14 +9,19 @@ body {
     align-items: center; /* Center content horizontally */
 }
 
-header {
-    padding: 20px 0;
-    text-align: center;
-    width: 100%; /* Ensure header spans full width */
+body.dark-mode {
+    background-color: #121212; /* Dark background for dark mode */
+    color: #e0e0e0; /* Light text color for dark mode */
 }
 
-header h1, header h2 {
-    margin: 0;
+header, nav, footer {
+    background-color: #fff; /* White background for light mode */
+}
+
+body.dark-mode header,
+body.dark-mode nav,
+body.dark-mode footer {
+    background-color: #1e1e1e; /* Dark background for dark mode */
 }
 
 nav {
@@ -31,6 +36,10 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+body.dark-mode nav {
+    background-color: #1e1e1e; /* Dark background for nav in dark mode */
 }
 
 nav ul {
@@ -58,8 +67,16 @@ nav ul li a {
     transition: background-color 0.3s ease;
 }
 
+body.dark-mode nav ul li a {
+    background-color: #444; /* Darker background for nav links in dark mode */
+}
+
 nav ul li a:hover {
     background-color: #555; /* Darker gray background on hover */
+}
+
+body.dark-mode nav ul li a:hover {
+    background-color: #666; /* Darker hover background for dark mode */
 }
 
 main {
@@ -70,15 +87,6 @@ main {
     text-align: center; /* Push text center within the main area */
 }
 
-.property-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1000px; /* Adjust to control gallery width */
-    margin: 0 auto; /* Center the gallery */
-}
-
 .property-item {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -87,6 +95,12 @@ main {
     overflow: hidden;
     width: 300px;
     text-align: left;
+}
+
+body.dark-mode .property-item {
+    background-color: #1e1e1e; /* Dark background for property items in dark mode */
+    border-color: #444; /* Darker border in dark mode */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Darker shadow in dark mode */
 }
 
 .property-item img {
@@ -107,9 +121,19 @@ footer {
     width: 100%;
 }
 
+body.dark-mode footer {
+    background-color: #1e1e1e; /* Dark background for footer in dark mode */
+}
+
 .welcome-section {
     text-align: center;
     margin-top: 50px; /* Adjust spacing as needed */
+}
+
+.header-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .header-section img {
@@ -154,6 +178,11 @@ footer {
     text-align: left;
 }
 
+body.dark-mode .info-grid div {
+    background-color: #1e1e1e; /* Dark background for info grid in dark mode */
+    color: #e0e0e0; /* Light text color for info grid in dark mode */
+}
+
 .info-grid h3 {
     margin-top: 0;
     font-family: "Cardo", serif; /* Apply the Cardo font */
@@ -172,6 +201,10 @@ footer {
     left: -2px; /* Adjust horizontal position */
 }
 
+body.dark-mode .info-grid h3::before {
+    color: #aaa; /* Light color for asterisks in dark mode */
+}
+
 .info-grid p {
     font-family: "Cardo", serif; /* Apply the Cardo font */
     font-weight: 400; /* Regular weight */
@@ -186,19 +219,11 @@ footer {
     text-align: center;
 }
 
-.header-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Adjust the size for the Welcome Home text */
 .header-section p.welcome-message {
     font-size: 25px; /* Adjust this value as needed */
     font-weight: 400;
 }
 
-/* Adjust the size for the Available Properties text */
 .header-section p.available-properties-title {
     font-size: 2em; /* Match the size with Welcome Home text */
     font-weight: bold; /* Optional: Make the text bold */
@@ -208,7 +233,6 @@ footer {
     font-size: 1.2em; /* Slightly smaller size for the description */
 }
 
-/* Additional CSS for centering thumbnails */
 .property-thumbnails {
     display: flex;
     justify-content: center;
@@ -224,6 +248,10 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+body.dark-mode .property-thumbnails .property-container {
+    border-color: #444; /* Darker border for property container in dark mode */
 }
 
 .property-address {
