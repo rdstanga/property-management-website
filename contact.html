@@ -7,17 +7,55 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Additional styles for Contact page */
+        .header-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px; /* Add padding to create space */
+        }
         .contact-info {
             padding: 20px; /* Add padding behind contact information */
             font-size: 18px; /* Increase text size */
             max-width: 600px; /* Limit width to prevent stretching */
-            margin: 0 auto; /* Center align */
+            margin: 0 auto 30px; /* Center align and add bottom margin */
+            background-color: #1e1e1e; /* Dark background */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+            color: #ffffff; /* Light text color */
+            text-align: left; /* Align text to left */
+            padding: 20px; /* Add padding inside the box */
+        }
+        .contact-info p {
+            margin: 10px 0; /* Adjust margin for paragraphs */
+        }
+        .contact-info h3 {
+            margin-top: 0; /* Remove top margin for consistency */
         }
         .contact-image {
             max-width: 100%; /* Ensure image is responsive */
             height: auto; /* Maintain aspect ratio */
             display: block; /* Ensure proper display */
             margin: 20px auto; /* Add margin for spacing */
+        }
+        .hours-info {
+            background-color: #1e1e1e; /* Dark background */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+            color: #ffffff; /* Light text color */
+            text-align: left; /* Align text to left */
+            padding: 20px; /* Add padding inside the box */
+            max-width: 600px; /* Limit width to prevent stretching */
+            margin: 0 auto 30px; /* Center align and add bottom margin */
+        }
+        .hours-info h3 {
+            margin-top: 0; /* Remove top margin for consistency */
+        }
+        .hours-table {
+            margin-top: 10px; /* Add some margin above the table */
+            font-size: 16px; /* Adjust font size for the table */
+        }
+        .hours-table td {
+            padding: 5px 15px; /* Add padding to table cells */
         }
     </style>
 </head>
@@ -40,15 +78,41 @@
             <div class="contact-info">
                 <p>We're here to help you with any questions or inquiries you may have.</p>
                 <p>Email: sherlockholmes@gmail.com</p>
-                <p>Phone: 123-456-7890.com</p>
-                <p>Address: 221 St, Thibodaux, LA 70301
-                <p>Hours: Monday    9 AM - 5 PM
-                        Tuesday    9 AM - 5 PM
-                        Wednesday    9 AM - 5 PM
-                        Thursday     9 AM - 5 PM
-                        Friday       9 AM - 4 PM
-                        Saturday    CLOSED
-                        SUNDAY      CLOSED</p>
+                <p>Phone: 123-456-7890</p>
+                <p>Address: 221 St, Thibodaux, LA 70301</p>
+            </div>
+            <div class="hours-info">
+                <h3>Hours of Operation</h3>
+                <table class="hours-table">
+                    <tr>
+                        <td>Monday</td>
+                        <td>9 AM - 5 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>9 AM - 5 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>9 AM - 5 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>9 AM - 5 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>9 AM - 4 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>CLOSED</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>CLOSED</td>
+                    </tr>
+                </table>
             </div>
             <img class="contact-image" src="placeholder-image.jpg" alt="Contact Image Placeholder">
         </div>
