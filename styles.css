@@ -6,22 +6,33 @@ body {
     color: #000; /* Set text color to black */
     display: flex; /* Flexbox for body */
     flex-direction: column; /* Column direction */
-    align-items: center; /* Center content horizontally */
+    align-items: center;
 }
 
 body.dark-mode {
     background-color: #121212; /* Dark background for dark mode */
-    color: #e0e0e0; /* Light text color for dark mode */
+    color: #e0e0e0; /* Light text for dark mode */
 }
 
-header, nav, footer {
+header {
+    padding: 20px 0;
+    text-align: center;
+    width: 100%; /* Ensure header spans full width */
     background-color: #fff; /* White background for light mode */
 }
 
-body.dark-mode header,
-body.dark-mode nav,
-body.dark-mode footer {
-    background-color: #1e1e1e; /* Dark background for dark mode */
+body.dark-mode header {
+    background-color: #1e1e1e; /* Dark background for header in dark mode */
+}
+
+header h1 {
+    margin: 0;
+    padding: 10px;
+    background-color: #fff; /* White background for light mode */
+}
+
+body.dark-mode header h1 {
+    background-color: #1e1e1e; /* Dark background for header title in dark mode */
 }
 
 nav {
@@ -68,7 +79,8 @@ nav ul li a {
 }
 
 body.dark-mode nav ul li a {
-    background-color: #444; /* Darker background for nav links in dark mode */
+    background-color: #000; /* Ensure black background for nav links in dark mode */
+    color: #fff; /* Ensure white text in dark mode */
 }
 
 nav ul li a:hover {
@@ -87,6 +99,15 @@ main {
     text-align: center; /* Push text center within the main area */
 }
 
+.property-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px; /* Adjust to control gallery width */
+    margin: 0 auto; /* Center the gallery */
+}
+
 .property-item {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -98,9 +119,8 @@ main {
 }
 
 body.dark-mode .property-item {
-    background-color: #1e1e1e; /* Dark background for property items in dark mode */
-    border-color: #444; /* Darker border in dark mode */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Darker shadow in dark mode */
+    background-color: #333; /* Dark background for property item in dark mode */
+    border: 1px solid #555; /* Darker border for dark mode */
 }
 
 .property-item img {
@@ -113,12 +133,17 @@ body.dark-mode .property-item {
     margin: 0;
 }
 
+body.dark-mode .property-item p {
+    color: #e0e0e0; /* Light text for dark mode */
+}
+
 footer {
     padding: 10px 0;
     text-align: center;
     position: fixed;
     bottom: 0;
     width: 100%;
+    background-color: #fff; /* Ensure footer matches the rest of the page */
 }
 
 body.dark-mode footer {
@@ -128,12 +153,6 @@ body.dark-mode footer {
 .welcome-section {
     text-align: center;
     margin-top: 50px; /* Adjust spacing as needed */
-}
-
-.header-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .header-section img {
@@ -179,8 +198,8 @@ body.dark-mode footer {
 }
 
 body.dark-mode .info-grid div {
-    background-color: #1e1e1e; /* Dark background for info grid in dark mode */
-    color: #e0e0e0; /* Light text color for info grid in dark mode */
+    background-color: #333; /* Dark background for info grid in dark mode */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Darker shadow for dark mode */
 }
 
 .info-grid h3 {
@@ -202,7 +221,7 @@ body.dark-mode .info-grid div {
 }
 
 body.dark-mode .info-grid h3::before {
-    color: #aaa; /* Light color for asterisks in dark mode */
+    color: #bbb; /* Lighter color for asterisks in dark mode */
 }
 
 .info-grid p {
@@ -213,17 +232,29 @@ body.dark-mode .info-grid h3::before {
     text-align: left; /* Left align text */
 }
 
+body.dark-mode .info-grid p {
+    color: #e0e0e0; /* Light text for dark mode */
+}
+
 .centered-section {
     margin: 0 auto;
     max-width: 800px; /* Adjust max-width as needed */
     text-align: center;
 }
 
+.header-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Adjust the size for the Welcome Home text */
 .header-section p.welcome-message {
     font-size: 25px; /* Adjust this value as needed */
     font-weight: 400;
 }
 
+/* Adjust the size for the Available Properties text */
 .header-section p.available-properties-title {
     font-size: 2em; /* Match the size with Welcome Home text */
     font-weight: bold; /* Optional: Make the text bold */
@@ -233,6 +264,7 @@ body.dark-mode .info-grid h3::before {
     font-size: 1.2em; /* Slightly smaller size for the description */
 }
 
+/* Additional CSS for centering thumbnails */
 .property-thumbnails {
     display: flex;
     justify-content: center;
@@ -264,29 +296,33 @@ body.dark-mode .property-thumbnails .property-container {
 
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
-    /* Adjustments for smaller screens */
-    header h1 {
-        font-size: 24px;
+    nav {
+        width: 70px; /* Adjust sidebar width for smaller screens */
+        padding-left: 5px;
     }
-    .welcome-message {
-        font-size: 20px;
-    }
+    
     nav ul li a {
-        padding: 8px 16px;
+        padding: 10px 15px; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Adjust font size for smaller screens */
     }
+
+    main {
+        padding: 20px;
+    }
+    
     .property-item {
-        width: 100%; /* Make property items take full width on smaller screens */
+        width: 100%; /* Full width for property items on smaller screens */
     }
-    .property-item img {
-        width: 100%; /* Make property images take full width on smaller screens */
+    
+    .info-grid {
+        grid-template-columns: 1fr; /* Single column layout for smaller screens */
     }
-    .header-section p.welcome-message {
-        font-size: 20px; /* Adjust this value as needed */
+
+    .property-thumbnails {
+        flex-direction: column; /* Stack property containers vertically */
     }
-    .header-section p.available-properties-title {
-        font-size: 1.5em; /* Adjust the size for smaller screens */
-    }
-    .header-section p.available-properties-description {
-        font-size: 1em; /* Adjust the size for smaller screens */
+
+    .property-thumbnails .property-container {
+        width: 100%; /* Full width for property containers on smaller screens */
     }
 }
