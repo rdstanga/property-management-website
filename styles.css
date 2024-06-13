@@ -251,122 +251,57 @@ footer {
         padding-left: 5px;
     }
     
+    nav ul li {
+        margin-bottom: 10px; /* Adjust spacing for smaller screens */
+    }
+
     nav ul li a {
         padding: 10px 15px; /* Adjust padding for smaller screens */
-        font-size: 14px; /* Adjust font size for smaller screens */
     }
 
     main {
-        padding: 20px;
+        padding: 20px; /* Adjust padding for smaller screens */
     }
-    
+
     .property-item {
-        width: 100%; /* Full width for property items on smaller screens */
+        width: 100%; /* Full width for smaller screens */
     }
-    
-    .info-grid {
-        grid-template-columns: 1fr; /* Single column layout for smaller screens */
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        width: 50px; /* Further adjust sidebar width for very small screens */
+    }
+
+    nav ul li a {
+        padding: 8px 10px; /* Further adjust padding for very small screens */
+        font-size: 12px; /* Smaller font size for very small screens */
+    }
+
+    .header-section p.welcome-message,
+    .header-section p.available-properties-title,
+    .header-section p.available-properties-description {
+        font-size: 1em; /* Adjust font size for very small screens */
     }
 
     .property-thumbnails {
-        flex-direction: column; /* Stack property containers vertically */
+        flex-direction: column; /* Stack property containers for very small screens */
     }
 
     .property-thumbnails .property-container {
-        width: 100%; /* Full width for property containers on smaller screens */
+        margin: 10px 0; /* Adjust margin for stacked property containers */
+        width: 100%; /* Full width for very small screens */
     }
-}
 
-/* FAQ Page Styles */
-.faq-section {
-    padding: 20px;
-    background-color: #1e1e1e; /* Dark background matching other sections */
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 0 auto;
-}
+    .header-section img {
+        max-width: 90%; /* Adjust the max-width for very small screens */
+    }
 
-.faq-item {
-    margin-bottom: 20px;
-}
+    .info-grid {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
 
-.faq-item h3 {
-    font-family: "Cardo", serif;
-    font-weight: 700;
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #ffffff; /* Light text color */
-}
-
-.faq-item p {
-    font-family: "Cardo", serif;
-    font-weight: 400;
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: #cccccc; /* Slightly lighter text color for answers */
-}
-
-/* Contact Page Styles */
-.contact-info {
-    padding: 20px; /* Add padding behind contact information */
-    font-size: 18px; /* Increase text size */
-    max-width: 600px; /* Limit width to prevent stretching */
-    margin: 0 auto; /* Center align */
-    background-color: #1e1e1e; /* Match background with other sections */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
-}
-
-.contact-info p {
-    margin: 0 0 10px 0; /* Add spacing between paragraphs */
-}
-
-.contact-info .hours {
-    text-align: left; /* Left-align the hours information */
-    margin-top: 20px; /* Add some top margin */
-}
-
-.contact-info .hours p {
-    margin: 5px 0; /* Add margin between each line of hours */
-}
-
-.contact-image {
-    max-width: 100%; /* Ensure image is responsive */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Ensure proper display */
-    margin: 20px auto; /* Add margin for spacing */
-}
-
-/* Apply padding and styling to form elements */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-form label {
-    margin-bottom: 5px;
-}
-
-form input {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%; /* Full width for inputs */
-    max-width: 300px; /* Max width for better control */
-}
-
-form button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #555555;
-    color: #ffffff;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #333333;
+    .centered-section {
+        padding: 0 10px; /* Add padding to center section */
+    }
 }

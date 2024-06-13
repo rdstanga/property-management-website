@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (hour >= nightStart || hour < nightEnd) {
         document.body.classList.add('dark-mode');
+    } else {
+        document.body.classList.add('light-mode');
     }
 
     // Payment form alert
