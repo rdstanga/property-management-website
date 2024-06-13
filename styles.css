@@ -27,7 +27,7 @@ nav {
     top: 0;
     left: 0;
     height: 100%;
-    width: 150px; /* Adjust width as needed to fit all items */
+    width: 100px; /* Adjust width as needed */
     background-color: #121212; /* Match the body background color */
     padding-top: 60px; /* Space from top */
     padding-left: 10px; /* Add padding to the left side */
@@ -35,7 +35,7 @@ nav {
     flex-direction: column;
     align-items: center;
     z-index: 1; /* Ensure nav is below the main content */
-    overflow-y: auto; /* Add vertical scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
 nav ul {
@@ -72,12 +72,11 @@ nav ul li a:hover {
 
 main {
     max-width: 1200px; /* Set max-width */
-    width: calc(100% - 160px); /* Subtract nav width from main width */
-    margin: 20px; /* Add some margin for spacing */
+    width: calc(100% - 120px); /* Adjust width to account for nav width */
+    margin: 20px 20px 20px 120px; /* Add margin for spacing and account for nav width */
     padding: 50px;
     text-align: center; /* Center text within the main area */
     z-index: 2; /* Ensure main content is above the nav */
-    margin-left: 160px; /* Adjust main content margin to accommodate nav */
 }
 
 .property-gallery {
@@ -115,7 +114,8 @@ footer {
     text-align: center;
     background-color: #121212; /* Match the body background color */
     color: #ffffff; /* Light text color */
-    width: 100%;
+    width: calc(100% - 20px); /* Adjust width to account for margins */
+    margin: 0 auto;
     z-index: 1; /* Ensure footer is below the main content */
 }
 
@@ -260,6 +260,8 @@ footer {
 
     main {
         padding: 20px;
+        margin: 20px; /* Adjust margin for smaller screens */
+        width: calc(100% - 90px); /* Adjust width for smaller screens */
     }
     
     .property-item {
@@ -271,40 +273,4 @@ footer {
     }
 
     .property-thumbnails {
-        flex-direction: column; /* Stack property containers vertically */
-    }
-
-    .property-thumbnails .property-container {
-        width: 100%; /* Full width for property containers on smaller screens */
-    }
-}
-
-/* FAQ Page Styles */
-.faq-section {
-    padding: 20px;
-    background-color: #1e1e1e; /* Dark background matching other sections */
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.faq-item {
-    margin-bottom: 20px;
-}
-
-.faq-item h3 {
-    font-family: "Cardo", serif;
-    font-weight: 700;
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #ffffff; /* Light text color */
-}
-
-.faq-item p {
-    font-family: "Cardo", serif;
-    font-weight: 400;
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: #cccccc; /* Slightly lighter text color for answers */
-}
+        flex-direction: column
