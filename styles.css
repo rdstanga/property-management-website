@@ -1,38 +1,25 @@
+/* General styles */
 body {
     font-family: 'Cardo', serif;
     margin: 0;
     padding: 0;
-    background-color: #fff; /* White background for body */
-    color: #000; /* Set text color to black */
+    background-color: #121212; /* Dark background for dark mode */
+    color: #ffffff; /* Light text color */
     display: flex; /* Flexbox for body */
     flex-direction: column; /* Column direction */
-    align-items: center;
-}
-
-body.dark-mode {
-    background-color: #121212; /* Dark background for dark mode */
-    color: #e0e0e0; /* Light text for dark mode */
+    align-items: center; /* Center content horizontally */
 }
 
 header {
     padding: 20px 0;
     text-align: center;
     width: 100%; /* Ensure header spans full width */
-    background-color: #fff; /* White background for light mode */
+    background-color: #121212; /* Match the body background color */
+    color: #ffffff; /* Light text color */
 }
 
-body.dark-mode header {
-    background-color: #1e1e1e; /* Dark background for header in dark mode */
-}
-
-header h1 {
+header h1, header h2 {
     margin: 0;
-    padding: 10px;
-    background-color: #fff; /* White background for light mode */
-}
-
-body.dark-mode header h1 {
-    background-color: #1e1e1e; /* Dark background for header title in dark mode */
 }
 
 nav {
@@ -41,16 +28,12 @@ nav {
     left: 0;
     height: 100%;
     width: 100px; /* Adjust width as needed */
-    background-color: #fff; /* White background for sidebar */
+    background-color: #121212; /* Match the body background color */
     padding-top: 60px; /* Space from top */
     padding-left: 10px; /* Add padding to the left side */
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-body.dark-mode nav {
-    background-color: #1e1e1e; /* Dark background for nav in dark mode */
 }
 
 nav ul {
@@ -71,24 +54,16 @@ nav ul li a {
     margin: 0 auto;
     padding: 15px 20px;
     text-align: center;
-    background-color: #000; /* Black background for nav links */
-    color: #fff; /* White text for nav links */
+    background-color: #ffffff; /* White background for nav links */
+    color: #000000; /* Black text for nav links */
     text-decoration: none;
     border-radius: 25px; /* Squircles */
-    transition: background-color 0.3s ease;
-}
-
-body.dark-mode nav ul li a {
-    background-color: #000; /* Ensure black background for nav links in dark mode */
-    color: #fff; /* Ensure white text in dark mode */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #555; /* Darker gray background on hover */
-}
-
-body.dark-mode nav ul li a:hover {
-    background-color: #666; /* Darker hover background for dark mode */
+    background-color: #555555; /* Darker gray background on hover */
+    color: #ffffff; /* White text on hover */
 }
 
 main {
@@ -96,7 +71,7 @@ main {
     width: 100%; /* Set width to 100% */
     margin: 20px; /* Add some margin for spacing */
     padding: 50px;
-    text-align: center; /* Push text center within the main area */
+    text-align: center; /* Center text within the main area */
 }
 
 .property-gallery {
@@ -109,18 +84,14 @@ main {
 }
 
 .property-item {
-    background-color: #fff;
+    background-color: #ffffff; /* White background for property items */
+    color: #000000; /* Black text for property items */
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     width: 300px;
     text-align: left;
-}
-
-body.dark-mode .property-item {
-    background-color: #333; /* Dark background for property item in dark mode */
-    border: 1px solid #555; /* Darker border for dark mode */
 }
 
 .property-item img {
@@ -133,21 +104,12 @@ body.dark-mode .property-item {
     margin: 0;
 }
 
-body.dark-mode .property-item p {
-    color: #e0e0e0; /* Light text for dark mode */
-}
-
 footer {
     padding: 10px 0;
     text-align: center;
-    position: fixed;
-    bottom: 0;
+    background-color: #121212; /* Match the body background color */
+    color: #ffffff; /* Light text color */
     width: 100%;
-    background-color: #fff; /* Ensure footer matches the rest of the page */
-}
-
-body.dark-mode footer {
-    background-color: #1e1e1e; /* Dark background for footer in dark mode */
 }
 
 .welcome-section {
@@ -190,16 +152,12 @@ body.dark-mode footer {
 }
 
 .info-grid div {
-    background-color: #f9f9f9;
+    background-color: #1e1e1e; /* Dark background for info grid items */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: left;
-}
-
-body.dark-mode .info-grid div {
-    background-color: #333; /* Dark background for info grid in dark mode */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Darker shadow for dark mode */
+    color: #ffffff; /* Light text color for info grid items */
 }
 
 .info-grid h3 {
@@ -210,7 +168,6 @@ body.dark-mode .info-grid div {
     text-align: left; /* Left align text */
 }
 
-/* Update the asterisk position */
 .info-grid h3::before {
     content: '*';
     font-size: 22px; /* Make the asterisks larger */
@@ -220,20 +177,12 @@ body.dark-mode .info-grid div {
     left: -2px; /* Adjust horizontal position */
 }
 
-body.dark-mode .info-grid h3::before {
-    color: #bbb; /* Lighter color for asterisks in dark mode */
-}
-
 .info-grid p {
     font-family: "Cardo", serif; /* Apply the Cardo font */
     font-weight: 400; /* Regular weight */
     line-height: 1.6; /* Increase line height for readability */
     margin-bottom: 0;
     text-align: left; /* Left align text */
-}
-
-body.dark-mode .info-grid p {
-    color: #e0e0e0; /* Light text for dark mode */
 }
 
 .centered-section {
@@ -248,13 +197,11 @@ body.dark-mode .info-grid p {
     align-items: center;
 }
 
-/* Adjust the size for the Welcome Home text */
 .header-section p.welcome-message {
     font-size: 25px; /* Adjust this value as needed */
     font-weight: 400;
 }
 
-/* Adjust the size for the Available Properties text */
 .header-section p.available-properties-title {
     font-size: 2em; /* Match the size with Welcome Home text */
     font-weight: bold; /* Optional: Make the text bold */
@@ -264,7 +211,6 @@ body.dark-mode .info-grid p {
     font-size: 1.2em; /* Slightly smaller size for the description */
 }
 
-/* Additional CSS for centering thumbnails */
 .property-thumbnails {
     display: flex;
     justify-content: center;
@@ -275,15 +221,12 @@ body.dark-mode .info-grid p {
     margin: 0 10px; /* Adjust spacing between properties */
     text-align: center; /* Center text */
     padding: 20px; /* Add padding inside the container */
-    border: 2px solid black; /* Outline of the squircle */
+    background-color: #1e1e1e; /* Dark background for property containers */
     border-radius: 25px; /* Squircles */
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-body.dark-mode .property-thumbnails .property-container {
-    border-color: #444; /* Darker border for property container in dark mode */
+    color: #ffffff; /* Light text color */
 }
 
 .property-address {
