@@ -276,3 +276,33 @@ footer {
         width: 100%; /* Full width for property containers on smaller screens */
     }
 }
+
+/* FAQ Page Styles */
+.faq-section {
+    padding: 20px;
+    background-color: #1e1e1e; /* Dark background matching other sections */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    font-family: "Cardo", serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ffffff; /* Light text color */
+}
+
+.faq-item p {
+    font-family: "Cardo", serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #cccccc; /* Slightly lighter text color for answers */
+}
