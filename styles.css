@@ -27,7 +27,7 @@ nav {
     top: 0;
     left: 0;
     height: 100%;
-    width: 100px; /* Adjust width as needed */
+    width: 120px; /* Adjust width as needed */
     background-color: #121212; /* Match the body background color */
     padding-top: 60px; /* Space from top */
     padding-left: 10px; /* Add padding to the left side */
@@ -35,7 +35,6 @@ nav {
     flex-direction: column;
     align-items: center;
     z-index: 1; /* Ensure nav is below the main content */
-    overflow-y: auto; /* Enable vertical scrolling */
 }
 
 nav ul {
@@ -72,8 +71,8 @@ nav ul li a:hover {
 
 main {
     max-width: 1200px; /* Set max-width */
-    width: calc(100% - 120px); /* Adjust width to account for nav width */
-    margin: 20px 20px 20px 120px; /* Add margin for spacing and account for nav width */
+    width: 100%; /* Set width to 100% */
+    margin: 20px; /* Add some margin for spacing */
     padding: 50px;
     text-align: center; /* Center text within the main area */
     z-index: 2; /* Ensure main content is above the nav */
@@ -114,8 +113,7 @@ footer {
     text-align: center;
     background-color: #121212; /* Match the body background color */
     color: #ffffff; /* Light text color */
-    width: calc(100% - 20px); /* Adjust width to account for margins */
-    margin: 0 auto;
+    width: 100%;
     z-index: 1; /* Ensure footer is below the main content */
 }
 
@@ -249,7 +247,7 @@ footer {
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
     nav {
-        width: 70px; /* Adjust sidebar width for smaller screens */
+        width: 100px; /* Adjust sidebar width for smaller screens */
         padding-left: 5px;
     }
     
@@ -260,8 +258,6 @@ footer {
 
     main {
         padding: 20px;
-        margin: 20px; /* Adjust margin for smaller screens */
-        width: calc(100% - 90px); /* Adjust width for smaller screens */
     }
     
     .property-item {
@@ -273,4 +269,66 @@ footer {
     }
 
     .property-thumbnails {
-        flex-direction: column
+        flex-direction: column; /* Stack property containers vertically */
+    }
+
+    .property-thumbnails .property-container {
+        width: 100%; /* Full width for property containers on smaller screens */
+    }
+}
+
+/* FAQ Page Styles */
+.faq-section {
+    padding: 20px;
+    background-color: #1e1e1e; /* Dark background matching other sections */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    font-family: "Cardo", serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ffffff; /* Light text color */
+}
+
+.faq-item p {
+    font-family: "Cardo", serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #cccccc; /* Slightly lighter text color for answers */
+}
+
+/* Contact Page Styles */
+.contact-info {
+    padding: 20px;
+    background-color: #1e1e1e; /* Dark background matching other sections */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-info p {
+    margin: 10px 0; /* Margin for spacing between paragraphs */
+}
+
+.hours-section {
+    margin: 20px 0; /* Margin for spacing between sections */
+    text-align: left; /* Align text to the left */
+}
+
+.contact-image {
+    max-width: 100%; /* Ensure image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure proper display */
+    margin: 20px auto; /* Add margin for spacing */
+}
