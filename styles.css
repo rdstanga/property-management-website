@@ -27,7 +27,7 @@ nav {
     top: 0;
     left: 0;
     height: 100%;
-    width: 100px; /* Adjust width as needed */
+    width: 150px; /* Adjust width as needed to fit all items */
     background-color: #121212; /* Match the body background color */
     padding-top: 60px; /* Space from top */
     padding-left: 10px; /* Add padding to the left side */
@@ -35,6 +35,7 @@ nav {
     flex-direction: column;
     align-items: center;
     z-index: 1; /* Ensure nav is below the main content */
+    overflow-y: auto; /* Add vertical scrolling */
 }
 
 nav ul {
@@ -71,11 +72,12 @@ nav ul li a:hover {
 
 main {
     max-width: 1200px; /* Set max-width */
-    width: 100%; /* Set width to 100% */
+    width: calc(100% - 160px); /* Subtract nav width from main width */
     margin: 20px; /* Add some margin for spacing */
     padding: 50px;
     text-align: center; /* Center text within the main area */
     z-index: 2; /* Ensure main content is above the nav */
+    margin-left: 160px; /* Adjust main content margin to accommodate nav */
 }
 
 .property-gallery {
