@@ -148,7 +148,7 @@ footer {
     font-style: normal;
 }
 
-/* CSS Grid styling for the new section */
+/* CSS Grid styling for the About Us section */
 .info-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -159,7 +159,7 @@ footer {
 }
 
 .info-grid div {
-    background-color: #1e1e1e; /* Dark background for info grid items */
+    background-color: #1e1e1e; /* Dark background for About Us grid items */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -177,11 +177,11 @@ footer {
 
 .info-grid h3::before {
     content: '*';
-    font-size: 22px; /* Make the asterisks larger */
-    color: #666; /* Set color */
+    font-size: 22px; /* Make asterisks larger */
+    color: #666; /* Set asterisk color */
     position: absolute;
-    top: -18px; /* Adjust vertical position */
-    left: -2px; /* Adjust horizontal position */
+    top: -18px; /* Adjust asterisk vertical position */
+    left: -2px; /* Adjust asterisk horizontal position */
 }
 
 .info-grid p {
