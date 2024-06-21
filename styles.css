@@ -191,6 +191,12 @@ footer {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.contact-form input[type="submit"] {
+    /* Existing styles */
+    display: block; /* Display the submit button as a block element */
+    margin: 0 auto; /* Center the submit button horizontally */
+}
+
 .contact-form label {
     display: block; /* Display labels as block elements */
     margin-bottom: 10px; /* Add space below labels */
@@ -259,6 +265,12 @@ footer p {
         width: 100%; /* Full width for navigation links on smaller screens */
     }
 
+/* Hamburger menu styles */
+.hamburger {
+    display: none; /* Initially hide the hamburger menu on larger screens */
+}
+
+@media (max-width: 480px) {
     .hamburger {
         display: block; /* Display hamburger menu */
         position: fixed; /* Fixed positioning */
@@ -266,6 +278,8 @@ footer p {
         right: 20px; /* Position from right */
         z-index: 3; /* Ensure hamburger icon is above content */
         cursor: pointer; /* Change cursor to pointer */
+        background: none; /* Remove default background */
+        border: none; /* Remove default border */
     }
 
     .hamburger-line {
@@ -288,7 +302,29 @@ footer p {
         transform: translateY(-10px) rotate(-45deg); /* Transform third line for 'X' shape */
     }
 
+    nav {
+        display: none; /* Initially hide the navigation menu on smaller screens */
+        position: fixed; /* Fixed positioning */
+        top: 0; /* Position from top */
+        right: 0; /* Position from right */
+        background-color: #1e1e1e; /* Dark background for navigation */
+        width: 60%; /* Set width of navigation menu */
+        max-width: 300px; /* Maximum width of navigation menu */
+        height: 100%; /* Full height of viewport */
+        padding-top: 60px; /* Padding top for spacing */
+        text-align: center; /* Center align text */
+        z-index: 2; /* Ensure navigation menu is above other content */
+        overflow-y: auto; /* Enable vertical scrolling if needed */
+        transition: transform 0.3s ease; /* Smooth transition for transform */
+    }
+
+    nav ul {
+        padding: 0; /* Remove default padding */
+        list-style-type: none; /* Remove default list styling */
+    }
+
     nav.show {
         transform: translateX(0); /* Show navigation menu */
     }
+}
 }
