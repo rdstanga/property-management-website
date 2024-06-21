@@ -2,37 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=home.html">
-    <link rel="icon" type="image/png" sizes="32x32" href="FaviconLarge.JPG">
-    <link rel="icon" type="image/png" sizes="16x16" href="FaviconSmall.png">
-    <title>Redirecting...</title>
-    <!-- Include the font link tags -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <!-- Optional: Add CSS for your redirection page -->
-    <style>
-        body {
-            font-family: 'Cardo', serif; /* Apply the Cardo font to the body */
-            margin: 0;
-            padding: 0;
-            background-color: #fff; /* White background */
-            color: #000; /* Black text color */
-            text-align: center; /* Center text */
-            padding-top: 100px; /* Add some padding for vertical centering */
-        }
-        p {
-            margin-top: 20px; /* Add spacing between paragraphs */
-        }
-        a {
-            color: #007bff; /* Link color */
-            text-decoration: none; /* Remove underline from links */
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stanga & Sons LLC</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<script src="scripts.js"></script>
 <body>
-    <!-- Optional: You can provide a message for users who don't have JavaScript enabled -->
-    <p>If you are not redirected automatically, <a href="home.html">click here</a>.</p>
+    <div class="container">
+        <header>
+            <h1>Stanga & Sons LLC</h1>
+        </header>
+
+        <nav>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="available-properties.html">Available Properties</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="centered-section">
+                <h2>Welcome to Stanga & Sons LLC</h2>
+                <p>Find your dream home with us.</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Stanga & Sons LLC. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>

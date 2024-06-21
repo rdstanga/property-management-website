@@ -1,52 +1,42 @@
-/* General styles */
 body {
-    font-family: 'Cardo', serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212; /* Dark background for dark mode */
-    color: #ffffff; /* Light text color */
-    display: flex; /* Flexbox for body */
-    flex-direction: column; /* Column direction */
-    align-items: center; /* Center content horizontally */
 }
 
-header {
-    padding: 20px 0;
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
     text-align: center;
-    width: 100%; /* Ensure header spans full width */
-    background-color: #121212; /* Match the body background color */
-    color: #ffffff; /* Light text color */
+    padding: 10px 0;
 }
 
-header h1, header h2 {
+header h1 {
     margin: 0;
 }
 
 nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 150px; /* Adjust width for better usability */
-    background-color: #121212; /* Match the body background color */
-    padding-top: 60px; /* Space from top */
-    padding-left: 10px; /* Add padding to the left side */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1; /* Ensure nav is below the main content */
+    position: relative;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none; /* Hide menu by default */
 }
 
 nav ul li {
     width: 100%;
-    margin-bottom: 20px; /* Space between buttons */
 }
 
 nav ul li a {
@@ -66,17 +56,28 @@ nav ul li a:hover {
     background-color: #f0f0f0; /* Slightly darker background on hover */
 }
 
+.hamburger {
+    display: none; /* Hide hamburger menu by default */
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
 main {
     flex: 1; /* Flex-grow for main content */
     padding: 20px;
     width: 100%; /* Ensure main content spans full width */
     max-width: 1200px; /* Limit max width for better readability */
     box-sizing: border-box; /* Include padding in element's total width and height */
-}
-
-header-section {
-    padding: 20px;
-    text-align: center;
 }
 
 footer {
@@ -107,21 +108,17 @@ footer {
 
 /* Responsive design */
 @media (max-width: 768px) {
-    nav {
-        position: relative;
-        height: auto;
-        width: 100%;
-        padding: 10px;
+    .hamburger {
+        display: block; /* Show hamburger menu on smaller screens */
     }
 
     nav ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        flex-direction: column;
+        display: none; /* Hide menu by default */
     }
 
-    main {
-        padding: 10px;
+    nav ul.active {
+        display: flex; /* Show menu when active */
     }
 
     .property-thumbnails {
