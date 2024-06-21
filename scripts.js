@@ -10,14 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.add('light-mode');
     }
 
-    // Mouse-hover dark mode
-    const elementsToHover = document.querySelectorAll('.hover-dark-mode');
-    elementsToHover.forEach(element => {
-        element.addEventListener('mouseenter', () => {
-            element.classList.add('dark-mode');
+    // Navigation toggle for mobile
+    const hamburgerBtn = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('nav ul');
+
+    if (hamburgerBtn && navMenu) {
+        hamburgerBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
         });
-        element.addEventListener('mouseleave', () => {
-            element.classList.remove('dark-mode');
-        });
-    });
+    }
 });
