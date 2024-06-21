@@ -29,6 +29,11 @@
             display: block; /* Ensure proper display */
             margin: 20px auto; /* Add margin for spacing */
         }
+        #map {
+            height: 400px; /* Set the height of the map */
+            width: 100%; /* Full width */
+            margin-top: 20px; /* Add margin on top */
+        }
     </style>
 </head>
 <body>
@@ -63,11 +68,30 @@
                 </div>
             </div>
             <img class="contact-image" src="placeholder-image.jpg" alt="Contact Image Placeholder">
+            <!-- Google Map Container -->
+            <div id="map"></div>
         </div>
     </main>
     <footer>
         <p>&copy; 2024 Stanga & Sons LLC</p>
     </footer>
     <script src="scripts.js"></script>
+    <!-- Load the Google Maps API -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+    <script>
+        function initMap() {
+            const officeLocation = { lat: 51.523774, lng: -0.158537 }; // Latitude and Longitude for 221B Baker St
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: officeLocation,
+            });
+            const marker = new google.maps.Marker({
+                position: officeLocation,
+                map: map,
+            });
+        }
+    </script>
 </body>
 </html>

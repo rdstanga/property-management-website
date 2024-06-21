@@ -9,4 +9,15 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         document.body.classList.add('light-mode');
     }
+
+    // Mouse-hover dark mode
+    const elementsToHover = document.querySelectorAll('.hover-dark-mode');
+    elementsToHover.forEach(element => {
+        element.addEventListener('mouseenter', () => {
+            element.classList.add('dark-mode');
+        });
+        element.addEventListener('mouseleave', () => {
+            element.classList.remove('dark-mode');
+        });
+    });
 });
