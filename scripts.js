@@ -9,13 +9,4 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         document.body.classList.add('light-mode');
     }
-
-    // Payment form alert
-    const paymentForm = document.getElementById('payment-form');
-    if (paymentForm) {
-        paymentForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Payment processing is not set up yet.');
-        });
-    }
 });

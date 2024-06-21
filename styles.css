@@ -27,7 +27,7 @@ nav {
     top: 0;
     left: 0;
     height: 100%;
-    width: 100px; /* Adjust width as needed */
+    width: 150px; /* Adjust width for better usability */
     background-color: #121212; /* Match the body background color */
     padding-top: 60px; /* Space from top */
     padding-left: 10px; /* Add padding to the left side */
@@ -71,7 +71,7 @@ nav ul li a:hover {
 
 main {
     max-width: 1200px; /* Set max-width */
-    width: 100%; /* Set width to 100% */
+    width: calc(100% - 150px); /* Adjust width to account for nav */
     margin: 20px; /* Add some margin for spacing */
     padding: 50px;
     text-align: center; /* Center text within the main area */
@@ -211,116 +211,82 @@ footer {
 
 .header-section p.available-properties-title {
     font-size: 2em; /* Match the size with Welcome Home text */
-    font-weight: bold; /* Optional: Make the text bold */
 }
 
-.header-section p.available-properties-description {
-    font-size: 1.2em; /* Slightly smaller size for the description */
-}
-
-.property-thumbnails {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.property-thumbnails .property-container {
-    margin: 0 10px; /* Adjust spacing between properties */
-    text-align: center; /* Center text */
-    padding: 20px; /* Add padding inside the container */
-    background-color: #1e1e1e; /* Dark background for property containers */
-    border-radius: 25px; /* Squircles */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #ffffff; /* Light text color */
-}
-
-.property-address {
-    margin-bottom: 10px; /* Add some margin between address and image */
-}
-
-.property-price {
-    margin-top: 10px; /* Add some margin between image and price */
-}
-
-/* Responsive adjustments */
-@media screen and (max-width: 768px) {
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
     nav {
-        width: 70px; /* Adjust sidebar width for smaller screens */
-        padding-left: 5px;
+        width: 100%;
+        height: auto;
+        position: relative;
     }
-    
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
     nav ul li {
-        margin-bottom: 10px; /* Adjust spacing for smaller screens */
+        margin-bottom: 0;
     }
 
     nav ul li a {
-        padding: 10px 15px; /* Adjust padding for smaller screens */
+        padding: 10px;
+        border-radius: 8px; /* Slightly rounder corners */
     }
 
     main {
-        padding: 20px; /* Adjust padding for smaller screens */
+        width: 100%;
+        padding: 20px;
     }
 
     .property-item {
-        width: 100%; /* Full width for smaller screens */
+        width: calc(100% - 40px);
+        margin-bottom: 20px;
     }
 }
 
-@media screen and (max-width: 480px) {
-    nav {
-        width: 50px; /* Further adjust sidebar width for very small screens */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
     }
 
-    nav ul li a {
-        padding: 8px 10px; /* Further adjust padding for very small screens */
-        font-size: 12px; /* Smaller font size for very small screens */
-    }
-
-    .header-section p.welcome-message,
-    .header-section p.available-properties-title,
-    .header-section p.available-properties-description {
-        font-size: 1em; /* Adjust font size for very small screens */
-    }
-
-    .property-thumbnails {
-        flex-direction: column; /* Stack property containers for very small screens */
-    }
-
-    .property-thumbnails .property-container {
-        margin: 10px 0; /* Adjust margin for stacked property containers */
-        width: 100%; /* Full width for very small screens */
+    .property-item {
+        width: calc(100% - 20px);
     }
 
     .header-section img {
-        max-width: 90%; /* Adjust the max-width for very small screens */
+        max-width: 100%;
     }
 
-    .info-grid {
-        grid-template-columns: 1fr; /* Single column for very small screens */
+    .header-section p.welcome-message {
+        font-size: 20px; /* Adjust this value as needed */
     }
 
-    .centered-section {
-        padding: 0 10px; /* Add padding to center section */
+    .header-section p.available-properties-title {
+        font-size: 1.5em; /* Adjust this value as needed */
     }
 }
 
-/* Default dark mode styles */
+/* Accessibility improvements */
+a:focus {
+    outline: 2px dashed #000000; /* High contrast outline for focus state */
+}
+
+img {
+    alt: "Description of the image"; /* Ensure all images have descriptive alt text */
+}
+
 body {
-    background-color: #333;
-    color: #fff;
+    font-size: 1rem; /* Base font size */
+    line-height: 1.5; /* Line height for readability */
 }
 
-/* Light mode styles */
-@media (prefers-color-scheme: light) {
-    body {
-        background-color: #fdfdfd;
-        color: #333;
-    }
-    /* Adjust specific elements like header, nav, and footer */
-    header, nav, footer {
-        background-color: #fdfdfd; /* Light mode background color */
-        color: #333; /* Example light mode text color */
-    }
+.property-item {
+    font-size: 0.875rem; /* Adjust font size for property items */
+}
+
+header, nav, main, footer {
+    font-size: 1rem; /* Base font size for main sections */
 }
