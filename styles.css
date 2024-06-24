@@ -32,7 +32,7 @@ nav {
     top: 0;
     left: 0;
     height: 100%;
-    width: 50px; /* Adjust width as needed */
+    width: 100px; /* Adjust width as needed */
     background-color: #FFFFFF; /* Match the body background color */
     padding-top: 60px; /* Space from top */
     padding-left: 10px; /* Add padding to the left side */
@@ -60,12 +60,12 @@ nav ul li a {
     margin: 0 auto;
     padding: 15px 20px;
     text-align: center;
-    background-color: #ffffff; /* White background for nav links */
-    color: #000000; /* Black text for nav links */
+    background-color: #000000; /* Black background for nav links */
+    color: #ffffff; /* White text for nav links */
     text-decoration: none;
     border-radius: 25px; /* Squircles */
-    border: 2px solid #ffffff; /* Outer white border */
-    box-shadow: inset 0 0 0 2px #000000; /* Thin black inner squircle */
+    border: 2px solid #000000; /* Outer black border */
+    box-shadow: inset 0 0 0 2px #ffffff; /* Thin white inner squircle */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
