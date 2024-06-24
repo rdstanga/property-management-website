@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Stanga & Sons LLC</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -14,7 +22,7 @@
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="available-properties.html">Available Properties</a></li>
+            <li><a href="available-properties.html">Vacancies</a></li>
             <li><a href="faq.html">FAQ</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -48,19 +56,17 @@
         <p>&copy; 2024 Stanga & Sons LLC. All rights reserved.</p>
     </footer>
 
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
-        function initMap() {
-            var location = { lat: 29.79744675788219, lng: -90.81922020378785 };
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 14,
-                center: location
-            });
-            var marker = new google.maps.Marker({
-                position: location,
-                map: map
-            });
-        }
+        var map = L.map('map').setView([29.79744675788219, -90.81922020378785], 14);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([29.79744675788219, -90.81922020378785]).addTo(map)
+            .bindPopup('Stanga & Sons LLC')
+            .openPopup();
     </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 </body>
 </html>
