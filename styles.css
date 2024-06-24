@@ -32,8 +32,8 @@ nav {
     top: 0;
     left: 0;
     height: 100%;
-    width: 100px; /* Adjust width as needed */
-    background-color: #121212; /* Match the body background color */
+    width: 50px; /* Adjust width as needed */
+    background-color: #FFFFFF; /* Match the body background color */
     padding-top: 60px; /* Space from top */
     padding-left: 10px; /* Add padding to the left side */
     display: flex;
