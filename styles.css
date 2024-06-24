@@ -5,6 +5,9 @@ body {
     padding: 0;
     background-color: #ffffff;
     color: #333;
+    display: flex; /* Flexbox for body */
+    flex-direction: column; /* Column direction */
+    align-items: center; /* Center content horizontally */
 }
 
 .container {
@@ -73,7 +76,6 @@ nav ul li a:hover {
     background-color: #555555; /* Darker gray background on hover */
     color: #ffffff; /* White text on hover */
 }
-
 
 /* Main Content Styles */
 main {
@@ -156,7 +158,7 @@ footer {
     text-align: center;
     line-height: 80px;
     font-size: 16px;
-    border-radius: 30% / 50%;
+    border-radius: 25px; /* Adjusted to match navigation buttons */
     margin: 20px auto;
     text-decoration: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
