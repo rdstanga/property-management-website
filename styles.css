@@ -111,16 +111,37 @@ main {
     margin-bottom: 20px;
 }
 
-/* About Us Section */
-.about-us-section {
-    background-color: #f9f9f9;
-    padding: 40px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Home Page Styles */
+.home-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
 }
 
-.about-us-section p {
+.about-us-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.about-us-piece {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.about-us-piece p {
     margin: 10px 0;
+}
+
+.about-us-pieces {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 /* Footer Styles */
