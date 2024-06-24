@@ -16,15 +16,19 @@
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </nav>
     </header>
     <main>
         <div class="header-section">
             <p class="welcome-message">Welcome Home</p>
             <p>Let us help you find your next home!</p>
-            <img src="House Sketch.png" alt="Home">
+            <img src="images/house-sketch.png" alt="Home">
         </div>
-        <!-- New about us section with flexbox centered content -->
         <div class="info-grid">
             <div>
                 <h3>Local</h3>
@@ -36,7 +40,7 @@
             </div>
             <div>
                 <h3>Assortment of Choice</h3>
-                <p>Our homes come in many sizes, from four bedroom houses to studio apartments. Whether you're looking for a house, apartment, or mobile home, we have the perfect home for your needs.</p>
+                <p>Our homes come in many sizes, from four-bedroom houses to studio apartments. Whether you're looking for a house, apartment, or mobile home, we have the perfect home for your needs.</p>
             </div>
             <div>
                 <h3>Competitive Pricing</h3>
@@ -48,15 +52,5 @@
         <p>&copy; 2024 Stanga & Sons LLC</p>
     </footer>
     <script src="scripts.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var hamburger = document.querySelector(".hamburger");
-            var navMenu = document.querySelector("nav ul");
-    
-            hamburger.addEventListener("click", function() {
-                navMenu.classList.toggle("active");
-            });
-        });
-    </script>
 </body>
 </html>
