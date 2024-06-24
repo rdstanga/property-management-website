@@ -1,9 +1,9 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     color: #333;
 }
 
@@ -15,7 +15,7 @@ body {
 
 /* Header Styles */
 header {
-    background: #333;
+    background: #4CAF50;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -27,7 +27,7 @@ header h1 {
 
 /* Navigation Styles */
 nav {
-    background: #444;
+    background: #333;
     color: #fff;
 }
 
@@ -57,6 +57,13 @@ main {
     text-align: center;
 }
 
+.centered-section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 .centered-section p {
     font-size: 1.2em;
     color: #555;
@@ -73,9 +80,21 @@ main {
     margin-bottom: 20px;
 }
 
+/* About Us Section */
+.about-us-section {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-section p {
+    margin: 10px 0;
+}
+
 /* Footer Styles */
 footer {
-    background: #333;
+    background: #4CAF50;
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -97,6 +116,26 @@ footer {
     height: 3px;
     background: #fff;
     margin: 5px 0;
+}
+
+/* Squircle Buttons */
+.squircle-button {
+    display: block;
+    width: 80px;
+    height: 80px;
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    font-size: 16px;
+    border-radius: 50%;
+    margin: 20px auto;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.squircle-button:hover {
+    background: #45a049;
 }
 
 /* Media Queries */
