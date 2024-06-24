@@ -28,28 +28,52 @@ header h1 {
 
 /* Navigation Styles */
 nav {
-    background: #ffffff;
-    color: #333;
-    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100px; /* Adjust width as needed */
+    background-color: #121212; /* Match the body background color */
+    padding-top: 60px; /* Space from top */
+    padding-left: 10px; /* Add padding to the left side */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1; /* Ensure nav is below the main content */
 }
 
 nav ul {
+    list-style-type: none;
     padding: 0;
-    list-style: none;
-    text-align: center;
     margin: 0;
+    width: 100%;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    width: 100%;
+    margin-bottom: 20px; /* Space between buttons */
 }
 
 nav ul li a {
-    color: #333;
+    display: block;
+    width: 90%; /* Adjust width to fit nicely within nav */
+    margin: 0 auto;
+    padding: 15px 20px;
+    text-align: center;
+    background-color: #ffffff; /* White background for nav links */
+    color: #000000; /* Black text for nav links */
     text-decoration: none;
-    font-weight: bold;
+    border-radius: 25px; /* Squircles */
+    border: 2px solid #ffffff; /* Outer white border */
+    box-shadow: inset 0 0 0 2px #000000; /* Thin black inner squircle */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+nav ul li a:hover {
+    background-color: #555555; /* Darker gray background on hover */
+    color: #ffffff; /* White text on hover */
+}
+
 
 /* Main Content Styles */
 main {
