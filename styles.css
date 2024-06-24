@@ -15,10 +15,11 @@ body {
 
 /* Header Styles */
 header {
-    background: #4CAF50;
-    color: #fff;
+    background: #ffffff;
+    color: #333;
     padding: 20px 0;
     text-align: center;
+    border-bottom: 1px solid #ddd;
 }
 
 header h1 {
@@ -27,14 +28,16 @@ header h1 {
 
 /* Navigation Styles */
 nav {
-    background: #333;
-    color: #fff;
+    background: #ffffff;
+    color: #333;
+    border-bottom: 1px solid #ddd;
 }
 
 nav ul {
     padding: 0;
     list-style: none;
     text-align: center;
+    margin: 0;
 }
 
 nav ul li {
@@ -43,7 +46,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #333;
     text-decoration: none;
     font-weight: bold;
 }
@@ -94,10 +97,11 @@ main {
 
 /* Footer Styles */
 footer {
-    background: #4CAF50;
-    color: #fff;
+    background: #ffffff;
+    color: #333;
     text-align: center;
     padding: 10px 0;
+    border-top: 1px solid #ddd;
     position: relative;
     bottom: 0;
     width: 100%;
@@ -114,7 +118,7 @@ footer {
 .hamburger div {
     width: 25px;
     height: 3px;
-    background: #fff;
+    background: #333;
     margin: 5px 0;
 }
 
@@ -123,19 +127,22 @@ footer {
     display: block;
     width: 80px;
     height: 80px;
-    background: #4CAF50;
+    background: #333;
     color: white;
     text-align: center;
     line-height: 80px;
     font-size: 16px;
-    border-radius: 50%;
+    border-radius: 30% / 50%;
     margin: 20px auto;
     text-decoration: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    left: 10px;
+    z-index: 1000;
 }
 
 .squircle-button:hover {
-    background: #45a049;
+    background: #555;
 }
 
 /* Media Queries */
@@ -166,10 +173,10 @@ footer {
     font-size: 18px;
     max-width: 600px;
     margin: 0 auto;
-    background-color: #1e1e1e;
+    background-color: #f1f1f1;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: #fff;
+    color: #333;
 }
 
 .contact-info p {
