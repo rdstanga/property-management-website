@@ -93,6 +93,7 @@ main {
     height: auto;
     display: block;
     margin: 0 auto;
+    align-items: center;
     max-height: 100px; /* Added to limit the height */
 }
 
