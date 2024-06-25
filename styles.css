@@ -95,7 +95,6 @@ main {
     display: block; /* Ensures image behaves as a block element */
     margin: 0 auto; /* Centers the image horizontally */
     margin-top: 20px; /* Add some top margin for spacing */
-    align-items: center; /* Attempt to center the image */
     max-height: 300px; /* Added to limit the height */
 }
 
