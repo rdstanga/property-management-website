@@ -89,11 +89,11 @@ main {
 }
 
 .centered-section img.home-image {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
     display: block;
     margin: 0 auto;
-    max-height: 200px; /* Added to limit the height */
+    max-height: 100px; /* Added to limit the height */
 }
 
 .centered-section p {
