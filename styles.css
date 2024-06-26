@@ -93,7 +93,7 @@ main {
     width: auto;
     height: auto; /* Maintains the aspect ratio of the image */
     display: block; /* Ensures image behaves as a block element */
-    margin: 0 auto; /* Centers the image horizontally */
+    margin: 0 20; /* Centers the image horizontally */
     margin-top: 20px; /* Add some top margin for spacing */
     max-height: 300px; /* Added to limit the height */
 }
