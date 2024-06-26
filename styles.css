@@ -243,12 +243,12 @@ footer {
 }
 
 .hours-section {
-    margin: 20px 0;
+    margin: 20px 20px;
     text-align: left;
 }
 
 .contact-image {
-    max-width: 60%; /* Reduced max-width */
+    max-width: 20%; /* Reduced max-width */
     height: auto;
     display: block;
     margin: 20px auto;
