@@ -251,7 +251,7 @@ footer {
     max-width: 20%; /* Reduced max-width */
     height: auto;
     display: block;
-    margin: 20px auto;
+    margin: 20px 100px;
 }
 
 .map-section {
