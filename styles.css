@@ -131,9 +131,9 @@ main {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    margin: 5px;
+    margin: 10px;
     flex: 1 1 30%;
-    max-width: 30%;
+    max-width: 20%;
     box-sizing: border-box;
 }
 
