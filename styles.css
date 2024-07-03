@@ -120,7 +120,7 @@ main {
     background-color: #f9f9f9;
     padding: 2px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 255, 0.2); /* Test styling on about us section, set purple, original values (0, 0, 255, 0.1) */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Test styling on about us section, set black, original values (0, 0, 255, 0.1) */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
