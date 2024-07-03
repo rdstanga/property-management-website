@@ -139,6 +139,7 @@ main {
 
 .about-us-box h3 {
     font-size: 1.2em; /* Reduced font size */
+    position: relative; /* Add this line to position the pseudo-element relative to h3 */
 }
 
 .about-us-box h3::before {
