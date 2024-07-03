@@ -144,11 +144,11 @@ main {
 
 .about-us-box h3::before {
     content: '*';
-    font-size: 22px; /* Make asterisks larger */
+    font-size: 30px; /* Make asterisks larger */
     color: #888888; /* Set asterisk color */
     position: absolute;
     top: -25px; /* Adjust asterisk vertical position */
-    left: -1px; /* Adjust asterisk horizontal position */
+    left: 1px; /* Adjust asterisk horizontal position */
 }
 
 .about-us-box p {
