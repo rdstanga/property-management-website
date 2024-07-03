@@ -147,8 +147,8 @@ main {
     font-size: 22px; /* Make asterisks larger */
     color: #666; /* Set asterisk color */
     position: absolute;
-    top: -18px; /* Adjust asterisk vertical position */
-    left: -2px; /* Adjust asterisk horizontal position */
+    top: -25px; /* Adjust asterisk vertical position */
+    left: -5px; /* Adjust asterisk horizontal position */
 }
 
 .about-us-box p {
