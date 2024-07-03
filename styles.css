@@ -145,10 +145,10 @@ main {
 .about-us-box h3::before {
     content: '*';
     font-size: 22px; /* Make asterisks larger */
-    color: #666; /* Set asterisk color */
+    color: #888888; /* Set asterisk color */
     position: absolute;
     top: -25px; /* Adjust asterisk vertical position */
-    left: -5px; /* Adjust asterisk horizontal position */
+    left: -1px; /* Adjust asterisk horizontal position */
 }
 
 .about-us-box p {
