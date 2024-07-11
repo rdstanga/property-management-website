@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const hamburgerBtn = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('nav ul');
+    const navMenu = document.querySelector('nav');
 
     if (hamburgerBtn && navMenu) {
         hamburgerBtn.addEventListener('click', () => {
