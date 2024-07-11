@@ -182,7 +182,7 @@ footer {
     padding: 10px;
     position: fixed;
     top: 10px;
-    left: 10px;
+    right: 10px; /* Positioning to the right */
     z-index: 1001; /* Ensure it is above other elements */
 }
 
@@ -208,7 +208,7 @@ footer {
     text-decoration: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: fixed;
-    left: 20px; /* Adjusted left position */
+    right: 20px; /* Positioning to the right */
     z-index: 1000;
 }
 
