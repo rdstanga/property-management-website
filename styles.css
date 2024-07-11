@@ -35,7 +35,7 @@ nav {
     top: 0;
     left: 0;
     height: 100%;
-    width: 100px;
+    width: 200px; /* Adjusted width for visibility */
     background-color: #0f81cd;
     padding-top: 60px;
     padding-left: 10px;
@@ -176,7 +176,7 @@ footer {
 
 /* Hamburger Menu Styles */
 .hamburger {
-    display: flex;
+    display: none; /* Hide by default */
     flex-direction: column;
     cursor: pointer;
     padding: 10px;
@@ -208,7 +208,7 @@ footer {
     text-decoration: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: fixed;
-    left: 10px;
+    left: 20px; /* Adjusted left position */
     z-index: 1000;
 }
 
@@ -242,7 +242,7 @@ footer {
     }
 
     .hamburger {
-        display: flex;
+        display: flex; /* Show hamburger on smaller screens */
     }
 
     .about-us-section {
