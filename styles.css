@@ -10,12 +10,6 @@ body {
     align-items: center;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-    overflow: visible;
-}
-
 /* Header Styles */
 header {
     background: #ffffff;
@@ -23,269 +17,133 @@ header {
     padding: 20px 0;
     text-align: center;
     border-bottom: 1px solid #ddd;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
 header h1 {
     margin: 0;
-}
-
-/* Navigation Styles */
-nav {
-    position: left;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 200px; /* Adjusted width for visibility */
-    background-color: #0f81cd;
-    padding-top: 60px;
-    padding-left: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1;
-    transition: transform 0.3s ease;
-    transform: translateX(-100%); /* Initially hide the nav */
-}
-
-nav.show {
-    transform: translateX(0); /* Show the nav when the 'show' class is added */
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
-
-nav ul li {
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-nav ul li a {
-    display: block;
-    width: 90%;
-    margin: 0 auto;
-    padding: 15px 20px;
+    flex-grow: 1;
     text-align: center;
-    background-color: #000000;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 25px;
-    border: 2px solid #000000;
-    /*box-shadow: inset 0 0 0 2px #ffffff;*/
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav ul li a:hover {
-    background-color: #555555;
-    color: #ffffff;
-}
-
-/* Main Content Styles */
-main {
-    padding: 20px 0;
-}
-
-.centered-section {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.centered-section img.house-sketch {
-    max-width: 5%;
-    width: auto;
-    height: auto; /* Maintains the aspect ratio of the image */
-    display: block; /* Ensures image behaves as a block element */
-    margin: 0 20; /* Centers the image horizontally */
-    margin-top: 20px; /* Add some top margin for spacing */
-    max-height: 300px; /* Added to limit the height */
-}
-
-.centered-section p {
-    font-size: 1em; /* Reduced font size */
-    color: #555;
-    margin-top: 10px;
-}
-
-.available-properties-title {
-    font-size: 1.5em; /* Reduced font size */
-    margin-bottom: 10px;
-}
-
-.available-properties-description {
-    font-size: 1em; /* Reduced font size */
-    color: #666;
-    margin-bottom: 20px;
-}
-
-/* About Us Section */
-.about-us-section {
-    background-color: #f9f9f9;
-    padding: 2px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Test styling on about us section, set black, original values (0, 0, 255, 0.1) */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.about-us-box {
-    background-color: #ffffff7a;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 10px;
-    flex: 1 1 30%;
-    width: 200px;
-    box-sizing: border-box;
-}
-
-.about-us-box h3 {
-    font-size: 1.2em; /* Reduced font size */
-    position: relative; /* Add this line to position the pseudo-element relative to h3 */
-}
-
-.about-us-box h3::before {
-    content: '*';
-    font-size: 28px; /* Make asterisks larger */
-    color: #888888; /* Set asterisk color */
-    position: absolute;
-    top: -27px; /* Adjust asterisk vertical position */
-    left: 1px; /* Adjust asterisk horizontal position */
-}
-
-.about-us-box p {
-    margin: 10px 0;
-    font-size: 0.9em; /* Reduced font size */
-}
-
-/* Footer Styles */
-footer {
-    background: #ffffff;
-    color: #333;
-    text-align: center;
-    padding: 10px 0;
-    border-top: 1px solid #ddd;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Hamburger Menu Styles */
 .hamburger {
-    display: none; /* Hide by default */
-    flex-direction: column;
+    font-size: 30px;
     cursor: pointer;
     padding: 10px;
     z-index: 1001; /* Ensure it is above other elements */
 }
 
-.hamburger div {
-    width: 30px; /* Adjust width as needed */
-    height: 3px;
-    background: #333;
-    margin: 5px 0;
-}
-
-/* Squircle Buttons */
-.squircle-button {
-    display: block;
-    width: 80px;
-    height: 80px;
-    background: #333;
-    color: white;
-    text-align: center;
-    line-height: 80px;
-    font-size: 16px;
-    border-radius: 30% / 50%;
-    margin: 20px auto;
-    text-decoration: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Sidenav Styles */
+.sidenav {
+    height: 100%;
+    width: 0;
     position: fixed;
-    right: 20px; /* Positioning to the right */
-    z-index: 1000;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
 }
 
-.squircle-button:hover {
-    background: #555;
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
-    nav {
-        transform: translateX(-100%); /* Ensure the nav is hidden initially */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
     }
-
-    nav.show {
-        transform: translateX(0); /* Show the nav when the 'show' class is added */
-    }
-    
-    nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: left;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .hamburger {
-        display: flex; /* Show hamburger on smaller screens */
-    }
-
-    .about-us-section {
-        flex-direction: column;
-    }
-
-    .about-us-box {
-        max-width: 100%;
+    .sidenav a {
+        font-size: 18px;
     }
 }
 
-/* Contact Page Styles */
-.contact-info {
-    padding: 20px;
-    font-size: 18px;
-    max-width: 600px;
-    margin: 0 0;
-    background-color: #f1f1f1;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: #333;
-}
-
-.contact-info p {
-    margin: 10px 0;
-}
-
-.hours-section {
-    margin: 20px 0;
-    text-align: left;
-}
-
-.contact-image {
-    max-width: 20%; /* Reduced max-width */
-    height: auto;
-    display: block;
-    margin: 20px 100px;
-}
-
-.map-section {
-    padding: 20px;
-    text-align: center;
-}
-
-#map {
-    height: 400px;
+/* Main Styles */
+main {
+    margin-top: 100px; /* Ensure content is not hidden behind the fixed header */
     width: 100%;
+    max-width: 1200px;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+}
+
+main p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+.about-us-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     margin-top: 20px;
+}
+
+.about-us-box {
+    flex: 1 1 30%;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-box h3 {
+    margin-top: 0;
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Dark and Light Mode */
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.light-mode {
+    background-color: #fff;
+    color: #333;
 }
