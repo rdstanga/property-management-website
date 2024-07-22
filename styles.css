@@ -81,7 +81,7 @@ main {
 }
 
 .centered-section img.House Sketch {
-    width: 80%; /* Increase the width to make the image larger */
+    width: 100%; /* Increase the width to make the image larger */
     max-width: none; /* Remove any previous max-width limitations */
     height: auto; /* Maintains the aspect ratio of the image */
     display: block; /* Ensures image behaves as a block element */
