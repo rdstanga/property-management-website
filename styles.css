@@ -38,7 +38,7 @@ nav {
     width: 200px; /* Adjusted width for visibility */
     background-color: #0f81cd;
     padding-top: 60px;
-    padding-left: 10px;
+    padding-left: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,7 +67,7 @@ nav ul li a {
     display: block;
     width: 90%;
     margin: 0 auto;
-    padding: 35px 70px;
+    padding: 15px 20px;
     text-align: center;
     background-color: #000000;
     color: #ffffff;
