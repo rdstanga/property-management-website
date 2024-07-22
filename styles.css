@@ -31,9 +31,9 @@ header h1 {
 
 /* Navigation Styles */
 nav {
-    position: fixed;
+    position: left;
     top: 0;
-    left: 5;
+    left: 0;
     height: 100%;
     width: 200px; /* Adjusted width for visibility */
     background-color: #0f81cd;
