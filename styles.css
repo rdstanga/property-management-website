@@ -180,9 +180,6 @@ footer {
     flex-direction: column;
     cursor: pointer;
     padding: 10px;
-    position: fixed;
-    top: 10px;
-    right: 10px; /* Positioning to the right */
     z-index: 1001; /* Ensure it is above other elements */
 }
 
