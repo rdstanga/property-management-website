@@ -82,8 +82,7 @@ main {
 
 .centered-section img.House Sketch {
     display: block; /* Ensures image behaves as a block element */
-    position: relative;
-    margin-left: 15;
+    margin-left: 15px;
     margin-right: auto;
     max-width: 85%;
     height: auto; /* Maintains the aspect ratio of the image */
