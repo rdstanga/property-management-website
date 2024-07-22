@@ -8,13 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         document.body.classList.add('light-mode');
     }
-
-    const hamburgerBtn = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('nav');
-
-    if (hamburgerBtn && navMenu) {
-        hamburgerBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('show');
-        });
-    }
 });
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
