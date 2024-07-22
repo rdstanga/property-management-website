@@ -86,7 +86,7 @@ main {
     margin-right: auto;
     max-width: 85%;
     height: auto; /* Maintains the aspect ratio of the image */
-    margin-top: 20px; /* Add some top margin for spacing */
+    margin-top: 25px; /* Add some top margin for spacing */
 }
 
 .centered-section p {
