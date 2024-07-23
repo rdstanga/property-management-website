@@ -107,8 +107,8 @@ main {
 
 /* About Us Section */
 .about-us-section {
-    background-color: #f9f9f9;
-    padding: 2px;
+    background-color: #801a1a;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Test styling on about us section, set black, original values (0, 0, 255, 0.1) */
     display: flex;
