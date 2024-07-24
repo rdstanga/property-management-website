@@ -123,19 +123,19 @@ main {
 } */
 
 .about-us-box {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 50px;
-    position: relative; /* Ensure grid is positioned correctly */
-    z-index: 2; /* Ensure grid items are above nav */
-    background-color: #1e1e1e; /* Dark background for About Us grid items */
-    padding: 20px;
+    background-color: #4f4f4f;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    color: #ffffff; /* Light text color for info grid items */
-}
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 calc(25% - 40px); /* Four boxes per row */
+    box-sizing: border-box;
+    max-width: calc(25% - 40px); /* Four boxes per row */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
 }
 
 .about-us-box h3 {
@@ -148,8 +148,9 @@ main {
     font-size: 28px; /* Make asterisks larger */
     color: #888888; /* Set asterisk color */
     position: absolute;
-    top: -27px; /* Adjust asterisk vertical position */
-    left: 1px; /* Adjust asterisk horizontal position */
+    top: 0; /* Adjust asterisk vertical position */
+    left: 5px; /* Adjust asterisk horizontal position */
+    transform: translateY(-50%);
 }
 
 .about-us-box p {
