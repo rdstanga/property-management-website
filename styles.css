@@ -76,13 +76,13 @@ main {
 
 .welcome-section {
     text-align: center; /* Align text in center of page */
-    max-width: 1200px; /* This controls the size of the house sketch on the home page */
+    max-width: 800px; /* This controls the size of the house sketch on the home page */
     margin: 0 auto;
 }
 
 .centered-section {
     text-align: center; /* Align text in center of page */
-    max-width: 1000px; /* This controls the size of the house sketch on the home page */
+    max-width: 1200px; /* This controls the size of the house sketch on the home page */
     margin: 0 auto;
 }
 
