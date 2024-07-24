@@ -131,6 +131,10 @@ main {
     flex: 1 1 calc(50% - 40px); /* Two boxes per row */
     box-sizing: border-box;
     max-width: calc(50% - 40px); /* Two boxes per row */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .about-us-box h3 {
