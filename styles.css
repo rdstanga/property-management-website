@@ -123,13 +123,14 @@ main {
 } */
 
 .about-us-box {
-    background-color: #8f8f8f61;
-    border-radius: 10px;
-    padding: 100px;
+    background-color: #4f4f4f;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     margin: 10px;
-    flex-wrap: wrap;
-    width: 50px;
-    justify-content: space-between;
+    flex: 1 1 calc(50% - 40px); /* Two boxes per row */
+    box-sizing: border-box;
+    max-width: calc(50% - 40px); /* Two boxes per row */
 }
 
 .about-us-box h3 {
