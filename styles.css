@@ -111,17 +111,30 @@ main {
     margin-bottom: 20px;
 }
 
+/* About Us Section */
+.about-us-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px; /* Adjust the width if needed */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fdfdfd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .about-us-box {
-    background-color: #c2c2c2;
+    background-color: #eaeaea;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    margin: 10px;
     box-sizing: content-box;
-    display: grid;
-    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    position:relative;
+    position: relative;
 }
 
 .about-us-box h3 {
@@ -136,7 +149,7 @@ main {
     position: absolute;
     top: 0; /* Adjust asterisk vertical position */
     left: 5px; /* Adjust asterisk horizontal position */
-    transform: translateY(-50%);
+    transform: translateY(-50%); /* Center the asterisk vertically */
 }
 
 .about-us-box p {
