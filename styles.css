@@ -78,7 +78,7 @@ main {
     text-align: center; /* Align text in center of page */
     font-family: 'Cardo', serif; /* Apply Cardo font */
     font-size: 24px; /* Adjust font size if needed */
-    color: #333; /* Adjust text color if needed */
+    color: #3e3e3e68; /* Adjust text color if needed */
     max-width: 500px;
     margin: 0 auto;
 }
@@ -95,6 +95,15 @@ main {
     height: auto; /* Maintains the aspect ratio of the image */
     display: block; /* Ensures image behaves as a block element */
     margin: 20px auto 0; /* Centers the image horizontally and adds top margin */
+}
+
+.decades-section p {
+    text-align: center; /* Align text in center of page */
+    font-family: 'Cardo', serif; /* Apply Cardo font */
+    font-size: 22px; /* Adjust font size if needed */
+    color: #3e3e3e68; /* Adjust text color if needed */
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 .centered-section p {
@@ -146,11 +155,12 @@ main {
 
 .about-us-box h3::before {
     content: '*';
+    font-family: 'Cardo', serif; /* Apply Cardo font */
     font-size: 28px; /* Make asterisks larger */
     color: #888888; /* Set asterisk color */
     position: absolute;
     top: 0; /* Adjust asterisk vertical position */
-    left: 5px; /* Adjust asterisk horizontal position */
+    left: 4px; /* Adjust asterisk horizontal position */
     transform: translateY(-50%); /* Center the asterisk vertically */
 }
 
