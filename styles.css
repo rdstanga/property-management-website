@@ -117,11 +117,11 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 10px;
-    box-sizing: border-box;
+    box-sizing: content-box;
     display: grid;
     align-items: stretch;
     text-align: center;
-    position: relative;
+    position:relative;
 }
 
 .about-us-box h3 {
