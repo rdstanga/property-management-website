@@ -111,17 +111,6 @@ main {
     margin-bottom: 20px;
 }
 
-/* About Us Section 
-.about-us-section {
-    background-color: #FDFDFD;
-    padding: 20px;
-    border-radius: 8px;
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); - Test styling on about us section, set black, original values (0, 0, 255, 0.1)
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-} */
-
 .about-us-box {
     background-color: #4f4f4f;
     border-radius: 8px;
@@ -130,7 +119,6 @@ main {
     margin: 10px;
     flex: 1 1 calc(25% - 40px); /* Four boxes per row */
     box-sizing: border-box;
-    max-width: calc(25% - 40px); /* Four boxes per row */
     display: flex;
     flex-direction: column;
     align-items: center;
