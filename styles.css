@@ -160,7 +160,7 @@ main {
     color: #888888; /* Set asterisk color */
     position: absolute;
     top: 0; /* Adjust asterisk vertical position */
-    left: 4px; /* Adjust asterisk horizontal position */
+    left: 0px; /* Adjust asterisk horizontal position */
     transform: translateY(-50%); /* Center the asterisk vertically */
 }
 
