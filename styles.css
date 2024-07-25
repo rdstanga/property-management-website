@@ -78,7 +78,7 @@ main {
     text-align: center; /* Align text in center of page */
     font-family: 'Cardo', serif; /* Apply Cardo font */
     font-size: 24px; /* Adjust font size if needed */
-    color: #20202068; /* Adjust text color if needed */
+    color: #202020f6; /* Adjust text color if needed */
     max-width: 500px;
     margin: 0 auto;
 }
