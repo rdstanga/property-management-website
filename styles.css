@@ -76,7 +76,10 @@ main {
 
 .welcome-section {
     text-align: center; /* Align text in center of page */
-    max-width: 500px; /* This controls the size of the house sketch on the home page */
+    font-family: 'Cardo', serif; /* Apply Cardo font */
+    font-size: 24px; /* Adjust font size if needed */
+    color: #333; /* Adjust text color if needed */
+    max-width: 500px;
     margin: 0 auto;
 }
 
