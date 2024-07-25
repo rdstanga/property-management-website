@@ -155,7 +155,7 @@ main {
 
 .about-us-box h3::before {
     content: '*';
-    font-family: 'Cardo', serif; /* Apply Cardo font */
+    font-family: 'Cardo', serif !important; /* Apply Cardo font */
     font-size: 28px; /* Make asterisks larger */
     color: #888888; /* Set asterisk color */
     position: absolute;
