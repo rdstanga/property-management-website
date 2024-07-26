@@ -104,7 +104,7 @@ main {
 section.centered-section p.decades-section {
     text-align: center;
     font-family: 'Cardo', serif;
-    font-size: 26px; /* Increase the font size */
+    font-size: 23px; /* Increase the font size */
     color: #202020f6;
     max-width: 500px;
     margin: 0 auto;
