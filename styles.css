@@ -81,7 +81,7 @@ main {
 .welcome-section {
     text-align: center; /* Align text in center of page */
     font-family: 'Cardo', serif; /* Apply Cardo font */
-    font-size: 24px; /* Adjust font size if needed */
+    font-size: 28px; /* Adjust font size if needed */
     color: #202020f6; /* Adjust text color if needed */
     max-width: 500px;
     margin: 0 auto;
@@ -104,7 +104,7 @@ main {
 section.centered-section p.decades-section {
     text-align: center;
     font-family: 'Cardo', serif;
-    font-size: 28px; /* Increase the font size */
+    font-size: 26px; /* Increase the font size */
     color: #202020f6;
     max-width: 500px;
     margin: 0 auto;
@@ -120,6 +120,8 @@ section.centered-section p + p {
     font-size: 1em; /* Reduced font size */
     color: #555;
     margin-top: 10px;
+    max-width: 700px; /* Adjust the max-width to control paragraph width */
+    margin: 0 auto; /* Center the paragraph */
 }
 
 .available-properties-title {
