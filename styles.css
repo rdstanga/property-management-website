@@ -162,8 +162,20 @@ section.centered-section p + p {
 }
 
 .about-us-box h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1.2em; /* Reduced font size */
     position: relative; /* Add this line to position the pseudo-element relative to h3 */
+
+    
+}
+
+.about-us-box h3 img.icon {
+    margin-left: 10px; /* Space between the text and icon */
+    width: 10px; /* Adjust icon size to match text */
+    height: 10px; /* Adjust icon size to match text */
+    order: 1; /* Ensure the icon is placed after the text */
 }
 
 .about-us-box h3::before {
