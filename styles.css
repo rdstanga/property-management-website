@@ -65,7 +65,7 @@ nav .closebtn {
 }
 
 nav a:first-child {
-    margin-top: 100px; /* Adjust the value as needed to create more space */
+    padding-top: 50px; /* Adjust the value as needed to create more space */
 }
 
 @media screen and (max-height: 450px) {
@@ -101,7 +101,8 @@ main {
     margin: 20px auto 0; /* Centers the image horizontally and adds top margin */
 }
 
-.decades-section p {
+.decades-section {
+    text-align: center; /* Align text in center of page */
     font-family: 'Cardo', serif; /* Apply Cardo font */
     font-size: 22px; /* Adjust font size if needed */
     color: #3e3e3e68; /* Adjust text color if needed */
