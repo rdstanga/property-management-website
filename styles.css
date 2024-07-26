@@ -65,7 +65,7 @@ nav .closebtn {
 }
 
 .nav-home-link {
-    margin-top: 30px; /* Adjust the value to create more space */
+    margin-top: 20px; /* Adjust the value to create more space */
 }
 
 @media screen and (max-height: 450px) {
@@ -101,14 +101,15 @@ main {
     margin: 20px auto 0; /* Centers the image horizontally and adds top margin */
 }
 
+/* Decades Section Styles */
 .decades-section {
-    text-align: center; /* Align text in center of page */
-    font-family: 'Cardo', serif; /* Apply Cardo font */
-    font-size: 100px; /* Adjust font size if needed */
-    color: #3e3e3e68; /* Adjust text color if needed */
+    text-align: center;
+    font-family: 'Cardo', serif;
+    font-size: 28px; /* Adjust the font size to make it larger */
+    color: #3e3e3e68;
     max-width: 500px;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Adjust the value to create more space */
 }
 
 .centered-section p {
