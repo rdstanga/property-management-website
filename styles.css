@@ -65,7 +65,7 @@ nav .closebtn {
 }
 
 nav a:first-child {
-    margin-top: 50px; /* Adjust the value as needed to create more space */
+    margin-top: 100px; /* Adjust the value as needed to create more space */
 }
 
 @media screen and (max-height: 450px) {
