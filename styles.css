@@ -64,7 +64,7 @@ nav .closebtn {
     margin-left: 50px;
 }
 
-nav a:first-child {
+nav a:first-of-type {
     padding-top: 50px; /* Adjust the value as needed to create more space */
 }
 
@@ -107,8 +107,7 @@ main {
     font-size: 22px; /* Adjust font size if needed */
     color: #3e3e3e68; /* Adjust text color if needed */
     max-width: 500px;
-    margin: 0 auto;
-    margin-bottom: 50px;
+    margin: 0 auto 50 auto;
 }
 
 .centered-section p {
