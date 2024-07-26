@@ -108,6 +108,7 @@ main {
     color: #3e3e3e68; /* Adjust text color if needed */
     max-width: 500px;
     margin: 0 auto;
+    margin-bottom: 50px;
 }
 
 .centered-section p {
