@@ -101,23 +101,25 @@ main {
     margin: 20px auto 0; /* Centers the image horizontally and adds top margin */
 }
 
-/* Decades Section Styles */
-.decades-section {
+section.centered-section p.decades-section {
     text-align: center;
     font-family: 'Cardo', serif;
-    font-size: 200px; /* Adjust the font size to make it larger */
+    font-size: 28px; /* Increase the font size */
     color: #3e3e3e68;
     max-width: 500px;
-    margin: 0;
-    margin-bottom: 30px; /* Adjust the value to create more space */
+    margin: 0 auto;
+    margin-bottom: 20px; /* Adjust the value to create more space */
+}
+
+/* Apply more spacing between paragraphs */
+section.centered-section p + p {
+    margin-top: 20px;
 }
 
 .centered-section p {
     font-size: 1em; /* Reduced font size */
     color: #555;
     margin-top: 10px;
-    max-width: 700px; /* Adjust the max-width to control paragraph width */
-    margin: 0 auto; /* Center the paragraph */
 }
 
 .available-properties-title {
