@@ -207,7 +207,7 @@ footer {
 }
 
 .hamburger div {
-    width: 30px; /* Adjust width as needed */
+    width: 25px; /* Adjust width as needed */
     height: 3px;
     background: #333;
     margin: 5px 0;
