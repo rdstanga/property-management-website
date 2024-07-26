@@ -64,6 +64,10 @@ nav .closebtn {
     margin-left: 50px;
 }
 
+nav a:first-child {
+    margin-top: 50px; /* Adjust the value as needed to create more space */
+}
+
 @media screen and (max-height: 450px) {
     nav {padding-top: 15px;}
     nav a {font-size: 18px;}
@@ -98,7 +102,6 @@ main {
 }
 
 .decades-section p {
-    text-align: center; /* Align text in center of page */
     font-family: 'Cardo', serif; /* Apply Cardo font */
     font-size: 22px; /* Adjust font size if needed */
     color: #3e3e3e68; /* Adjust text color if needed */
@@ -110,6 +113,8 @@ main {
     font-size: 1em; /* Reduced font size */
     color: #555;
     margin-top: 10px;
+    max-width: 700px; /* Adjust the max-width to control paragraph width */
+    margin: 0 auto; /* Center the paragraph */
 }
 
 .available-properties-title {
