@@ -178,17 +178,17 @@ section.centered-section p + p {
     order: 1; /* Ensure the icon is placed after the text */
 }
 
-.about-us-box h3::before {
+/* .about-us-box h3::before {
     content: '*';
-    font-family: 'Cardo', serif !important; /* Apply Cardo font */
-    font-size: 28px; /* Make asterisks larger */
-    color: #888888; /* Set asterisk color */
+    font-family: 'Cardo', serif !important; Apply Cardo font
+    font-size: 28px; /* Make asterisks larger
+    color: #888888; /* Set asterisk color
     position: absolute;
-    top: 0; /* Adjust asterisk vertical position */
-    left: 0px; /* Adjust asterisk horizontal position */
-    transform: translateY(-50%); /* Center the asterisk vertically */
+    top: 0; /* Adjust asterisk vertical position
+    left: 0px; /* Adjust asterisk horizontal position
+    transform: translateY(-50%); /* Center the asterisk vertically
 }
-
+*/
 .about-us-box p {
     margin: 10px 0;
     font-size: 0.9em; /* Reduced font size */
