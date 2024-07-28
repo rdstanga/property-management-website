@@ -165,17 +165,16 @@ section.centered-section p + p {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2em; /* Reduced font size */
-    position: relative; /* Add this line to position the pseudo-element relative to h3 */
-
-    
+    font-size: 1.2em;
+    position: relative;
 }
 
 .about-us-box h3 img.icon {
     margin-left: 10px; /* Space between the text and icon */
-    width: 85px; /* Adjust icon size to match text */
-    height: 85px; /* Adjust icon size to match text */
+    width: 16px; /* Adjust icon size to be smaller */
+    height: 16px; /* Adjust icon size to be smaller */
     order: 1; /* Ensure the icon is placed after the text */
+    flex-shrink: 0; /* Prevent the icon from shrinking */
 }
 
 /* .about-us-box h3::before {
