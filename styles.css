@@ -170,7 +170,7 @@ section.centered-section p + p {
 }
 
 .icon {
-    width: 30px; /* Adjust size as needed */
+    width: 85px; /* Adjust size as needed */
     height: auto;
     margin-left: 10px; /* Adjust this value to push the icon further right */
 }
