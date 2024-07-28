@@ -162,33 +162,19 @@ section.centered-section p + p {
 }
 
 .about-us-box h3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 1.2em; /* Reduced font size */
     position: relative; /* Add this line to position the pseudo-element relative to h3 */
-
-    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.about-us-box h3 img.icon {
-    margin-left: 10px; /* Space between the text and icon */
-    width: 85px; /* Adjust icon size to match text */
-    height: 85px; /* Adjust icon size to match text */
-    order: 1; /* Ensure the icon is placed after the text */
+.icon {
+    width: 30px; /* Adjust size as needed */
+    height: auto;
+    margin-left: 10px; /* Adjust this value to push the icon further right */
 }
 
-/* .about-us-box h3::before {
-    content: '*';
-    font-family: 'Cardo', serif !important; Apply Cardo font
-    font-size: 28px; /* Make asterisks larger
-    color: #888888; /* Set asterisk color
-    position: absolute;
-    top: 0; /* Adjust asterisk vertical position
-    left: 0px; /* Adjust asterisk horizontal position
-    transform: translateY(-50%); /* Center the asterisk vertically
-}
-*/
 .about-us-box p {
     margin: 10px 0;
     font-size: 0.9em; /* Reduced font size */
