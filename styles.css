@@ -136,6 +136,26 @@ section.centered-section p + p {
     margin-bottom: 20px;
 }
 
+.property-listing {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.zillow-logo {
+    width: 150px;
+    height: auto;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+.zillow-logo:hover {
+    transform: scale(1.1);
+}
+
 /* About Us Section */
 .about-us-section {
     display: grid;
