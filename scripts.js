@@ -9,9 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.add('dark-mode');
         if (officeImage) {
             officeImage.src = 'Website Images/OfficeNight.jpg';
-            if (houseSketchImage) {
-                houseSketchImage.src = 'Website Images/HouseDark.png';
-            }
+        }
+        if (houseSketchImage) {
+            houseSketchImage.src = 'Website Images/HouseDark.png';
+        }
     } else {
         document.body.classList.add('light-mode');
         if (officeImage) {
