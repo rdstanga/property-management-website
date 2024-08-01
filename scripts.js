@@ -2,11 +2,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const hour = new Date().getHours();
     const nightStart = 19;
     const nightEnd = 7;
+    const officeImage = document.getElementById('office-image');
+    const houseSketchImage = document.getElementById('house-sketch');
 
     if (hour >= nightStart || hour < nightEnd) {
         document.body.classList.add('dark-mode');
+        if (officeImage) {
+            officeImage.src = 'Website Images/OfficeNight.jpg';
+            if (houseSketchImage) {
+                houseSketchImage.src = 'Website Images/HouseDark.png';
+            }
     } else {
         document.body.classList.add('light-mode');
+        if (officeImage) {
+            officeImage.src = 'Website Images/OfficeDay.jpg';
+        }
+        if (houseSketchImage) {
+            houseSketchImage.src = 'Website Images/HouseLight.png';
+        }
     }
 
     const hamburgerBtn = document.querySelector('.hamburger');
