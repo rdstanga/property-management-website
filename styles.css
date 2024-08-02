@@ -79,75 +79,125 @@ main {
 }
 
 .welcome-section {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.welcome-section p {
+    text-align: center; /* Align text in center of page */
     font-family: 'Cardo', serif; /* Apply Cardo font */
-    font-size: 2em;
-    color: #333;
-    margin: 0;
+    font-size: 28px; /* Adjust font size if needed */
+    color: #202020f6; /* Adjust text color if needed */
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 .centered-section {
+    text-align: center; /* Align text in center of page */
+    max-width: 1200px; /* This controls the size of the house sketch on the home page */
+    margin: 0 auto;
+}
+
+.centered-section img.House Sketch {
+    width: 100%; /* Increase the width to make the image larger */
+    max-width: none; /* Remove any previous max-width limitations */
+    height: auto; /* Maintains the aspect ratio of the image */
+    display: block; /* Ensures image behaves as a block element */
+    margin: 20px auto 0; /* Centers the image horizontally and adds top margin */
+}
+
+section.centered-section p.decades-section {
     text-align: center;
+    font-family: 'Cardo', serif;
+    font-size: 23px; /* Increase the font size */
+    color: #202020f6;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 20px; /* Adjust the value to create more space */
 }
 
-.centered-section img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.centered-section .decades-section {
-    font-family: 'Cardo', serif; /* Apply Cardo font */
-    font-size: 1.5em;
-    margin-bottom: 10px;
+/* Apply more spacing between paragraphs */
+section.centered-section p + p {
+    margin-top: 20px;
 }
 
 .centered-section p {
-    font-size: 1em;
+    font-size: 1em; /* Reduced font size */
+    color: #555;
+    margin-top: 10px;
+    max-width: 700px; /* Adjust the max-width to control paragraph width */
+    margin: 0 auto; /* Center the paragraph */
     line-height: 1.5;
+}
+
+.available-properties-title {
+    font-size: 1.5em; /* Reduced font size */
+    margin-bottom: 10px;
+}
+
+.available-properties-description {
+    font-size: 1em; /* Reduced font size */
     color: #666;
-    max-width: 600px;
-    margin: 0 auto 20px;
+    margin-bottom: 20px;
+}
+
+.available-section {
+    text-align: center; /* Align text in center of page */
+    font-family: 'Cardo', serif; /* Apply Cardo font */
+    font-size: 28px; /* Adjust font size if needed */
+    color: #202020f6; /* Adjust text color if needed */
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.zillow-logo {
+    width: 150px;
+    height: auto;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+.zillow-logo:hover {
+    transform: scale(1.1);
 }
 
 /* About Us Section */
 .about-us-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px; /* Adjust the width if needed */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
 }
 
 .about-us-box {
-    width: 45%;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-    text-align: center;
+    background-color: #eaeaea;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    position: relative;
 }
 
 .about-us-box h3 {
-    font-family: 'Cardo', serif; /* Apply Cardo font */
-    font-size: 1.5em;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.about-us-box p {
-    font-size: 1em;
-    line-height: 1.5;
-    color: #666;
+    font-size: 1.2em; /* Reduced font size */
+    position: relative; /* Add this line to position the pseudo-element relative to h3 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .icon {
-    width: 50px;
+    width: 85px; /* Adjust size as needed */
     height: auto;
-    vertical-align: middle;
-    margin-left: 10px;
+    margin-left: 10px; /* Adjust this value to push the icon further right */
+}
+
+.about-us-box p {
+    margin: 10px 0;
+    font-size: 0.9em; /* Reduced font size */
 }
 
 /* Footer Styles */
@@ -181,6 +231,29 @@ footer {
     margin: 5px 0;
 }
 
+/* Squircle Buttons */
+.squircle-button {
+    display: block;
+    width: 80px;
+    height: 80px;
+    background: #333;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    font-size: 16px;
+    border-radius: 30% / 50%;
+    margin: 20px auto;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    right: 20px; /* Positioning to the right */
+    z-index: 1000;
+}
+
+.squircle-button:hover {
+    background: #555;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
     nav {
@@ -209,4 +282,51 @@ footer {
     .hamburger {
         display: flex; /* Show hamburger on smaller screens */
     }
+
+    .about-us-section {
+        flex-direction: column;
+    }
+
+    .about-us-box {
+        max-width: 100%;
+    }
+}
+
+/* Contact Page Styles */
+.contact-info {
+    padding: 20px;
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 0;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.hours-section {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.contact-image {
+    max-width: 20%; /* Reduced max-width */
+    height: auto;
+    display: block;
+    margin: 20px 100px;
+}
+
+.map-section {
+    padding: 20px;
+    text-align: center;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    margin-top: 20px;
 }
