@@ -200,6 +200,16 @@ section.centered-section p + p {
     font-size: 0.9em; /* Reduced font size */
 }
 
+.local-section {
+    font-family: 'Cardo', serif; /* Apply Cardo font */
+    font-size: 1.2em; /* Adjust font size if needed */
+    color: #202020f6; /* Adjust text color if needed */
+    position: relative; /* Add this line to position the pseudo-element relative to h3 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 /* Footer Styles */
 footer {
     background: #ffffff; /* Set background color to white */
