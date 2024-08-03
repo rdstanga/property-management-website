@@ -181,12 +181,11 @@ section.centered-section p + p {
     position: relative;
 }
 
-.about-us-box h3 {
-    font-size: 1.2em; /* Reduced font size */
-    position: relative; /* Add this line to position the pseudo-element relative to h3 */
+.about-us-title {
+    font-family: 'Cardo', serif; /* Apply Cardo font */
+    font-size: 1.8em; /* Increase the font size */
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .icon {
@@ -198,16 +197,6 @@ section.centered-section p + p {
 .about-us-box p {
     margin: 10px 0;
     font-size: 0.9em; /* Reduced font size */
-}
-
-.local-section {
-    font-family: 'Cardo', serif; /* Apply Cardo font */
-    font-size: 1.2em; /* Adjust font size if needed */
-    color: #202020f6; /* Adjust text color if needed */
-    position: relative; /* Add this line to position the pseudo-element relative to h3 */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 /* Footer Styles */
