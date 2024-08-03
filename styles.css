@@ -183,7 +183,7 @@ section.centered-section p + p {
 
 .about-us-title {
     font-family: 'Cardo', serif; /* Apply Cardo font */
-    font-size: 1.8em; /* Increase the font size */
+    font-size: 1.2em; /* Increase the font size */
     display: flex;
     align-items: center;
 }
