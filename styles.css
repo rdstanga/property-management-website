@@ -133,7 +133,7 @@ section.centered-section p + p {
 }
 
 .available-properties-description {
-    font-size: 1em; /* Reduced font size */
+    font-size: 25px; /* Reduced font size */
     color: #202020f6; /* Adjust text color */
     margin-bottom: 20px;
     font-family: 'Cardo', serif; /* Apply Cardo font */
