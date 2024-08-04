@@ -186,6 +186,8 @@ section.centered-section p + p {
     font-size: 1.2em; /* Increase the font size */
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Ensures the title takes full width for alignment */
 }
 
 .icon {
