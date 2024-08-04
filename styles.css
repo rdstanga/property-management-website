@@ -126,7 +126,7 @@ section.centered-section p + p {
 }
 
 .available-properties-title {
-    font-size: 25px; /* Adjust font size */
+    font-size: 28px; /* Adjust font size */
     margin-bottom: 10px;
     color: #202020f6; /* Adjust text color */
     font-family: 'Cardo', serif; /* Apply Cardo font */
@@ -146,6 +146,7 @@ section.centered-section p + p {
     color: #202020f6; /* Adjust text color if needed */
     max-width: 500px;
     margin: 0 auto;
+    margin-bottom: 50px;
 }
 
 .property-description {
