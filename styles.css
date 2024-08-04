@@ -128,6 +128,8 @@ section.centered-section p + p {
 .available-properties-title {
     font-size: 1.5em; /* Reduced font size */
     margin-bottom: 10px;
+    color: #202020f6; /* Adjust text color */
+    font-family: 'Cardo', serif; /* Apply Cardo font */
 }
 
 .available-properties-description {
