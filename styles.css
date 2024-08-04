@@ -134,8 +134,9 @@ section.centered-section p + p {
 
 .available-properties-description {
     font-size: 1em; /* Reduced font size */
-    color: #666;
+    color: #202020f6; /* Adjust text color */
     margin-bottom: 20px;
+    font-family: 'Cardo', serif; /* Apply Cardo font */
 }
 
 .available-section {
@@ -145,6 +146,12 @@ section.centered-section p + p {
     color: #202020f6; /* Adjust text color if needed */
     max-width: 500px;
     margin: 0 auto;
+}
+
+.property-description {
+    font-size: 0.9em; /* Reduced font size */
+    color: #202020f6; /* Adjust text color */
+    font-family: 'Helvetica', sans-serif; /* Apply Helvetica font */
 }
 
 .zillow-logo {
