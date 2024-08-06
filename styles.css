@@ -135,7 +135,7 @@ section.centered-section p + p {
 .available-properties-description {
     font-size: 22px; /* Reduced font size */
     color: #202020f6; /* Adjust text color */
-    margin-bottom: 70px;
+    margin-bottom: 100px;
     font-family: 'Cardo', serif; /* Apply Cardo font */
 }
 
@@ -160,7 +160,7 @@ section.centered-section p + p {
     font-family: 'Helvetica', sans-serif; /* Apply Helvetica font */
     width: 150px;
     height: auto;
-    margin-top: 10px;
+    margin-top: 5px;
     transition: transform 0.3s ease;
 }
 
