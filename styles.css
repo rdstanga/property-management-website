@@ -153,7 +153,7 @@ section.centered-section p + p {
     font-size: 18px; /* Reduced font size */
     color: #202020f6; /* Adjust text color */
     font-family: 'Helvetica', sans-serif; /* Apply Helvetica font */
-    margin-bottom: 100px;
+    margin-bottom: 10px;
 }
 
 .zillow-logo {
