@@ -23,24 +23,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Hamburger Menu functionality
     const hamburgerBtn = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('nav');
+    const navMenu = document.querySelector('nav ul');
+    const nav = document.querySelector('nav'); // Select nav for outside click
 
     if (hamburgerBtn && navMenu) {
         hamburgerBtn.addEventListener('click', () => {
-            if (navMenu.style.width === "250px") {
-                navMenu.style.width = "0";
-            } else {
-                navMenu.style.width = "250px";
-            }
+            navMenu.classList.toggle('show'); // Toggle 'show' class
         });
 
         // Add event listener to close button inside the nav
         const closeBtn = navMenu.querySelector('.closebtn');
         if (closeBtn) {
             closeBtn.addEventListener('click', () => {
-                navMenu.style.width = "0";
+                navMenu.classList.remove('show');
             });
         }
+
+        // Close menu when clicking outside the nav
+        document.addEventListener('click', (e) => {
+            if (!nav.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+                navMenu.classList.remove('show');
+            }
+        });
     }
 });

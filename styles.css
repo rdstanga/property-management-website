@@ -272,6 +272,7 @@ footer {
 @media (max-width: 768px) {
     nav {
         transform: translateX(-100%); /* Ensure the nav is hidden initially */
+        transition: transform 0.3s ease-in-out;
     }
 
     nav.show {
@@ -282,11 +283,18 @@ footer {
         display: none;
         flex-direction: column;
         width: 100%;
+        overflow: hidden;
         text-align: left;
+        transition: width 0.3s ease;
+
     }
 
     nav ul.active {
         display: flex;
+    }
+
+    nav ul.show {
+        width:250px; /* Slides out*/
     }
 
     nav ul li {
@@ -296,12 +304,36 @@ footer {
     .hamburger {
         display: flex; /* Show hamburger on smaller screens */
     }
+    
 
     .about-us-section {
         flex-direction: column;
     }
 
+    /* Updated image size for mobile */
+    .centered-section img.house-sketch {
+        width: 90%; /* Smaller size on mobile */
+        max-width: 400px;
+        height: auto;
+    }
+
+    /* Updated paragraph width and spacing for mobile */
+    .centered-section p {
+        max-width: 90%;
+        word-wrap: break-word;
+        margin: 0 auto 20px;
+        font-size: 0.9em;
+        line-height: 1.4;
+    }
+
+    /* Adjusted About Us section for mobile */
+    .about-us-section {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 15px;
+    }
+
     .about-us-box {
+        padding: 15px;
         max-width: 100%;
     }
 }
