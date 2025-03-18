@@ -271,12 +271,13 @@ footer {
 /* Media Queries */
 @media (max-width: 768px) {
     nav {
-        transform: translateX(-100%); /* Ensure the nav is hidden initially */
+        width: 0;
+        overflow: hidden;
         transition: transform 0.3s ease-in-out;
     }
 
     nav.show {
-        transform: translateX(0); /* Show the nav when the 'show' class is added */
+        width: 250px; /* Slides out */
     }
     
     nav ul {
