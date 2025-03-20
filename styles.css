@@ -32,15 +32,20 @@ header h1 {
 /* Navigation Styles */
 nav {
     height: 100%;
-    width: 0;
+    width: 250px; /* Default width for the menu */
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
     background-color: #000000;
     overflow-x: hidden;
-    transition: 0.5s;
+    transform: translateX(-100%); /* Hide by default */
+    transition: transform 0.3s ease-in-out; /* Smooth slide-in */
     padding-top: 60px;
+}
+
+nav.show {
+    transform: translateX(0); /* Slide in smoothly */
 }
 
 nav a {
@@ -69,8 +74,12 @@ nav .closebtn {
 }
 
 @media screen and (max-height: 450px) {
-    nav {padding-top: 15px;}
-    nav a {font-size: 18px;}
+    nav {
+        padding-top: 15px;
+    }
+    nav a {
+        font-size: 18px;
+    }
 }
 
 /* Main Content Styles */
@@ -125,6 +134,7 @@ section.centered-section p + p {
     line-height: 1.5;
 }
 
+/* Available Properties Section */
 .available-properties-title {
     font-size: 28px; /* Adjust font size */
     margin-bottom: 2px;
@@ -149,6 +159,7 @@ section.centered-section p + p {
     margin-bottom: 100px;
 }
 
+/* Property Description */
 .property-description {
     font-size: 18px; /* Reduced font size */
     color: #202020f6; /* Adjust text color */
@@ -199,14 +210,13 @@ section.centered-section p + p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%; /* Ensures the title takes full width for alignment */
+    width: 100%;
 }
 
 .icon {
     width: 85px; /* Adjust size as needed */
     height: auto;
-    margin-left: 90px;  /* Adjust this value to push the icon further right */
-    
+    margin-left: 90px; /* Adjust this value to push the icon further right */
 }
 
 .about-us-box p {
@@ -270,67 +280,23 @@ footer {
 
 /* Media Queries */
 @media (max-width: 768px) {
-    nav {
-        width: 0;
-        overflow: hidden;
-        transition: width 0.3s ease-in-out;
-    }
-
-    nav.show {
-        width: 250px; /* Slides out */
-    }
-    
-    nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        overflow: hidden;
-        text-align: left;
-        transition: width 0.3s ease;
-
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
-    nav ul.show {
-        width:250px; /* Slides out*/
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .hamburger {
-        display: flex; /* Show hamburger on smaller screens */
-    }
-    
-
     .about-us-section {
-        flex-direction: column;
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 15px;
     }
 
-    /* Updated image size for mobile */
     .centered-section img.house-sketch {
         width: 90%; /* Smaller size on mobile */
         max-width: 400px;
         height: auto;
     }
 
-    /* Updated paragraph width and spacing for mobile */
     .centered-section p {
         max-width: 90%;
         word-wrap: break-word;
         margin: 0 auto 20px;
         font-size: 0.9em;
         line-height: 1.4;
-    }
-
-    /* Adjusted About Us section for mobile */
-    .about-us-section {
-        grid-template-columns: 1fr; /* Single column on mobile */
-        gap: 15px;
     }
 
     .about-us-box {
