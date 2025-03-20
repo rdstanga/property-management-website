@@ -25,27 +25,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Hamburger Menu functionality
     const hamburgerBtn = document.querySelector('.hamburger');
-    const nav = document.querySelector('nav'); // Select the nav, not the ul
+    const nav = document.querySelector('#mySidenav'); // Select nav with ID
     const navMenu = document.querySelector('nav ul'); // Select ul for reference, but not toggling this
+
+    // Ensure nav is hidden initially without visible flicker
+    if (nav) {
+        nav.style.visibility = 'hidden';
+        setTimeout(() => {
+            nav.style.visibility = 'visible'; // Make nav visible after page load
+        }, 0);
+    }
 
     if (hamburgerBtn && nav) {
         hamburgerBtn.addEventListener('click', () => {
-            nav.classList.toggle('show'); // Toggle 'show' class on nav
+            if (nav.style.transform === 'translateX(0px)') {
+                closeNav(); // Close if already open
+            } else {
+                openNav(); // Open if closed
+            }
         });
 
         // Add event listener to close button inside the nav
         const closeBtn = document.querySelector('.closebtn');
         if (closeBtn) {
             closeBtn.addEventListener('click', () => {
-                nav.classList.remove('show');
+                closeNav();
             });
         }
 
         // Close menu when clicking outside the nav
         document.addEventListener('click', (e) => {
             if (!nav.contains(e.target) && !hamburgerBtn.contains(e.target)) {
-                nav.classList.remove('show');
+                closeNav();
             }
         });
+    }
+
+    // Open nav function
+    function openNav() {
+        nav.style.transform = 'translateX(0)';
+    }
+
+    // Close nav function
+    function closeNav() {
+        nav.style.transform = 'translateX(-100%)';
     }
 });
