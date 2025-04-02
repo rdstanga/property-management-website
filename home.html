@@ -25,7 +25,7 @@
     </header>
     
     <!-- Hamburger Menu Button -->
-    <div class="hamburger" onclick="toggleNav()">
+    <div class="hamburger">
         <div></div>
         <div></div>
         <div></div>
@@ -33,7 +33,7 @@
     
     <!-- Navigation -->
     <nav id="mySidenav" class="sidenav" style="transform: translateX(-100%); visibility: hidden;">
-        <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+        <a href="javascript:void(0)" class="closebtn">&times;</a>
         <a href="index.html" class="nav-home-link">Home</a>
         <a href="faq.html">FAQ</a>
         <a href="available-properties.html">Vacancies</a>
@@ -46,7 +46,7 @@
             <p>Welcome Home</p>
         </section>
         <section class="centered-section">
-            <img src="Website Images/HouseLight.png" alt="House Sketch" class="house-sketch" style="width:100%">
+            <img src="Website Images/HouseLight.png" alt="House Sketch" class="house-sketch" id="house-sketch" style="width:100%">
             <p class="decades-section">Decades of Tradition</p>
             <p>We are Stanga & Sons LLC. We've served the Thibodaux area for years. Whether you're searching for a large family home, or a cozy studio, we're sure we have the perfect space for you.</p>
         </section>
@@ -69,7 +69,7 @@
                 <h3 class="about-us-title">
                     Assortment of Choices <img src="Website Images/ChoiceGlyph.jpg" alt="Assortment Icon" class="icon">
                 </h3>
-                <p>Our homes come in many sizes, from four bedroom houses to studio apartments. Whether you're looking for a house, apartment, or mobile home, we have the perfect home for your needs.</p>
+                <p>Our homes come in many sizes, from four-bedroom houses to studio apartments. Whether you're looking for a house, apartment, or mobile home, we have the perfect home for your needs.</p>
             </div>
             <div class="about-us-box">
                 <h3 class="about-us-title">
@@ -85,28 +85,6 @@
         <p>&copy; 2024 Stanga & Sons LLC. All rights reserved.</p>
     </footer>
 
-    <script>
-        // Show nav properly after DOM loads
-        document.addEventListener('DOMContentLoaded', () => {
-            const nav = document.getElementById('mySidenav');
-            nav.style.visibility = 'visible';
-        });
-
-        // Open nav
-        function openNav() {
-            document.getElementById("mySidenav").style.transform = "translateX(0)";
-            const nav = document.getElementById("mySidenav");
-            if (nav.style.transform === "translateX(0px)") {
-                nav.style.transform = "translateX(-100%)";
-            } else {
-                nav.style.transform = "translateX(0)";
-            }
-        }
-
-        // Close nav
-        function closeNav() {
-            document.getElementById("mySidenav").style.transform = "translateX(-100%)";
-        }
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>

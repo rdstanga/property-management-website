@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const officeImage = document.getElementById('office-image');
     const houseSketchImage = document.getElementById('house-sketch');
     const hamburgerBtn = document.querySelector('.hamburger');
-    const nav = document.querySelector('#mySidenav'); // Select nav with ID
+    const nav = document.getElementById("mySidenav");
 
     // Remove previous mode to prevent class stacking
     document.body.classList.remove('dark-mode', 'light-mode');
@@ -46,9 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Ensure nav is hidden initially (No flicker if hidden in CSS)
+    // Ensure nav is visible after DOM loads
     if (nav) {
-        nav.style.visibility = 'visible'; // Make nav visible after load
+        nav.style.visibility = 'visible';
     }
 
     // Hamburger Menu functionality
@@ -58,31 +58,27 @@ document.addEventListener('DOMContentLoaded', () => {
         // Add event listener to close button inside the nav
         const closeBtn = document.querySelector('.closebtn');
         if (closeBtn) {
-            closeBtn.addEventListener('click', () => {
-                closeNav();
-            });
+            closeBtn.addEventListener('click', closeNav);
         }
 
         // Close menu when clicking outside the nav
         document.addEventListener('click', (e) => {
-            if (nav && !nav.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+            if (!nav.contains(e.target) && !hamburgerBtn.contains(e.target)) {
                 closeNav();
             }
         });
     }
 
     function toggleNav() {
-        const nav = document.getElementById("mySidenav");
-        if (nav.style.transform === "translateX(0px)") {
-            nav.style.transform = "translateX(-100%)";
-        } else {
+        const computedStyle = window.getComputedStyle(nav);
+        if (computedStyle.transform === "none" || computedStyle.transform === "matrix(1, 0, 0, 1, -100, 0)") {
             nav.style.transform = "translateX(0)";
+        } else {
+            nav.style.transform = "translateX(-100%)";
         }
     }
 
-    // Close nav function
     function closeNav() {
-        document.getElementById("mySidenav").style.transform = "translateX(-100%)";
+        nav.style.transform = "translateX(-100%)";
     }
-    
 });

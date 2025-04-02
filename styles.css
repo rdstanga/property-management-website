@@ -379,7 +379,9 @@ footer {
         color: #ffffff;
     }
 
-    .house-sketch {
-        content: url("Website Images/HouseDark.png"); /* Switch to dark mode image */
+    @media (prefers-color-scheme: dark) {
+        .house-sketch {
+            content: url("Website Images/HouseDark.png");
+        }
     }
 }
