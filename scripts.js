@@ -77,17 +77,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Open nav function
-    function openNav() {
-        if (nav) {
-            nav.style.transform = 'translateX(0)';
-        }
+
+    function toggleNav() {
+        const nav = document.getElementById("mySidenav");
+        nav.classList.toggle("open");
     }
 
     // Close nav function
     function closeNav() {
-        if (nav) {
-            nav.style.transform = 'translateX(-100%)';
-        }
+    document.getElementById("mySidenav").classList.remove("open");
     }
+    
 });
