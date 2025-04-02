@@ -53,13 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Hamburger Menu functionality
     if (hamburgerBtn && nav) {
-        hamburgerBtn.addEventListener('click', () => {
-            if (nav.style.transform === 'translateX(0px)') {
-                closeNav(); // Close if already open
-            } else {
-                openNav(); // Open if closed
-            }
-        });
+        hamburgerBtn.addEventListener('click', toggleNav);
 
         // Add event listener to close button inside the nav
         const closeBtn = document.querySelector('.closebtn');
@@ -77,7 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-
     function toggleNav() {
         const nav = document.getElementById("mySidenav");
         nav.classList.toggle("open");
@@ -85,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Close nav function
     function closeNav() {
-    document.getElementById("mySidenav").classList.remove("open");
+        document.getElementById("mySidenav").classList.remove("open");
     }
     
 });
