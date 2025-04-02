@@ -73,12 +73,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function toggleNav() {
         const nav = document.getElementById("mySidenav");
-        nav.classList.toggle("open");
+        if (nav.style.transform === "translateX(0px)") {
+            nav.style.transform = "translateX(-100%)";
+        } else {
+            nav.style.transform = "translateX(0)";
+        }
     }
 
     // Close nav function
     function closeNav() {
-        document.getElementById("mySidenav").classList.remove("open");
+        document.getElementById("mySidenav").style.transform = "translateX(-100%)";
     }
     
 });
