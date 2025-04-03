@@ -353,14 +353,14 @@ footer {
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #162030; /* Dark navy background */
-        color: #ffffff; /* Light text */
+        color: #ffffff;            /* Light text */
     }
-
+    
     header, footer {
         background-color: #1e1e1e; /* Darker header and footer */
         color: #ffffff;
     }
-
+    
     .sidenav {
         height: 100%;
         width: 250px;
@@ -375,97 +375,43 @@ footer {
         padding-top: 60px;
         visibility: visible;
     }
-
-    .hamburger div {
-        width: 25px; /* Adjust width as needed */
-        height: 3px;
-        background: #ffffff;
-        margin: 5px 0;
-    }
-
     .sidenav.open {
         transform: translateX(0);
     }
-
-    .about-us-box {
-        background-color: #2a2a2a;
+    
+    /* Ensure nav links are always white */
+    nav a {
         color: #ffffff;
     }
-
-    @media (prefers-color-scheme: dark) {
-        body {
-            background-color: #162030; /* Dark navy background */
-            color: #ffffff; /* Light text */
-        }
     
-        header, footer {
-            background-color: #162030; /* Darker header and footer */
-            color: #ffffff;
-        }
+    /* Force welcome text and other text in the centered-section to white */
+    .welcome-section p,
+    .centered-section p.decades-section,
+    .centered-section p {
+        color: #ffffff !important;
+    }
     
-        /* Navigation (sidenav) styling */
-        .sidenav {
-            height: 100%;
-            width: 250px;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #000000;
-            overflow-x: hidden;
-            transform: translateX(-100%);
-            transition: transform 0.3s ease-in-out;
-            padding-top: 60px;
-            visibility: visible;
-        }
+    /* Change the background of the about-us section (the white box) */
+    .about-us-section {
+        background-color: #162030; /* Matches the page background */
+    }
     
-        .sidenav.open {
-            transform: translateX(0);
-        }
+    /* Update the about-us boxes to a complementary color */
+    .about-us-box {
+        background-color: #28333A; /* Suggested complementary color */
+        color: #ffffff;
+    }
     
-        /* Ensure nav links are always white */
-        nav a {
-            color: #ffffff;
-        }
+    /* Update the house sketch image to your dark mode version */
+    .house-sketch {
+        content: url("Website Images/HouseDarkMode.png");
+    }
     
-        /* Force welcome text to white */
-        .welcome-section p,
-        .centered-section p.decades-section,
-        .centered-section p {
-            color: #ffffff !important;
-        }
-    
-        /* Change the background of the about-us section */
-        .about-us-section {
-            background-color: #162030; /* Matches the page background */
-        }
-    
-        /* Update the about-us boxes to a complementary color */
-        .about-us-box {
-            background-color: #28333A; /* Suggested complementary color */
-            color: #ffffff;
-        }
-    
-        /* Update the house sketch image to your dark mode version */
-        .house-sketch {
-            content: url("Website Images/HouseDarkMode.png");
-        }
-
-        /* Vacant Properties Section */
-        .vacancy-title {
-            color: #ffffff; /* Adjust text color */
-        }
-        .vacancy-description {
-            color: #ffffff; /* Adjust text color */
-        }
-        
-        .vacancy-section {
-            color: #ffffff; /* Adjust text color if needed */
-        }
-        
-        /* Property Description */
-        .property-description {
-            color: #ffffff; /* Adjust text color */
-        }
+    /* Vacancy page specific overrides (if needed) */
+    .vacancy-title, 
+    .vacancy-description, 
+    .vacancy-section,
+    .property-description {
+        color: #ffffff;
     }
 }
