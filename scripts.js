@@ -70,14 +70,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function toggleNav() {
+        // Toggle the nav open/closed based on the current transform value,
+        // and toggle a class on the hamburger button for styling.
         if (nav.style.transform === "translateX(0%)") {
             nav.style.transform = "translateX(-100%)";
+            hamburgerBtn.classList.remove("nav-open");
         } else {
             nav.style.transform = "translateX(0%)";
+            hamburgerBtn.classList.add("nav-open");
         }
     }
 
     function closeNav() {
         nav.style.transform = "translateX(-100%)";
+        hamburgerBtn.classList.remove("nav-open");
     }
 });
