@@ -352,7 +352,7 @@ footer {
 
 .property-image {
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     height: auto;
     display: block;
     margin: 20px auto; /* center it and add spacing */
