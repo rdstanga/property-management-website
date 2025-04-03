@@ -425,6 +425,11 @@ footer {
         nav a {
             color: #ffffff;
         }
+
+         /* Force Welcome Home text (and similar text in the welcome section) to white */
+        .welcome-section p {
+            color: #ffffff;
+        }
     
         /* 
            Make "Decades of Tradition" and "We are..." text white. 
