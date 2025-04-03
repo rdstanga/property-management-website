@@ -387,7 +387,7 @@ footer {
 
     @media (prefers-color-scheme: dark) {
         .house-sketch {
-            content: url("Website Images/HouseDark.png");
+            content: url("Website Images/HouseDarkMode.png");
         }
     }
 }
