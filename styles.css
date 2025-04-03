@@ -357,8 +357,12 @@ footer {
     }
     
     header, footer {
-        background-color: #1e1e1e; /* Darker header and footer */
+        background-color: #162030; /* Navy header and footer */
         color: #ffffff;
+    }
+
+    .hamburger div {
+        background: #ffffff;
     }
     
     .sidenav {
