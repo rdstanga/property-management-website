@@ -454,6 +454,18 @@ footer {
         /* Available Properties Section */
         .available-properties-title {
             color: #ffffff; /* Adjust text color */
-}
+        }
+        .available-properties-description {
+            color: #ffffff; /* Adjust text color */
+        }
+        
+        .available-section {
+            color: #ffffff; /* Adjust text color if needed */
+        }
+        
+        /* Property Description */
+        .property-description {
+            color: #ffffff; /* Adjust text color */
+        }
     }
 }
