@@ -352,7 +352,7 @@ footer {
 
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #162030; /* Dark navy background */
+        background-color: #0F183C; /* Dark navy background */
         color: #ffffff; /* Light text */
     }
 
