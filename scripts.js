@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (houseSketchImage) {
-            houseSketchImage.src = 'Website Images/HouseDark.png';
+            houseSketchImage.src = 'Website Images/HouseDarkMode.png';
         } else {
             console.warn("House sketch image not found!");
         }
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (houseSketchImage) {
-            houseSketchImage.src = 'Website Images/HouseLight.png';
+            houseSketchImage.src = 'Website Images/HouseLightMode.png';
         } else {
             console.warn("House sketch image not found!");
         }
