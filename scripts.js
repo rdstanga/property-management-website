@@ -70,11 +70,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function toggleNav() {
-        const computedStyle = window.getComputedStyle(nav);
-        if (computedStyle.transform === "none" || computedStyle.transform === "matrix(1, 0, 0, 1, -100, 0)") {
-            nav.style.transform = "translateX(0)";
-        } else {
+        if (nav.style.transform === "translateX(0%)") {
             nav.style.transform = "translateX(-100%)";
+        } else {
+            nav.style.transform = "translateX(0%)";
         }
     }
 
