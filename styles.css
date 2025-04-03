@@ -448,7 +448,7 @@ footer {
     
         /* Update the house sketch image to your dark mode version */
         .house-sketch {
-            content: url("Website Images/HouseDarkMode.jpg");
+            content: url("Website Images/HouseDarkMode.png");
         }
     }
 }
