@@ -350,6 +350,16 @@ footer {
     margin-top: 20px;
 }
 
+.property-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* center it and add spacing */
+    border-radius: 8px; /* optional: make corners slightly rounded */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* optional: soft shadow */
+}
+
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #162030; /* Dark navy background */
