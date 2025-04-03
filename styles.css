@@ -449,8 +449,7 @@ footer {
     
         /* 
            Update the .about-us-box elements to a slightly lighter dark color 
-           that complements #162030. 
-           #28333A is just one example—feel free to adjust as you like!
+           that complements #162030.
         */
         .about-us-box {
             background-color: #28333A; 
