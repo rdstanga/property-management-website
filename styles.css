@@ -136,22 +136,22 @@ section.centered-section p + p {
     line-height: 1.5;
 }
 
-/* Available Properties Section */
-.available-properties-title {
+/* Vacant Properties Section */
+.vacancy-title {
     font-size: 28px; /* Adjust font size */
     margin-bottom: 2px;
     color: #202020f6; /* Adjust text color */
     font-family: 'Cardo', serif; /* Apply Cardo font */
 }
 
-.available-properties-description {
+.vacancy-description {
     font-size: 22px; /* Reduced font size */
     color: #202020f6; /* Adjust text color */
     margin-bottom: 100px;
     font-family: 'Cardo', serif; /* Apply Cardo font */
 }
 
-.available-section {
+.vacancy-section {
     text-align: center; /* Align text in center of page */
     font-family: 'Cardo', serif; /* Apply Cardo font */
     font-size: 22px; /* Adjust font size if needed */
@@ -451,15 +451,15 @@ footer {
             content: url("Website Images/HouseDarkMode.png");
         }
 
-        /* Available Properties Section */
-        .available-properties-title {
+        /* Vacant Properties Section */
+        .vacancy-title {
             color: #ffffff; /* Adjust text color */
         }
-        .available-properties-description {
+        .vacancy-description {
             color: #ffffff; /* Adjust text color */
         }
         
-        .available-section {
+        .vacancy-section {
             color: #ffffff; /* Adjust text color if needed */
         }
         
