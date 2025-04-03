@@ -63,7 +63,7 @@ nav a:hover {
 
 nav .closebtn {
     position: absolute;
-    top: 1px; /* Adjusted to more closely align with the center of the hamburber menu */
+    top: 3px; /* Adjusted to more closely align with the center of the hamburber menu */
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
