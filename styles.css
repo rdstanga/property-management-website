@@ -450,5 +450,10 @@ footer {
         .house-sketch {
             content: url("Website Images/HouseDarkMode.png");
         }
+
+        /* Available Properties Section */
+        .available-properties-title {
+            color: #ffffff; /* Adjust text color */
+}
     }
 }
