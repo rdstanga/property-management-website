@@ -386,22 +386,17 @@ footer {
     }
 
     @media (prefers-color-scheme: dark) {
-        /* Page background & global text color */
         body {
             background-color: #162030; /* Dark navy background */
-            color: #ffffff;            /* Light text */
+            color: #ffffff; /* Light text */
         }
     
-        header {
-            background-color: #162030; 
-            color: #ffffff;
-        }
-        footer {
-            background-color: #1e1e1e; 
+        header, footer {
+            background-color: #1e1e1e; /* Darker header and footer */
             color: #ffffff;
         }
     
-        /* Navigation (sidenav) styling remains unchanged */
+        /* Navigation (sidenav) styling */
         .sidenav {
             height: 100%;
             width: 250px;
@@ -416,6 +411,7 @@ footer {
             padding-top: 60px;
             visibility: visible;
         }
+    
         .sidenav.open {
             transform: translateX(0);
         }
@@ -424,35 +420,22 @@ footer {
         nav a {
             color: #ffffff;
         }
-
-         /* Force Welcome Home text (and similar text in the welcome section) to white */
-        .welcome-section p {
-            color: #ffffff;
-        }
     
-        /* 
-           Make "Decades of Tradition" and "We are..." text white. 
-           These likely live inside the .centered-section 
-        */
+        /* Force welcome text to white */
+        .welcome-section p,
         .centered-section p.decades-section,
         .centered-section p {
             color: #ffffff !important;
         }
     
-        /*
-           Change the background of the "white box" below
-           (the .about-us-section) to match #162030
-        */
+        /* Change the background of the about-us section */
         .about-us-section {
             background-color: #162030; /* Matches the page background */
         }
     
-        /* 
-           Update the .about-us-box elements to a slightly lighter dark color 
-           that complements #162030.
-        */
+        /* Update the about-us boxes to a complementary color */
         .about-us-box {
-            background-color: #28333A; 
+            background-color: #28333A; /* Suggested complementary color */
             color: #ffffff;
         }
     
