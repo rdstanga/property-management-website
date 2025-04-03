@@ -54,11 +54,13 @@ nav a {
     font-size: 25px;
     color: #ffffff;
     display: block;
-    transition: 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav a:hover {
-    color: #f1f1f1;
+    background-color: #333333; /* A subtle darker background on hover */
+    /* Optionally, you could change the text color slightly, e.g.: */
+    /* color: #e0e0e0; */
 }
 
 nav .closebtn {
