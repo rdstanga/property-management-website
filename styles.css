@@ -284,7 +284,7 @@ footer {
 /* Media Queries */
 @media (max-width: 768px) {
     .about-us-section {
-        max-width: 150; /* Allow the section to expand to the full container width */
+        max-width: 100; /* Allow the section to expand to the full container width */
         grid-template-columns: 1fr; /* Single column on mobile */
         gap: 15px;
     }
