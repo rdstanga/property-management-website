@@ -281,10 +281,12 @@ footer {
     background: #555;
 }
 
+
+
 /* Media Queries */
 @media (max-width: 768px) {
     .about-us-section {
-        max-width: 100; /* Allow the section to expand to the full container width */
+        max-width: 95%; /* Allow the section to expand to the full container width */
         grid-template-columns: 1fr; /* Single column on mobile */
         gap: 15px;
     }
