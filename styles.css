@@ -186,7 +186,7 @@ section.centered-section p + p {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    max-width: 800px; /* Adjust the width if needed */
+    /* max-width: 800px; /* Adjust the width if needed */
     margin: 0 auto;
     padding: 20px;
     background-color: #ffffff;
