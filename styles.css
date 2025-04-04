@@ -300,7 +300,7 @@ footer {
     /* Increase padding in the grey boxes for more space */
     .about-us-box {
         padding: 10px;      /* More breathing room inside the boxes */
-        max-width: 100%;    /* Ensure boxes can use full available width */
+        max-width: 90%;    /* Ensure boxes can use full available width */
     }
 
     /* Keep existing styles for other elements */
