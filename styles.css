@@ -288,8 +288,6 @@ footer {
     background: #555;
 }
 
-
-
 @media (max-width: 768px) {
     /* Make the container wider on mobile */
     .container {
@@ -324,6 +322,13 @@ footer {
         font-size: 0.9em;
         line-height: 1.4;
     }
+
+    .contact-info {
+        .container {
+        width: 95%;
+        }
+    }
+    
 }
 
 /* Contact Page Styles */
