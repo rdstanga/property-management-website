@@ -1,15 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Theme update code
     const officeImage = document.getElementById('office-image');
     const houseSketchImage = document.getElementById('house-sketch');
-    const hamburgerBtn = document.querySelector('.hamburger');
-    const nav = document.getElementById("mySidenav");
     const headerEl = document.querySelector('header');
     const themeColorMeta = document.querySelector('meta[name="theme-color"]');
-
-    // Remove previous mode classes
+    
     document.body.classList.remove('dark-mode', 'light-mode');
-
-    // Update theme based on device setting
+    
     function updateTheme() {
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             document.body.classList.add('dark-mode');
@@ -19,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (houseSketchImage) {
                 houseSketchImage.src = 'Website Images/HouseDarkMode.png';
             }
-            themeColorMeta.setAttribute('content', '#162030');
+            themeColorMeta.setAttribute('content', '#162030'); // Dark safe area
             if (headerEl) {
                 headerEl.style.backgroundColor = '#162030';
             }
@@ -31,55 +28,56 @@ document.addEventListener('DOMContentLoaded', () => {
             if (houseSketchImage) {
                 houseSketchImage.src = 'Website Images/HouseLightMode.png';
             }
-            themeColorMeta.setAttribute('content', '#ffffff');
+            themeColorMeta.setAttribute('content', '#ffffff'); // Light safe area
             if (headerEl) {
                 headerEl.style.backgroundColor = '#ffffff';
             }
         }
     }
-
+    
     // Run theme update on page load
     updateTheme();
-
+    
     // Listen for changes in the device's color scheme
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
-
-    // Ensure nav is visible after DOM loads
+    
+    // Hamburger Menu functionality
+    const nav = document.getElementById("mySidenav");
+    // Use querySelectorAll to attach event listeners to all hamburger elements
+    const hamburgerBtns = document.querySelectorAll('.hamburger');
+    
+    // Ensure nav is visible after DOM loads (no inline transform needed)
     if (nav) {
         nav.style.visibility = 'visible';
     }
-
-    // Hamburger Menu functionality using class toggling
+    
     function toggleNav(e) {
-        if (e) {
-            e.stopPropagation();
-        }
+        // Stop the event from propagating so that document click doesn't immediately close nav
+        e.stopPropagation();
         nav.classList.toggle('open');
-        hamburgerBtn.classList.toggle('nav-open');
     }
     function closeNav() {
         nav.classList.remove('open');
-        hamburgerBtn.classList.remove('nav-open');
     }
-
-    if (hamburgerBtn && nav) {
-        // Attach event listener to the hamburger and stop propagation
-        hamburgerBtn.addEventListener('click', (e) => {
+    
+    // Attach click listener to every hamburger element
+    hamburgerBtns.forEach(btn => {
+        btn.addEventListener('click', toggleNav);
+    });
+    
+    // Attach click listener to the close button (assumes one exists)
+    const closeBtn = document.querySelector('.closebtn');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', (e) => {
             e.stopPropagation();
-            toggleNav();
-        });
-        const closeBtn = document.querySelector('.closebtn');
-        if (closeBtn) {
-            closeBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                closeNav();
-            });
-        }
-        // Close nav when clicking outside of nav and hamburger button
-        document.addEventListener('click', (e) => {
-            if (!nav.contains(e.target) && !hamburgerBtn.contains(e.target)) {
-                closeNav();
-            }
+            closeNav();
         });
     }
+    
+    // Close nav if clicking outside the nav and any hamburger
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('#mySidenav') && !e.target.closest('.hamburger')) {
+            closeNav();
+        }
+    });
 });
