@@ -26,12 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Ensure nav is visible after DOM loads
+    // Ensure nav is visible after DOM loads (do not set transform inline in HTML)
     if (nav) {
         nav.style.visibility = 'visible';
     }
 
-    // Hamburger Menu functionality
+    // Hamburger Menu functionality using class toggling
     if (hamburgerBtn && nav) {
         hamburgerBtn.addEventListener('click', toggleNav);
 
@@ -50,20 +50,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function toggleNav() {
-        const computedStyle = window.getComputedStyle(nav);
-        const transformValue = computedStyle.getPropertyValue("transform");
-        // If transform indicates the nav is hidden (contains -100), open it; otherwise, close it.
-        if (transformValue.includes("-100")) {
-            nav.style.transform = "translateX(0%)";
-            hamburgerBtn.classList.add("nav-open");
-        } else {
-            nav.style.transform = "translateX(-100%)";
-            hamburgerBtn.classList.remove("nav-open");
-        }
+        nav.classList.toggle("open");
+        hamburgerBtn.classList.toggle("nav-open");
     }
 
     function closeNav() {
-        nav.style.transform = "translateX(-100%)";
+        nav.classList.remove("open");
         hamburgerBtn.classList.remove("nav-open");
     }
 });
