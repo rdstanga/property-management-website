@@ -343,6 +343,14 @@ footer {
         width: 100%;
         max-width: 100%;
     }
+    .map-section {
+        width: 100%;
+        max-width: 100%;
+    }
+    #map {
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 /* Contact Page Styles */
