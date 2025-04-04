@@ -360,6 +360,13 @@ footer {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* optional: soft shadow */
 }
 
+@media (prefers-color-scheme: light) {
+    header, footer {
+      background-color: #ffffff; /* Light background */
+      color: #333; /* Dark text */
+    }
+  }
+
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #162030; /* Dark navy background */
