@@ -464,6 +464,11 @@ footer {
         background-color: #28333A; /* Suggested complementary color */
         color: #ffffff;
     }
+
+    .contact-info {
+        background-color: #162030; 
+        color: #ffffff;
+    }
     
     /* Update the house sketch image to your dark mode version */
     .house-sketch {
