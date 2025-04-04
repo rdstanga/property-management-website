@@ -3,35 +3,57 @@ document.addEventListener('DOMContentLoaded', () => {
     const houseSketchImage = document.getElementById('house-sketch');
     const hamburgerBtn = document.querySelector('.hamburger');
     const nav = document.getElementById("mySidenav");
+    const headerEl = document.querySelector('header');
+    const themeColorMeta = document.querySelector('meta[name="theme-color"]');
 
     // Remove previous mode to prevent class stacking
     document.body.classList.remove('dark-mode', 'light-mode');
 
-    // Rely solely on the user's device setting for dark mode.
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark-mode');
-        if (officeImage) {
-            officeImage.src = 'Website Images/OfficeNight.jpg';
-        }
-        if (houseSketchImage) {
-            houseSketchImage.src = 'Website Images/HouseDarkMode.png';
-        }
-    } else {
-        document.body.classList.add('light-mode');
-        if (officeImage) {
-            officeImage.src = 'Website Images/OfficeDay.jpg';
-        }
-        if (houseSketchImage) {
-            houseSketchImage.src = 'Website Images/HouseLightMode.png';
+    // Function to update theme based on the device setting
+    function updateTheme() {
+        const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        if (darkModeQuery.matches) {
+            document.body.classList.add('dark-mode');
+            if (officeImage) {
+                officeImage.src = 'Website Images/OfficeNight.jpg';
+            }
+            if (houseSketchImage) {
+                houseSketchImage.src = 'Website Images/HouseDarkMode.png';
+            }
+            themeColorMeta.setAttribute('content', '#162030'); // Set safe area to navy
+            if(headerEl) {
+                // Force header background to navy with !important
+                headerEl.style.setProperty('background-color', '#162030', 'important');
+            }
+        } else {
+            document.body.classList.add('light-mode');
+            if (officeImage) {
+                officeImage.src = 'Website Images/OfficeDay.jpg';
+            }
+            if (houseSketchImage) {
+                houseSketchImage.src = 'Website Images/HouseLightMode.png';
+            }
+            themeColorMeta.setAttribute('content', '#ffffff'); // Set safe area to white
+            if(headerEl) {
+                // Force header background to white with !important
+                headerEl.style.setProperty('background-color', '#ffffff', 'important');
+            }
         }
     }
 
-    // Ensure nav is visible after DOM loads (do not set transform inline in HTML)
+    // Run on page load
+    updateTheme();
+
+    // Listen for changes to the device's preferred color scheme
+    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    darkModeMediaQuery.addEventListener('change', updateTheme);
+
+    // Ensure nav is visible after DOM loads
     if (nav) {
         nav.style.visibility = 'visible';
     }
 
-    // Hamburger Menu functionality using class toggling
+    // Hamburger Menu functionality
     if (hamburgerBtn && nav) {
         hamburgerBtn.addEventListener('click', toggleNav);
 
@@ -50,12 +72,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function toggleNav() {
-        nav.classList.toggle("open");
-        hamburgerBtn.classList.toggle("nav-open");
+        if (nav.style.transform === "translateX(0%)") {
+            nav.style.transform = "translateX(-100%)";
+            hamburgerBtn.classList.remove("nav-open");
+        } else {
+            nav.style.transform = "translateX(0%)";
+            hamburgerBtn.classList.add("nav-open");
+        }
     }
 
     function closeNav() {
-        nav.classList.remove("open");
+        nav.style.transform = "translateX(-100%)";
         hamburgerBtn.classList.remove("nav-open");
     }
 });
