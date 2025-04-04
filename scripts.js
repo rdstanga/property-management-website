@@ -50,7 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Hamburger Menu functionality using class toggling
-    function toggleNav() {
+    function toggleNav(e) {
+        if (e) {
+            e.stopPropagation();
+        }
         nav.classList.toggle('open');
         hamburgerBtn.classList.toggle('nav-open');
     }
@@ -60,12 +63,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (hamburgerBtn && nav) {
-        hamburgerBtn.addEventListener('click', toggleNav);
+        // Attach event listener to the hamburger and stop propagation
+        hamburgerBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleNav();
+        });
         const closeBtn = document.querySelector('.closebtn');
         if (closeBtn) {
-            closeBtn.addEventListener('click', closeNav);
+            closeBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                closeNav();
+            });
         }
-        // Close menu when clicking outside of nav and hamburger button
+        // Close nav when clicking outside of nav and hamburger button
         document.addEventListener('click', (e) => {
             if (!nav.contains(e.target) && !hamburgerBtn.contains(e.target)) {
                 closeNav();
