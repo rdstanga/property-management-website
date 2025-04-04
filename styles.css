@@ -296,8 +296,8 @@ footer {
     }
 
     .centered-section p {
-        max-width: 90%;
-        word-wrap: break-word;
+        max-width: 100%; 
+        word-wrap: break-word; 
         margin: 0 auto 20px;
         font-size: 0.9em;
         line-height: 1.4;
