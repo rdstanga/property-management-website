@@ -22,11 +22,14 @@ header {
     color: #333;
     padding: 20px 0;
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    /* Remove the border from here */
 }
 
 header h1 {
     margin: 0;
+    display: inline-block;  /* So the border only covers the text */
+    padding-bottom: 10px;   /* Optional: Adjust for spacing */
+    border-bottom: 1px solid #ddd;
 }
 
 /* Navigation Styles */
