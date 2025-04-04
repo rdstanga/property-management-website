@@ -323,10 +323,21 @@ footer {
         line-height: 1.4;
     }
 
-    .contact-info {
-        .container {
+    .container {
         width: 95%;
-        }
+    }
+    .contact-info {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+    }
+    .contact-image {
+        max-width: 100%;
+        height: auto;
+    }
+    .contact-info p {
+        font-size: 16px;
+        line-height: 1.5;
     }
     
 }
