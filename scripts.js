@@ -3,34 +3,48 @@ document.addEventListener('DOMContentLoaded', () => {
     const houseSketchImage = document.getElementById('house-sketch');
     const hamburgerBtn = document.querySelector('.hamburger');
     const nav = document.getElementById("mySidenav");
+    const headerEl = document.querySelector('header');
     const themeColorMeta = document.querySelector('meta[name="theme-color"]');
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        themeColorMeta.setAttribute('content', '#162030'); // Dark mode: navy
-    } else {
-        themeColorMeta.setAttribute('content', '#ffffff'); // Light mode: white
-    }
 
     // Remove previous mode to prevent class stacking
     document.body.classList.remove('dark-mode', 'light-mode');
 
-    // Rely solely on the user's device setting for dark mode.
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark-mode');
-        if (officeImage) {
-            officeImage.src = 'Website Images/OfficeNight.jpg';
-        }
-        if (houseSketchImage) {
-            houseSketchImage.src = 'Website Images/HouseDarkMode.png';
-        }
-    } else {
-        document.body.classList.add('light-mode');
-        if (officeImage) {
-            officeImage.src = 'Website Images/OfficeDay.jpg';
-        }
-        if (houseSketchImage) {
-            houseSketchImage.src = 'Website Images/HouseLightMode.png';
+    // Function to update theme based on the device setting
+    function updateTheme() {
+        const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        if (darkModeQuery.matches) {
+            document.body.classList.add('dark-mode');
+            if (officeImage) {
+                officeImage.src = 'Website Images/OfficeNight.jpg';
+            }
+            if (houseSketchImage) {
+                houseSketchImage.src = 'Website Images/HouseDarkMode.png';
+            }
+            themeColorMeta.setAttribute('content', '#162030'); // Set safe area to navy
+            if(headerEl) {
+                headerEl.style.backgroundColor = '#162030';
+            }
+        } else {
+            document.body.classList.add('light-mode');
+            if (officeImage) {
+                officeImage.src = 'Website Images/OfficeDay.jpg';
+            }
+            if (houseSketchImage) {
+                houseSketchImage.src = 'Website Images/HouseLightMode.png';
+            }
+            themeColorMeta.setAttribute('content', '#ffffff'); // Set safe area to white
+            if(headerEl) {
+                headerEl.style.backgroundColor = '#ffffff';
+            }
         }
     }
+
+    // Run on page load
+    updateTheme();
+
+    // Listen for changes to the device's preferred color scheme
+    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    darkModeMediaQuery.addEventListener('change', updateTheme);
 
     // Ensure nav is visible after DOM loads
     if (nav) {
