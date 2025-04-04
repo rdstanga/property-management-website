@@ -47,7 +47,7 @@ nav {
     padding-top: 60px;
 }
 
-/* Use "open" class instead of "show" */
+/* Use "open" class to show the nav */
 nav.open {
     transform: translateX(0); /* Slide in smoothly */
 }
@@ -63,8 +63,6 @@ nav a {
 
 nav a:hover {
     background-color: #333333; /* A subtle darker background on hover */
-    /* Optionally, you could change the text color slightly, e.g.: */
-    /* color: #e0e0e0; */
 }
 
 nav .closebtn {
