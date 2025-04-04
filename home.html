@@ -24,67 +24,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Stanga & Sons LLC</h1>
-    </header>
-    
-    <!-- Hamburger Menu Button -->
-    <div class="hamburger" onclick="toggleNav()">
-        <div></div>
-        <div></div>
-        <div></div>
+    <div class="container">
+        <header>
+            <h1>Stanga & Sons LLC</h1>
+        </header>
+        <!-- Hamburger Menu Button -->
+        <div class="hamburger" onclick="toggleNav()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- Navigation -->
+        <nav id="mySidenav" class="sidenav" style="transform: translateX(-100%); visibility: hidden;">
+            <a href="javascript:void(0)" class="closebtn">&times;</a>
+            <a href="index.html" class="nav-home-link">Home</a>
+            <a href="faq.html">FAQ</a>
+            <a href="vacancies.html">Vacancies</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <!-- Main Content -->
+        <main>
+            <section class="welcome-section">
+                <p>Welcome Home</p>
+            </section>
+            <section class="centered-section">
+                <img src="Website Images/HouseLightMode.png" alt="House Sketch" class="house-sketch" id="house-sketch" style="width:100%">
+                <p class="decades-section">Decades of Tradition</p>
+                <p>We are Stanga & Sons LLC. We've served the Thibodaux area for years. Whether you're searching for a large family home, or a cozy studio, we're sure we have the perfect space for you.</p>
+            </section>
+            <!-- About Us Section -->
+            <section class="about-us-section">
+                <!-- about-us content -->
+            </section>
+        </main>
     </div>
-    
-    <!-- Navigation -->
-    <nav id="mySidenav" class="sidenav" style="transform: translateX(-100%); visibility: hidden;">
-        <a href="javascript:void(0)" class="closebtn">&times;</a>
-        <a href="index.html" class="nav-home-link">Home</a>
-        <a href="faq.html">FAQ</a>
-        <a href="vacancies.html">Vacancies</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-
-    <!-- Main Content -->
-    <main>
-        <section class="welcome-section">
-            <p>Welcome Home</p>
-        </section>
-        <section class="centered-section">
-            <img src="Website Images/HouseLightMode.png" alt="House Sketch" class="house-sketch" id="house-sketch" style="width:100%">
-            <p class="decades-section">Decades of Tradition</p>
-            <p>We are Stanga & Sons LLC. We've served the Thibodaux area for years. Whether you're searching for a large family home, or a cozy studio, we're sure we have the perfect space for you.</p>
-        </section>
-        
-        <!-- About Us Section -->
-        <section class="about-us-section">
-            <div class="about-us-box">
-                <h3 class="about-us-title">
-                    Local <img src="Website Images/LocalGlyph.jpg" alt="Local Icon" class="icon">
-                </h3>
-                <p>Our office is conveniently located in downtown Thibodaux, ready to serve you.</p>
-            </div>
-            <div class="about-us-box">
-                <h3 class="about-us-title">
-                    Family Owned & Operated <img src="Website Images/FamilyGlyph.png" alt="Family Icon" class="icon">
-                </h3>
-                <p>Our founder, XYZ, started this company over 30 years ago. His family continues its operation in his memory, and believes that serving you builds a better Thibodaux for all of us.</p>
-            </div>
-            <div class="about-us-box">
-                <h3 class="about-us-title">
-                    Assortment of Choices <img src="Website Images/ChoiceGlyph.jpg" alt="Assortment Icon" class="icon">
-                </h3>
-                <p>Our homes come in many sizes, from four-bedroom houses to studio apartments. Whether you're looking for a house, apartment, or mobile home, we have the perfect home for your needs.</p>
-            </div>
-            <div class="about-us-box">
-                <h3 class="about-us-title">
-                    Competitive Pricing <img src="Website Images/PriceGlyph.jpg" alt="Price Icon" class="icon">
-                </h3>
-                <p>Our rental prices are fair and ranged to fit your budget.</p>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
+    <!-- Footer (can be left full width or also wrapped in a container depending on your design) -->
     <footer>
         <p>&copy; 2025 Stanga & Sons LLC. All rights reserved.</p>
     </footer>
