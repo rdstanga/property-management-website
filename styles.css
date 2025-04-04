@@ -42,14 +42,12 @@ nav {
     left: 0;
     background-color: #000000;
     overflow-x: hidden;
-    transform: translateX(-100%); /* Hide by default */
-    transition: transform 0.3s ease-in-out; /* Smooth slide-in */
+    transform: translateX(-100%); /* Hidden by default */
+    transition: transform 0.3s ease-in-out;
     padding-top: 60px;
 }
-
-/* Use "open" class to show the nav */
 nav.open {
-    transform: translateX(0); /* Slide in smoothly */
+    transform: translateX(0); /* Open state */
 }
 
 nav a {
@@ -240,25 +238,22 @@ footer {
     width: 100%;
 }
 
-/* Hamburger Menu Styles */
 .hamburger {
-    display: flex; /* Show hamburger */
+    display: flex;
     flex-direction: column;
     cursor: pointer;
     padding: 10px;
     position: fixed;
     top: 10px;
-    left: 10px; /* Positioning to the left */
-    z-index: 1001; /* Ensure it is above other elements */
+    left: 10px;
+    z-index: 1001;
 }
-
 .hamburger div {
-    width: 25px; /* Adjust width as needed */
+    width: 25px;
     height: 3px;
     background: #333;
     margin: 5px 0;
 }
-
 .hamburger.nav-open div {
     background: #ffffff;
 }
