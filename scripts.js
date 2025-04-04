@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const headerEl = document.querySelector('header');
     const themeColorMeta = document.querySelector('meta[name="theme-color"]');
 
-    // Remove previous mode to prevent class stacking
+    // Remove previous mode classes
     document.body.classList.remove('dark-mode', 'light-mode');
 
-    // Function to update theme based on the device setting
+    // Function to update theme based on device setting (ignoring time-of-day)
     function updateTheme() {
         const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
         if (darkModeQuery.matches) {
@@ -20,9 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (houseSketchImage) {
                 houseSketchImage.src = 'Website Images/HouseDarkMode.png';
             }
-            themeColorMeta.setAttribute('content', '#162030'); // Set safe area to navy
-            if(headerEl) {
-                // Force header background to navy with !important
+            themeColorMeta.setAttribute('content', '#162030'); // Safe area: navy in dark mode
+            if (headerEl) {
                 headerEl.style.setProperty('background-color', '#162030', 'important');
             }
         } else {
@@ -33,22 +32,21 @@ document.addEventListener('DOMContentLoaded', () => {
             if (houseSketchImage) {
                 houseSketchImage.src = 'Website Images/HouseLightMode.png';
             }
-            themeColorMeta.setAttribute('content', '#ffffff'); // Set safe area to white
-            if(headerEl) {
-                // Force header background to white with !important
+            themeColorMeta.setAttribute('content', '#ffffff'); // Safe area: white in light mode
+            if (headerEl) {
                 headerEl.style.setProperty('background-color', '#ffffff', 'important');
             }
         }
     }
 
-    // Run on page load
+    // Run theme update on page load
     updateTheme();
 
-    // Listen for changes to the device's preferred color scheme
+    // Listen for changes in the device's color scheme
     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     darkModeMediaQuery.addEventListener('change', updateTheme);
 
-    // Ensure nav is visible after DOM loads
+    // Ensure nav is visible after DOM loads (remove inline transform from HTML)
     if (nav) {
         nav.style.visibility = 'visible';
     }
@@ -57,13 +55,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (hamburgerBtn && nav) {
         hamburgerBtn.addEventListener('click', toggleNav);
 
-        // Add event listener to the close button inside the nav
+        // Add event listener to the close button inside nav
         const closeBtn = document.querySelector('.closebtn');
         if (closeBtn) {
             closeBtn.addEventListener('click', closeNav);
         }
 
-        // Close menu when clicking outside the nav
+        // Close menu when clicking outside of nav and hamburger button
         document.addEventListener('click', (e) => {
             if (!nav.contains(e.target) && !hamburgerBtn.contains(e.target)) {
                 closeNav();
@@ -71,8 +69,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Updated toggleNav() function
     function toggleNav() {
-        if (nav.style.transform === "translateX(0%)") {
+        let currentTransform = nav.style.transform;
+        if (!currentTransform || currentTransform === "") {
+            // If inline style is not set, fall back to computed style.
+            const computed = window.getComputedStyle(nav).transform;
+            // If no transform is applied, assume it is hidden.
+            currentTransform = computed === 'none' ? 'translateX(-100%)' : computed;
+        }
+        // Check if the nav is currently open. We'll treat the nav as open if its transform is the identity matrix.
+        if (currentTransform === "translateX(0%)" || currentTransform === "matrix(1, 0, 0, 1, 0, 0)") {
             nav.style.transform = "translateX(-100%)";
             hamburgerBtn.classList.remove("nav-open");
         } else {
