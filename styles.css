@@ -470,6 +470,10 @@ footer {
         content: url("Website Images/HouseDarkMode.png");
     }
     
+    .office-image {
+        content: url("Website Images/OfficeNight.jpg");
+    }
+    
     /* Vacancy page specific overrides (if needed) */
     .vacancy-title, 
     .vacancy-description, 
