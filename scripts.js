@@ -3,6 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const houseSketchImage = document.getElementById('house-sketch');
     const hamburgerBtn = document.querySelector('.hamburger');
     const nav = document.getElementById("mySidenav");
+    const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        themeColorMeta.setAttribute('content', '#162030'); // Dark mode: navy
+    } else {
+        themeColorMeta.setAttribute('content', '#ffffff'); // Light mode: white
+    }
 
     // Remove previous mode to prevent class stacking
     document.body.classList.remove('dark-mode', 'light-mode');
