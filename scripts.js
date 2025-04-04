@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (houseSketchImage) {
                 houseSketchImage.src = 'Website Images/HouseDarkMode.png';
             }
-            themeColorMeta.setAttribute('content', '#162030'); // Dark safe area
+            themeColorMeta.setAttribute('content', '#162030');
             if (headerEl) {
                 headerEl.style.backgroundColor = '#162030';
             }
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (houseSketchImage) {
                 houseSketchImage.src = 'Website Images/HouseLightMode.png';
             }
-            themeColorMeta.setAttribute('content', '#ffffff'); // Light safe area
+            themeColorMeta.setAttribute('content', '#ffffff');
             if (headerEl) {
                 headerEl.style.backgroundColor = '#ffffff';
             }
@@ -41,15 +41,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Run theme update on page load
     updateTheme();
 
-    // Listen for changes in device color scheme
+    // Listen for changes in the device's color scheme
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
 
-    // Remove inline transform styles if any, let CSS handle it
+    // Ensure nav is visible after DOM loads
     if (nav) {
         nav.style.visibility = 'visible';
     }
 
-    // Hamburger Menu: Use class toggling
+    // Hamburger Menu functionality using class toggling
     function toggleNav() {
         nav.classList.toggle('open');
         hamburgerBtn.classList.toggle('nav-open');
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (closeBtn) {
             closeBtn.addEventListener('click', closeNav);
         }
-        // Close nav when clicking outside
+        // Close menu when clicking outside of nav and hamburger button
         document.addEventListener('click', (e) => {
             if (!nav.contains(e.target) && !hamburgerBtn.contains(e.target)) {
                 closeNav();
