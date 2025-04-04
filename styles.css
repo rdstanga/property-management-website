@@ -286,7 +286,7 @@ footer {
     .about-us-section {
         max-width: 100; /* Allow the section to expand to the full container width */
         grid-template-columns: 1fr; /* Single column on mobile */
-        gap: 5px;
+        gap: 50px;
     }
 
     .centered-section img.house-sketch {
