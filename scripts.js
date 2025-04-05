@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function toggleNav(e) {
         e.stopPropagation();
         nav.classList.toggle('open');
+        hamburgerBtn.classList.toggle('nav-open');
     }
     
     function closeNav() {

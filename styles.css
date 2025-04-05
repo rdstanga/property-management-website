@@ -271,16 +271,20 @@ footer {
     height: 3px;
     background: #333;
     margin: 5px 0;
+    transition: background 0.3s ease;
 }
+
+/* When the nav is open, the hamburger gets the class "nav-open" */
 .hamburger.nav-open div {
     background: #ffffff;
 }
 
+/* Enforce that in light mode the hamburger's open state is white */
 @media (prefers-color-scheme: light) {
     .hamburger.nav-open div {
-      background: #ffffff !important;
+        background: #ffffff !important;
     }
-  }
+}
 
 /* Squircle Buttons */
 .squircle-button {
