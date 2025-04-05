@@ -42,7 +42,41 @@ document.addEventListener('DOMContentLoaded', () => {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
     
     // Hamburger Menu functionality
-    const nav = document.getElementById("mySidenav");
+    // Set initial state immediately
+const nav = document.getElementById("mySidenav");
+if (nav) {
+    nav.style.transform = "translateX(-100%)";
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerBtns = document.querySelectorAll('.hamburger');
+
+    function toggleNav(e) {
+        e.stopPropagation();
+        nav.classList.toggle('open');
+    }
+    function closeNav() {
+        nav.classList.remove('open');
+    }
+
+    hamburgerBtns.forEach(btn => {
+        btn.addEventListener('click', toggleNav);
+    });
+
+    const closeBtn = document.querySelector('.closebtn');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeNav();
+        });
+    }
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('#mySidenav') && !e.target.closest('.hamburger')) {
+            closeNav();
+        }
+    });
+});
     // Use querySelectorAll to attach event listeners to all hamburger elements
     const hamburgerBtns = document.querySelectorAll('.hamburger');
     
