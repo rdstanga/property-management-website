@@ -276,6 +276,12 @@ footer {
     background: #ffffff;
 }
 
+@media (prefers-color-scheme: light) {
+    .hamburger.nav-open div {
+      background: #ffffff !important;
+    }
+  }
+
 /* Squircle Buttons */
 .squircle-button {
     display: block;
