@@ -40,6 +40,10 @@ header h1 {
 }
 
 /* Navigation Styles */
+.sidenav.hidden {
+    transform: translateX(-100%) /* Hide the menu by default */
+}
+
 nav {
     height: 100%;
     width: 250px; /* Default width for the menu */
@@ -49,7 +53,7 @@ nav {
     left: 0;
     background-color: #000000;
     overflow-x: hidden;
-    transform: translateX(-100%); /* Hidden by default */
+    transform: translateX(-100%); /* Default state after load */
     transition: transform 0.3s ease-in-out;
     padding-top: 60px;
 }

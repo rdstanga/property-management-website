@@ -43,6 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Hamburger Menu functionality
     const nav = document.getElementById("mySidenav");
+    if (nav) {
+        nav.classList.remove('hidden'); // Remove initial hide class
+    }
     const hamburgerBtns = document.querySelectorAll('.hamburger');
     
     function toggleNav(e) {
@@ -54,12 +57,10 @@ document.addEventListener('DOMContentLoaded', () => {
         nav.classList.remove('open');
     }
     
-    // Attach click listener to every hamburger element
     hamburgerBtns.forEach(btn => {
         btn.addEventListener('click', toggleNav);
     });
     
-    // Attach click listener to the close button
     const closeBtn = document.querySelector('.closebtn');
     if (closeBtn) {
         closeBtn.addEventListener('click', (e) => {
@@ -68,7 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // Close nav if clicking outside
     document.addEventListener('click', (e) => {
         if (!e.target.closest('#mySidenav') && !e.target.closest('.hamburger')) {
             closeNav();
