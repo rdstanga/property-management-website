@@ -72,13 +72,13 @@ nav a {
 
 nav a:not(.closebtn) {
     /* When not hovered, use a slower transition for the reverse (unhover) effect */
-    transition: transform 0.6s ease-out;
+    transition: transform 0.4s ease-out;
 }
 
 nav a:not(.closebtn):hover {
     transform: translateX(40px);
     /* When hovered, use a quicker transition to slide in */
-    transition: transform 0.3s ease-in;
+    transition: transform 0.2s ease-in;
 }
 
 nav .closebtn {
