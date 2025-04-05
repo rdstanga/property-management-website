@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (houseSketchImage) {
                 houseSketchImage.src = 'Website Images/HouseDarkMode.png';
             }
-            themeColorMeta.setAttribute('content', '#162030'); // Dark safe area
+            themeColorMeta.setAttribute('content', '#162030');
             if (headerEl) {
                 headerEl.style.backgroundColor = '#162030';
             }
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (houseSketchImage) {
                 houseSketchImage.src = 'Website Images/HouseLightMode.png';
             }
-            themeColorMeta.setAttribute('content', '#ffffff'); // Light safe area
+            themeColorMeta.setAttribute('content', '#ffffff');
             if (headerEl) {
                 headerEl.style.backgroundColor = '#ffffff';
             }
@@ -42,54 +42,14 @@ document.addEventListener('DOMContentLoaded', () => {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
     
     // Hamburger Menu functionality
-    // Set initial state immediately
-const nav = document.getElementById("mySidenav");
-if (nav) {
-    nav.style.transform = "translateX(-100%)";
-}
-
-document.addEventListener('DOMContentLoaded', () => {
+    const nav = document.getElementById("mySidenav");
     const hamburgerBtns = document.querySelectorAll('.hamburger');
-
+    
     function toggleNav(e) {
         e.stopPropagation();
         nav.classList.toggle('open');
     }
-    function closeNav() {
-        nav.classList.remove('open');
-    }
-
-    hamburgerBtns.forEach(btn => {
-        btn.addEventListener('click', toggleNav);
-    });
-
-    const closeBtn = document.querySelector('.closebtn');
-    if (closeBtn) {
-        closeBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            closeNav();
-        });
-    }
-
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('#mySidenav') && !e.target.closest('.hamburger')) {
-            closeNav();
-        }
-    });
-});
-    // Use querySelectorAll to attach event listeners to all hamburger elements
-    const hamburgerBtns = document.querySelectorAll('.hamburger');
     
-    // Ensure nav is visible after DOM loads (no inline transform needed)
-    if (nav) {
-        nav.style.visibility = 'visible';
-    }
-    
-    function toggleNav(e) {
-        // Stop the event from propagating so that document click doesn't immediately close nav
-        e.stopPropagation();
-        nav.classList.toggle('open');
-    }
     function closeNav() {
         nav.classList.remove('open');
     }
@@ -99,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', toggleNav);
     });
     
-    // Attach click listener to the close button (assumes one exists)
+    // Attach click listener to the close button
     const closeBtn = document.querySelector('.closebtn');
     if (closeBtn) {
         closeBtn.addEventListener('click', (e) => {
@@ -108,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // Close nav if clicking outside the nav and any hamburger
+    // Close nav if clicking outside
     document.addEventListener('click', (e) => {
         if (!e.target.closest('#mySidenav') && !e.target.closest('.hamburger')) {
             closeNav();
