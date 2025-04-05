@@ -70,7 +70,7 @@ nav a {
     transition: background-color 0.8s, color 0.3s;
 }
 
-nav a:hover {
+nav a:not(.closebtn)hover {
     /* background-color: #333333; /* A subtle darker background on hover */
     transform: translateX(40px); /* Slide effect */
 }
