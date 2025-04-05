@@ -49,7 +49,7 @@ nav {
     left: 0;
     background-color: #000000;
     overflow-x: hidden;
-    /* transform: translateX(-100%); /* Hidden by default */
+    transform: translateX(-100%); /* Hidden by default */
     transition: transform 0.3s ease-in-out;
     padding-top: 60px;
 }
