@@ -73,6 +73,7 @@ nav a {
 nav a:not(.closebtn):hover {
     /* background-color: #333333; /* A subtle darker background on hover */
     transform: translateX(40px); /* Slide effect */
+    transition: transform 0.6s ease;
 }
 
 nav .closebtn {
