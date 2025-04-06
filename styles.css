@@ -272,13 +272,12 @@ footer {
 .hamburger div {
     width: 25px;
     height: 3px;
-    color: #ffffff
     background: #888;
     margin: 5px 0;
     transition: background 0.3s ease;
 }
 .hamburger.nav-open div {
-    background: #ffffff;
+    color: #ffffff;
 }
 
 /* Squircle Buttons */
