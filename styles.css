@@ -278,6 +278,7 @@ footer {
 }
 .hamburger.nav-open div {
     color: #ffffff;
+    background: #888;
 }
 
 /* Squircle Buttons */
