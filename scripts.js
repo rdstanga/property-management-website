@@ -51,11 +51,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function toggleNav(e) {
         e.stopPropagation();
         nav.classList.toggle('open');
-        hamburgerBtn.classList.toggle('nav-open');
+        hamburgerBtns.forEach(btn => btn.classList.toggle('nav-open')); // Fix: Apply to all hamburger buttons
     }
     
     function closeNav() {
         nav.classList.remove('open');
+        hamburgerBtns.forEach(btn => btn.classList.remove('nav-open')); // Ensure class is removed
     }
     
     hamburgerBtns.forEach(btn => {
