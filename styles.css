@@ -268,7 +268,7 @@ footer {
     z-index: 1001;
 }
 
-/* In light mode, when closed, show gray (#888); when open, white */
+/* In light mode, when closed, show black hamburber menu; when open, white hamburger menu*/
 .hamburger div {
     width: 25px;
     height: 3px;
