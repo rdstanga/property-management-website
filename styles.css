@@ -256,6 +256,7 @@ footer {
     width: 100%;
 }
 
+/* Hamburger Menu Styles */
 .hamburger {
     display: flex;
     flex-direction: column;
@@ -266,12 +267,17 @@ footer {
     left: 10px;
     z-index: 1001;
 }
+
+/* In light mode, when closed, show gray (#888); when open, white */
 .hamburger div {
     width: 25px;
     height: 3px;
-    background: #ffffff;
+    background: #888;
     margin: 5px 0;
     transition: background 0.3s ease;
+}
+.hamburger.nav-open div {
+    background: #ffffff;
 }
 
 /* Squircle Buttons */
@@ -302,7 +308,6 @@ footer {
     .container {
         width: 95%;
     }
-
     /* Ensure the About Us section takes the full container width */
     .about-us-section {
         width: 100%;        /* Take up the full width of the container */
@@ -310,20 +315,17 @@ footer {
         grid-template-columns: 1fr; /* Keep single column layout */
         gap: 15px;          /* Maintain spacing between grid items */
     }
-
     /* Increase padding in the grey boxes for more space */
     .about-us-box {
         padding: 10px;      /* More breathing room inside the boxes */
-        max-width: 95%;    /* Ensure boxes can use full available width */
+        max-width: 95%;     /* Ensure boxes can use full available width */
     }
-
     /* Keep existing styles for other elements */
     .centered-section img.house-sketch {
         width: 95%;         /* Smaller size on mobile */
         max-width: 400px;
         height: auto;
     }
-
     .centered-section p {
         max-width: 95%;
         word-wrap: break-word;
