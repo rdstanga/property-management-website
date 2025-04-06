@@ -277,7 +277,7 @@ footer {
     transition: background 0.3s ease;
 }
 .hamburger.nav-open div {
-    color: #ffffff !important;
+    background: #ffffff !important;
 }
 
 /* Squircle Buttons */
