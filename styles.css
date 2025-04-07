@@ -307,63 +307,64 @@ footer {
 
 /* FAQ Section Styles */
 .faq-section {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.faq-item {
+    max-width: 800px; /* Sets the maximum width for the entire FAQ section */
+    width: 100%; /* Ensures it takes up available space up to max-width */
+    margin: 0 auto; /* Centers the section */
+  }
+  
+  .faq-item {
     border-bottom: 1px solid #ccc;
     margin-bottom: 10px;
-}
-
-.faq-question {
+    width: 100%; /* Ensures each item takes the full width of faq-section */
+  }
+  
+  .faq-question {
     background: #f9f9f9;
     border: none;
-    width: 100%;
+    width: 100%; /* Takes full width of faq-item */
     text-align: left;
     font-size: 1rem;
     line-height: 1.4;
-    padding: 15px 10px;   /* Increase padding for consistent spacing */
-    min-height: 50px;     /* Ensures a uniform height for short questions */
+    padding: 15px 10px; /* Consistent padding */
+    min-height: 50px; /* Uniform height for short questions */
     cursor: pointer;
-    /* Use flex so the plus sign can stay on the right,
-       but allow wrapping if the text is too long */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.faq-question span:first-child {
-    flex: 1 1 auto;
-    white-space: normal;
-    word-wrap: break-word;
-}
-
-.faq-question .toggle-icon {
-    flex-shrink: 0;
-    margin-left: 10px;
-    font-size: 1.2rem;
-}
-
-.faq-answer {
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Spaces text and icon */
+    align-items: center; /* Vertically centers content */
+    flex-wrap: wrap; /* Allows wrapping if needed */
+    box-sizing: border-box; /* Includes padding in width calculation */
+  }
+  
+  .faq-question span:first-child {
+    flex: 1 1 auto; /* Allows text to grow and shrink */
+    white-space: normal; /* Ensures text wraps naturally */
+    word-wrap: break-word; /* Breaks long words if necessary */
+  }
+  
+  .faq-question .toggle-icon {
+    flex-shrink: 0; /* Prevents icon from shrinking */
+    margin-left: 10px; /* Spacing from text */
+    font-size: 1.2rem; /* Icon size */
+  }
+  
+  .faq-answer {
     display: none;
     padding: 0 8px 10px;
     font-size: 0.95rem;
     color: #555;
-}
-
-.faq-item.active .faq-answer {
+  }
+  
+  .faq-item.active .faq-answer {
     display: block;
-}
-
-.faq-item.active .toggle-icon::before {
+  }
+  
+  .faq-item.active .toggle-icon::before {
     content: '-';
-}
-
-.faq-item .toggle-icon::before {
+  }
+  
+  .faq-item .toggle-icon::before {
     content: '+';
-}
+  }
 
 /* Media Queries */
 @media (max-width: 768px) {
