@@ -323,8 +323,11 @@ footer {
     text-align: left;
     font-size: 1rem;
     line-height: 1.4;
-    padding: 10px 8px;
+    padding: 15px 10px;   /* Increase padding for consistent spacing */
+    min-height: 50px;     /* Ensures a uniform height for short questions */
     cursor: pointer;
+    /* Use flex so the plus sign can stay on the right,
+       but allow wrapping if the text is too long */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -333,6 +336,8 @@ footer {
 
 .faq-question span:first-child {
     flex: 1 1 auto;
+    white-space: normal;
+    word-wrap: break-word;
 }
 
 .faq-question .toggle-icon {
