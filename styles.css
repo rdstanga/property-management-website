@@ -430,8 +430,8 @@ footer {
   
   /* The clickable question area */
   .faq-question {
-    background: #f9f9f9;        /* Light gray background */
-    border: none;               /* Remove default button styles */
+    background: inherit;        /* Inherit background from the page */
+    border: none;
     width: 100%;
     text-align: left;
     font-size: 1rem;            /* Adjust to match your site */
@@ -440,12 +440,23 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: inherit;
   }
   
   /* The plus/minus icon */
   .toggle-icon {
     font-size: 1.2rem;          /* Slightly bigger than text */
     margin-left: 10px;
+  }
+
+  .faq-question .toggle-icon::before {
+    content: '+'; /* Default plus sign */
+    transition: content 0.3s ease;
+  }
+
+  /* When the FAQ item is active, change plus to minus */
+.faq-item.active .toggle-icon::before {
+    content: '-';
   }
   
   /* The answer is hidden by default */
@@ -474,6 +485,11 @@ footer {
       background-color: #ffffff; /* Light background */
       color: #333; /* Dark text */
     }
+
+    .faq-question {
+        background-color: #ffffff;
+        color: #333;
+      }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -553,4 +569,9 @@ footer {
     .property-description {
         color: #ffffff;
     }
+
+    .faq-question {
+        background-color: #162030;
+        color: #ffffff;
+      }    
 }
