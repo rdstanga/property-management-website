@@ -570,8 +570,12 @@ footer {
         color: #ffffff;
     }
 
-    .faq-question {
+    .faq-question, .faq-question .faq-question-text {
         background-color: #162030;
         color: #ffffff;
-      }    
+        font-size: 1rem;    /* Adjust this value as needed */
+        line-height: 1.4;   /* Consistent line height */
+        margin: 0;          /* Remove any extra margins if present */
+        padding: 0;         /* Remove any extra padding if present */
+    }    
 }
