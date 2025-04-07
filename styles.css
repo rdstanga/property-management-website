@@ -93,6 +93,10 @@ nav .closebtn {
     margin-top: 20px; /* Adjust the value to create more space */
 }
 
+.nav-link-spacer {
+    margin-top: 20px;
+}
+
 @media screen and (max-height: 450px) {
     nav {
         padding-top: 15px;
