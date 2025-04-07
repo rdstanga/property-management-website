@@ -352,18 +352,19 @@ footer {
     content: '-';
 }
 
-/* 
-   2) Use a smooth transition for the answer 
-      by animating max-height instead of display. 
-*/
+/* FAQ Answer container */
 .faq-answer {
-    /* Remove "display: none" */
-    max-height: 0;           /* Start closed */
-    overflow: hidden;        /* Hide content when closed */
-    background-color: #ffffff;  /* Light mode answer background */
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    background-color: #ffffff; /* Light mode background */
+}
+
+/* Inner content container with consistent padding */
+.faq-answer-inner {
+    padding: 10px;
+    font-size: 0.95rem;
     color: #555;
-    padding: 0 10px;         /* Will show only when open due to max-height=0 */
-    transition: max-height 0.3s ease;  /* Smoother open/close */
 }
 
 /* 
@@ -560,6 +561,10 @@ footer {
 
     .faq-answer {
         background-color: #162030; /* Darker background for answer */
+        color: #fff;
+    }
+
+    .faq-answer-inner {
         color: #fff;
     }
 }
