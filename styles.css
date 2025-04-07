@@ -308,6 +308,9 @@ footer {
     .container {
         width: 95%;
     }
+    .mobile-hamburger {
+        margin-top: 20px; /* Adjust the value to create more space for hamburger menu placement*/
+    }
     /* Ensure the About Us section takes the full container width */
     .about-us-section {
         width: 100%;        /* Take up the full width of the container */
