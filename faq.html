@@ -140,20 +140,17 @@
         <p>&copy; 2025 Rental Company LLC. All rights reserved.</p>
     </footer>
 
-    document.addEventListener('DOMContentLoaded', () => {
-        // Select all FAQ question buttons
-        const faqQuestions = document.querySelectorAll('.faq-question');
-      
-        faqQuestions.forEach(questionBtn => {
-          questionBtn.addEventListener('click', () => {
-            // Get the parent .faq-item
-            const faqItem = questionBtn.closest('.faq-item');
-            
-            // Toggle the .active class to expand/collapse
-            faqItem.classList.toggle('active');
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const faqQuestions = document.querySelectorAll('.faq-question');
+          faqQuestions.forEach(questionBtn => {
+            questionBtn.addEventListener('click', () => {
+              const faqItem = questionBtn.closest('.faq-item');
+              faqItem.classList.toggle('active');
+            });
           });
         });
-      });
+      </script>
     
     <script src="scripts.js"></script>
 </body>
