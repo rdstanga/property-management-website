@@ -134,10 +134,22 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const faqQuestions = document.querySelectorAll('.faq-question');
+            
             faqQuestions.forEach(questionBtn => {
                 questionBtn.addEventListener('click', () => {
                     const faqItem = questionBtn.closest('.faq-item');
-                    faqItem.classList.toggle('active');
+                    
+                    // Toggle 'active' class
+                    if (faqItem.classList.contains('active')) {
+                        faqItem.classList.remove('active');
+                    } else {
+                        // Close any other open items if you only want one open at a time:
+                        // document.querySelectorAll('.faq-item.active').forEach(openItem => {
+                        //     openItem.classList.remove('active');
+                        // });
+                        
+                        faqItem.classList.add('active');
+                    }
                 });
             });
         });

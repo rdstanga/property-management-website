@@ -307,64 +307,73 @@ footer {
 
 /* FAQ Section Styles */
 .faq-section {
-    max-width: 800px; /* Sets the maximum width for the entire FAQ section */
-    width: 100%; /* Ensures it takes up available space up to max-width */
-    margin: 0 auto; /* Centers the section */
-  }
-  
-  .faq-item {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.faq-item {
     border-bottom: 1px solid #ccc;
     margin-bottom: 10px;
-    width: 100%; /* Ensures each item takes the full width of faq-section */
-  }
-  
-  .faq-question {
-    background: #f9f9f9;
+    width: 100%;
+}
+
+/* 
+   1) Ensure the question text is on the left
+      and the plus icon is on the far right in a single column.
+*/
+.faq-question {
+    background: #f9f9f9; /* Light mode background */
     border: none;
-    width: 100%; /* Takes full width of faq-item */
+    width: 100%;
     text-align: left;
     font-size: 1rem;
     line-height: 1.4;
-    padding: 15px 10px; /* Consistent padding */
-    min-height: 50px; /* Uniform height for short questions */
+    padding: 15px 10px;
     cursor: pointer;
-    display: flex; /* Flexbox for alignment */
-    justify-content: space-between; /* Spaces text and icon */
-    align-items: center; /* Vertically centers content */
-    flex-wrap: wrap; /* Allows wrapping if needed */
-    box-sizing: border-box; /* Includes padding in width calculation */
-  }
-  
-  .faq-question span:first-child {
-    flex: 1 1 auto; /* Allows text to grow and shrink */
-    white-space: normal; /* Ensures text wraps naturally */
-    word-wrap: break-word; /* Breaks long words if necessary */
-  }
-  
-  .faq-question .toggle-icon {
-    flex-shrink: 0; /* Prevents icon from shrinking */
-    margin-left: 10px; /* Spacing from text */
-    font-size: 1.2rem; /* Icon size */
-  }
-  
-  .faq-answer {
-    display: none;
-    padding: 0 8px 10px;
-    font-size: 0.95rem;
-    color: #555;
-  }
-  
-  .faq-item.active .faq-answer {
-    display: block;
-  }
-  
-  .faq-item.active .toggle-icon::before {
-    content: '-';
-  }
-  
-  .faq-item .toggle-icon::before {
+    display: grid;
+    grid-template-columns: 1fr auto; /* text in first column, icon in second column */
+    gap: 10px;
+    align-items: center;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+/* 
+   The icon is always in the "auto" column (far right). 
+   Using a pseudo-element for the '+' or '-'. 
+*/
+.toggle-icon::before {
     content: '+';
-  }
+    font-size: 1.2rem;
+}
+
+.faq-item.active .toggle-icon::before {
+    content: '-';
+}
+
+/* 
+   2) Use a smooth transition for the answer 
+      by animating max-height instead of display. 
+*/
+.faq-answer {
+    /* Remove "display: none" */
+    max-height: 0;           /* Start closed */
+    overflow: hidden;        /* Hide content when closed */
+    background-color: #ffffff;  /* Light mode answer background */
+    color: #555;
+    padding: 0 10px;         /* Will show only when open due to max-height=0 */
+    transition: max-height 0.4s ease;  /* Smoother open/close */
+}
+
+/* 
+   When .active is on .faq-item, expand the answer. 
+   Set a large max-height so it won't cut off normal FAQ text.
+*/
+.faq-item.active .faq-answer {
+    max-height: 300px; /* Adjust as needed */
+    padding: 10px;
+}
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -542,5 +551,15 @@ footer {
     .vacancy-section,
     .property-description {
         color: #ffffff;
+    }
+
+    .faq-question {
+        background-color: #28333A; /* Darker background for question */
+        color: #fff;
+    }
+
+    .faq-answer {
+        background-color: #162030; /* Darker background for answer */
+        color: #fff;
     }
 }
