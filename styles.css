@@ -89,7 +89,7 @@ nav .closebtn {
     margin-left: 50px;
 }
 
-.nav-link-spacer {
+.nav-home-link {
     margin-top: 20px; /* Adjust the value to create more space */
 }
 
@@ -267,12 +267,10 @@ footer {
     left: 10px;
     z-index: 1001;
 }
-
-/* In light mode, when closed, show black hamburber menu; when open, white hamburger menu*/
 .hamburger div {
     width: 25px;
     height: 3px;
-    background: #000000;
+    background: #777; /* Gray when closed in light mode */
     margin: 5px 0;
     transition: background 0.3s ease;
 }
@@ -295,7 +293,7 @@ footer {
     text-decoration: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: fixed;
-    right: 20px; /* Positioning to the right */
+    right: 20px;
     z-index: 1000;
 }
 
@@ -303,29 +301,78 @@ footer {
     background: #555;
 }
 
+/* FAQ Section Styles */
+.faq-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    background: #f9f9f9;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.4;
+    padding: 10px 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.faq-question span:first-child {
+    flex: 1 1 auto;
+}
+
+.faq-question .toggle-icon {
+    flex-shrink: 0;
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 8px 10px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .toggle-icon::before {
+    content: '-';
+}
+
+.faq-item .toggle-icon::before {
+    content: '+';
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
-    /* Make the container wider on mobile */
     .container {
         width: 95%;
     }
-    .mobile-hamburger {
-        margin-top: 20px; /* Adjust the value to create more space for hamburger menu placement*/
-    }
-    /* Ensure the About Us section takes the full container width */
     .about-us-section {
-        width: 100%;        /* Take up the full width of the container */
-        max-width: 100%;    /* Override any smaller max-width constraints */
-        grid-template-columns: 1fr; /* Keep single column layout */
-        gap: 15px;          /* Maintain spacing between grid items */
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
-    /* Increase padding in the grey boxes for more space */
     .about-us-box {
-        padding: 10px;      /* More breathing room inside the boxes */
-        max-width: 95%;     /* Ensure boxes can use full available width */
+        padding: 10px;
+        max-width: 95%;
     }
-    /* Keep existing styles for other elements */
     .centered-section img.house-sketch {
-        width: 95%;         /* Smaller size on mobile */
+        width: 95%;
         max-width: 400px;
         height: auto;
     }
@@ -353,15 +400,7 @@ footer {
         max-width: 100%;
         height: auto;
     }
-    .hours-section {
-        width: 100%;
-        max-width: 100%;
-    }
-    .map-section {
-        width: 100%;
-        max-width: 100%;
-    }
-    #map {
+    .hours-section, .map-section, #map {
         width: 100%;
         max-width: 100%;
     }
@@ -389,7 +428,7 @@ footer {
 }
 
 .contact-image {
-    max-width: 20%; /* Reduced max-width */
+    max-width: 20%;
     height: auto;
     display: block;
     margin: 20px 100px;
@@ -411,100 +450,29 @@ footer {
     max-width: 1000px;
     height: auto;
     display: block;
-    margin: 20px auto; /* center it and add spacing */
-    border-radius: 8px; /* optional: make corners slightly rounded */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* optional: soft shadow */
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
-
-/* FAQ Container */
-.faq-section {
-    max-width: 800px; /* Or your preferred width */
-    margin: 0 auto;
-  }
-  
-  /* Each FAQ item */
-  .faq-item {
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 10px;
-  }
-  
-  /* The clickable question area */
-  .faq-question, .faq-question .faq-question-text {
-    background: inherit;        /* Inherit background from the page */
-    border: none;
-    width: 100%;
-    text-align: left;
-    font-size: 1rem;
-    padding: 10px 8px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: inherit;
-    line-height: 1.4;
-    margin: 0;
-  }
-  
-  /* The plus/minus icon */
-  .toggle-icon {
-    font-size: 1.2rem;          /* Slightly bigger than text */
-    margin-left: 10px;
-  }
-
-  .faq-question .toggle-icon::before {
-    content: '+'; /* Default plus sign */
-    transition: content 0.3s ease;
-  }
-
-  /* When the FAQ item is active, change plus to minus */
-.faq-item.active .toggle-icon::before {
-    content: '-';
-  }
-  
-  /* The answer is hidden by default */
-  .faq-answer {
-    display: none;
-    padding: 0 8px 10px;        /* Some spacing under the question */
-    font-size: 0.95rem;         /* Slightly smaller than question text */
-    color: #555;                /* Subtle text color */
-  }
-  
-  /* When .active is added, show the answer */
-  .faq-item.active .faq-answer {
-    display: block;
-  }
-  
-  /* Also swap the plus to minus when .active is added */
-  .faq-item.active .toggle-icon::before {
-    content: '-';
-  }
-  .faq-item .toggle-icon::before {
-    content: '+';  /* Default plus sign */
-  }
 
 @media (prefers-color-scheme: light) {
     header, footer {
-      background-color: #ffffff; /* Light background */
-      color: #333; /* Dark text */
-    }
-
-    .faq-question {
         background-color: #ffffff;
         color: #333;
-      }
+    }
 }
 
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #162030; /* Dark navy background */
-        color: #ffffff;            /* Light text */
+        background-color: #162030;
+        color: #ffffff;
     }
     
     header, footer {
-        background-color: #162030; /* Navy header and footer */
+        background-color: #162030;
         color: #ffffff;
     }
-
+    
     .hamburger div {
         background: #ffffff !important;
     }
@@ -527,35 +495,30 @@ footer {
         transform: translateX(0);
     }
     
-    /* Ensure nav links are always white */
     nav a {
         color: #ffffff;
     }
     
-    /* Force welcome text and other text in the centered-section to white */
     .welcome-section p,
     .centered-section p.decades-section,
     .centered-section p {
         color: #ffffff !important;
     }
     
-    /* Change the background of the about-us section (the white box) */
     .about-us-section {
-        background-color: #162030; /* Matches the page background */
+        background-color: #162030;
     }
     
-    /* Update the about-us boxes to a complementary color */
     .about-us-box {
-        background-color: #28333A; /* Suggested complementary color */
+        background-color: #28333A;
         color: #ffffff;
     }
-
+    
     .contact-info {
         background-color: #28333A; 
         color: #ffffff;
     }
     
-    /* Update the house sketch image to your dark mode version */
     .house-sketch {
         content: url("Website Images/HouseDarkMode.png");
     }
@@ -564,16 +527,10 @@ footer {
         content: url("Website Images/OfficeNight.jpg");
     }
     
-    /* Vacancy page specific overrides (if needed) */
     .vacancy-title, 
     .vacancy-description, 
     .vacancy-section,
     .property-description {
         color: #ffffff;
     }
-
-    .faq-question {
-        background-color: #162030;
-        color: #ffffff;
-      }    
 }
