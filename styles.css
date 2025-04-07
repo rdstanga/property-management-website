@@ -416,6 +416,59 @@ footer {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* optional: soft shadow */
 }
 
+/* FAQ Container */
+.faq-section {
+    max-width: 800px; /* Or your preferred width */
+    margin: 0 auto;
+  }
+  
+  /* Each FAQ item */
+  .faq-item {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  /* The clickable question area */
+  .faq-question {
+    background: #f9f9f9;        /* Light gray background */
+    border: none;               /* Remove default button styles */
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;            /* Adjust to match your site */
+    padding: 10px 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* The plus/minus icon */
+  .toggle-icon {
+    font-size: 1.2rem;          /* Slightly bigger than text */
+    margin-left: 10px;
+  }
+  
+  /* The answer is hidden by default */
+  .faq-answer {
+    display: none;
+    padding: 0 8px 10px;        /* Some spacing under the question */
+    font-size: 0.95rem;         /* Slightly smaller than question text */
+    color: #555;                /* Subtle text color */
+  }
+  
+  /* When .active is added, show the answer */
+  .faq-item.active .faq-answer {
+    display: block;
+  }
+  
+  /* Also swap the plus to minus when .active is added */
+  .faq-item.active .toggle-icon::before {
+    content: '-';
+  }
+  .faq-item .toggle-icon::before {
+    content: '+';  /* Default plus sign */
+  }
+
 @media (prefers-color-scheme: light) {
     header, footer {
       background-color: #ffffff; /* Light background */
