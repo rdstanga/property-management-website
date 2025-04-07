@@ -429,18 +429,20 @@ footer {
   }
   
   /* The clickable question area */
-  .faq-question {
+  .faq-question, .faq-question .faq-question-text {
     background: inherit;        /* Inherit background from the page */
     border: none;
     width: 100%;
     text-align: left;
-    font-size: 1rem;            /* Adjust to match your site */
+    font-size: 1rem;
     padding: 10px 8px;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: inherit;
+    line-height: 1.4;
+    margin: 0;
   }
   
   /* The plus/minus icon */
@@ -570,12 +572,8 @@ footer {
         color: #ffffff;
     }
 
-    .faq-question, .faq-question .faq-question-text {
+    .faq-question {
         background-color: #162030;
         color: #ffffff;
-        font-size: 1rem;    /* Adjust this value as needed */
-        line-height: 1.4;   /* Consistent line height */
-        margin: 0;          /* Remove any extra margins if present */
-        padding: 0;         /* Remove any extra padding if present */
-    }    
+      }    
 }
