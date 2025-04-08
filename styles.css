@@ -408,7 +408,8 @@ footer {
     .contact-info {
         width: 90%;
         max-width: 90%;
-        /* padding: 15px; */
+        margin: 0 auto;
+        padding: 15px;
     }
     .contact-info img {
         width: 100% !important;
