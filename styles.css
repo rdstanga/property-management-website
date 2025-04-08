@@ -337,6 +337,14 @@ footer {
     transition: background-color 0.4s ease-in-out;
 }
 
+.faq-question::after {
+    content: '';
+    display: block;
+    width: calc(100% - 40px); /* Customize this value */
+    margin: 10px auto 0;
+    border-bottom: 1px solid #ccc;
+}
+
 /* Hover effect for light mode */
 .faq-question:hover {
     background: #e0e0e0; /* Slightly darker gray for light mode hover */
@@ -565,6 +573,10 @@ footer {
     .faq-question {
         background-color: #28333A; /* Darker background for question */
         color: #fff;
+    }
+
+    .faq-question::after {
+        border-bottom-color: #555; /* Adjust for dark mode */
     }
 
     .faq-question:hover {
