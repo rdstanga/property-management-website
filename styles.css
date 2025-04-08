@@ -451,6 +451,8 @@ footer {
     height: 400px;
     width: 90%;
     margin-top: 20px;
+    display: block;
+    margin: 20px auto;
 }
 
 .property-image {
