@@ -332,7 +332,7 @@ footer {
     gap: 10px;
     align-items: center;
     box-sizing: border-box;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.4s ease;
 }
 
 .toggle-icon::before {
@@ -347,7 +347,7 @@ footer {
 .faq-answer {
     height: 0;
     overflow: hidden;
-    transition: height 0.3s ease-in-out;
+    transition: height 0.4s ease-in-out;
     background-color: #ffffff;
 }
 
