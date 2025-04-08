@@ -283,29 +283,6 @@ footer {
     background: #ffffff !important;
 }
 
-/* Squircle Buttons
-.squircle-button {
-    display: block;
-    width: 80px;
-    height: 80px;
-    background: #333;
-    color: white;
-    text-align: center;
-    line-height: 80px;
-    font-size: 16px;
-    border-radius: 30% / 50%;
-    margin: 20px auto;
-    text-decoration: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    right: 20px;
-    z-index: 1000;
-}
-
-.squircle-button:hover {
-    background: #555;
-} */
-
 /* FAQ Section Styles */
 .faq-section {
     max-width: 800px;
@@ -449,7 +426,7 @@ footer {
     padding: 20px;
     font-size: 18px;
     max-width: 800px;
-    margin: 0 0;
+    margin: 1 1;
     background-color: #f1f1f1;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
