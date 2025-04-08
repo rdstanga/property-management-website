@@ -364,7 +364,7 @@ footer {
         width: 100%;
         max-width: 100%;
         grid-template-columns: 1fr;
-        gap: 10px;
+        gap: 5px;
     }
     .about-us-box {
         padding: 10px;
