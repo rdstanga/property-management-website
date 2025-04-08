@@ -336,7 +336,7 @@ footer {
     gap: 10px;
     align-items: center;
     box-sizing: border-box;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 1.4s ease;
 }
 
 /* 
@@ -356,7 +356,7 @@ footer {
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    transition: height 0.3s ease-in-out;
+    transition: max-height 1.4s ease;
     background-color: #ffffff; /* Light mode background */
 }
 
