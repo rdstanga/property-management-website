@@ -283,7 +283,7 @@ footer {
     background: #ffffff !important;
 }
 
-/* Squircle Buttons */
+/* Squircle Buttons
 .squircle-button {
     display: block;
     width: 80px;
@@ -304,7 +304,7 @@ footer {
 
 .squircle-button:hover {
     background: #555;
-}
+} */
 
 /* FAQ Section Styles */
 .faq-section {
@@ -470,8 +470,6 @@ footer {
     height: auto;
     display: block;
     margin: 20px 100px;
-    border-radius: 12px;
-    overflow: hidden;
 }
 
 .map-section {
