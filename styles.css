@@ -406,8 +406,8 @@ footer {
         width: 95%;
     }
     .contact-info {
-        width: 100%;
-        max-width: 100%;
+        width: 900%;
+        max-width: 90%;
         padding: 15px;
     }
     .contact-info img {
@@ -434,7 +434,7 @@ footer {
 }
 
 .contact-info p {
-    margin: 10px 10px;
+    margin: 10px;
 }
 
 .hours-section {
