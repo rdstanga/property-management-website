@@ -341,8 +341,8 @@ footer {
     content: '';
     display: block;
     width: calc(100% - 40px); /* Customize this value */
-    margin: 10px auto 0;
-    /* border-bottom: 1px solid #ccc; */
+    margin: 20px auto 0;
+    border-bottom: 1px solid #ccc;
 }
 
 /* Hover effect for light mode */
