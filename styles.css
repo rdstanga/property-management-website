@@ -356,7 +356,7 @@ footer {
 .faq-answer {
     height: 0;
     overflow: hidden;
-    transition: height 0.3s ease;
+    transition: height 0.3s ease-in-out;
     background-color: #ffffff; /* Light mode background */
 }
 
