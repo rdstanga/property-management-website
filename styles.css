@@ -335,6 +335,7 @@ footer {
     border-radius: 12px; /* Subtle squircle for question box */
     transition: background-color 0.4s ease-in-out;
     position: relative;
+    color: #555;
 }
 
 .faq-question::after {
@@ -469,6 +470,7 @@ footer {
     height: auto;
     display: block;
     margin: 20px 100px;
+    border-radius: 12px;
 }
 
 .map-section {
