@@ -364,11 +364,11 @@ footer {
         width: 100%;
         max-width: 100%;
         grid-template-columns: 1fr;
-        gap: 5px;
+        gap: 15px;
     }
     .about-us-box {
         padding: 10px;
-        max-width: 95%;
+        max-width: 100%;
     }
     .centered-section img.house-sketch {
         width: 95%;
