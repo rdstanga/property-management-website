@@ -341,7 +341,7 @@ footer {
     content: '';
     display: block;
     width: calc(100% - 40px); /* Customize this value */
-    margin: 10px auto 0;
+    margin: 30px auto 0;
     border-bottom: 1px solid #ccc;
 }
 
@@ -573,10 +573,6 @@ footer {
     .faq-question {
         background-color: #28333A; /* Darker background for question */
         color: #fff;
-    }
-
-    .faq-question::after {
-        border-bottom-color: #555; /* Adjust for dark mode */
     }
 
     .faq-question:hover {
