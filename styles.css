@@ -376,7 +376,7 @@ footer {
         gap: 15px;
     }
     .about-us-box {
-        padding: 10px;
+        padding: 10px 15px;
         max-width: 95%;
     }
     .centered-section img.house-sketch {
