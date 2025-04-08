@@ -369,7 +369,10 @@ footer {
 }
 
 .faq-answer-inner {
-    padding: 10px 10px;
+    padding-top: 5px;    /* Space above the answer */
+    padding-right: 10px;
+    padding-bottom: 2px; /* Minimize space below the answer */
+    padding-left: 10px;
     font-size: 0.95rem;
     color: #555;
 }
