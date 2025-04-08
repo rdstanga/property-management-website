@@ -159,26 +159,15 @@
                   const answer = faqItem.querySelector('.faq-answer');
                   const answerInner = answer.querySelector('.faq-answer-inner');
                   
-                  if (faqItem.classList.contains('active')) {
-                      // Closing: set height to current computed height, then animate to 0.
-                      answer.style.height = answer.scrollHeight + 'px'; 
-                      // Force reflow
-                      requestAnimationFrame(() => {
-                          answer.style.height = '0';
-                      });
-                      faqItem.classList.remove('active');
+                  const isActive = faqItem.classList.toggle('active');
+                  
+                  if (isActive) {
+                      answer.style.height = `${answerInner.scrollHeight}px`;
                   } else {
-                      // Opening: set height to the inner content's scrollHeight.
-                      answer.style.height = answerInner.scrollHeight + 'px';
-                      faqItem.classList.add('active');
-                      
-                      // After transition, reset height to auto for dynamic content (if needed).
-                      answer.addEventListener('transitionend', function handler() {
-                          if (faqItem.classList.contains('active')) {
-                              answer.style.height = 'auto';
-                          }
-                          answer.removeEventListener('transitionend', handler);
-                      });
+                      answer.style.height = `${answer.scrollHeight}px`;
+                      setTimeout(() => {
+                          answer.style.height = '0';
+                      }, 0);
                   }
               });
           });

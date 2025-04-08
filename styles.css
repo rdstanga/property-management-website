@@ -318,12 +318,8 @@ footer {
     width: 100%;
 }
 
-/* 
-   1) Ensure the question text is on the left
-      and the plus icon is on the far right in a single column.
-*/
 .faq-question {
-    background: #f9f9f9; /* Light mode background */
+    background: #f9f9f9;
     border: none;
     width: 100%;
     text-align: left;
@@ -332,17 +328,13 @@ footer {
     padding: 15px 10px;
     cursor: pointer;
     display: grid;
-    grid-template-columns: 1fr auto; /* text in first column, icon in second column */
+    grid-template-columns: 1fr auto;
     gap: 10px;
     align-items: center;
     box-sizing: border-box;
-    transition: background-color 1.4s ease;
+    transition: background-color 0.3s ease;
 }
 
-/* 
-   The icon is always in the "auto" column (far right). 
-   Using a pseudo-element for the '+' or '-'. 
-*/
 .toggle-icon::before {
     content: '+';
     font-size: 1.2rem;
@@ -352,28 +344,17 @@ footer {
     content: '-';
 }
 
-/* FAQ Answer container */
 .faq-answer {
-    max-height: 0;
+    height: 0;
     overflow: hidden;
-    transition: max-height 1.4s ease;
-    background-color: #ffffff; /* Light mode background */
+    transition: height 0.3s ease-in-out;
+    background-color: #ffffff;
 }
 
-/* Inner content container with consistent padding */
 .faq-answer-inner {
     padding: 10px;
     font-size: 0.95rem;
     color: #555;
-}
-
-/* 
-   When .active is on .faq-item, expand the answer. 
-   Set a large max-height so it won't cut off normal FAQ text.
-*/
-.faq-item.active .faq-answer {
-    max-height: 300px; /* Adjust as needed */
-    padding: 10px;
 }
 
 /* Media Queries */
