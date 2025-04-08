@@ -391,6 +391,22 @@ footer {
         font-size: 0.9em;
         line-height: 1.4;
     }
+
+    .faq-section {
+        padding: 0 15px;
+        max-width: 100%;  /* Ensure it uses the full available width minus the padding */
+      }
+      
+      /* You can also adjust the question and answer paddings if needed */
+      .faq-question {
+        padding: 15px 15px; /* Increase right and left padding */
+      }
+      
+      /* If necessary, adjust the inner answer padding */
+      .faq-answer-inner {
+        padding: 10px 15px;
+      }
+
 }
 
 /* Contact page mobile formatting */
