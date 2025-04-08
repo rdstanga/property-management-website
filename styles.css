@@ -332,7 +332,13 @@ footer {
     gap: 10px;
     align-items: center;
     box-sizing: border-box;
-    transition: background-color 0.4s ease;
+    border-radius: 12px; /* Subtle squircle for question box */
+    transition: background-color 0.4s ease-in-out;
+}
+
+/* Hover effect for light mode */
+.faq-question:hover {
+    background: #e0e0e0; /* Slightly darker gray for light mode hover */
 }
 
 .toggle-icon::before {
@@ -349,6 +355,7 @@ footer {
     overflow: hidden;
     transition: height 0.4s ease-in-out;
     background-color: #ffffff;
+    border-radius: 12px; /* Subtle squircle for answer box */
 }
 
 .faq-answer-inner {
@@ -538,6 +545,10 @@ footer {
     .faq-question {
         background-color: #28333A; /* Darker background for question */
         color: #fff;
+    }
+
+    .faq-question:hover {
+        background-color: #3A4A55; /* Hover color for dark mode */
     }
 
     .faq-answer {
