@@ -342,7 +342,7 @@ footer {
     display: block;
     width: calc(100% - 40px); /* Customize this value */
     margin: 10px auto 0;
-    border-bottom: 1px solid #ccc;
+    /* border-bottom: 1px solid #ccc; */
 }
 
 /* Hover effect for light mode */
