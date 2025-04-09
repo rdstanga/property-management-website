@@ -355,6 +355,58 @@ footer {
     color: #000000;
 }
 
+/* Contact Page Styles */
+.contact-info {
+    padding: 0 1px;
+    font-size: 18px;
+    max-width: 800px;
+    margin: 5px auto;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.contact-info p {
+    margin: 15px;
+}
+
+.hours-section {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.contact-image {
+    max-width: 20%;
+    height: auto;
+    display: block;
+    margin: 20px 100px;
+}
+
+.map-section {
+    padding: 20px;
+    text-align: center;
+}
+
+#map {
+    height: 400px;
+    width: 90%;
+    margin-top: 20px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+}
+
+.property-image {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
 /* Combined Mobile Media Query */
 @media (max-width: 768px) {
     /* Adjust container width and padding */
@@ -426,58 +478,6 @@ footer {
     .map-section, #map {
         margin-bottom: 5px;
     }
-}
-
-/* Contact Page Styles */
-.contact-info {
-    padding: 0 1px;
-    font-size: 18px;
-    max-width: 800px;
-    margin: 5px auto;
-    background-color: #f1f1f1;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: #333;
-}
-
-.contact-info p {
-    margin: 20px;
-}
-
-.hours-section {
-    margin: 20px 0;
-    text-align: left;
-}
-
-.contact-image {
-    max-width: 20%;
-    height: auto;
-    display: block;
-    margin: 20px 100px;
-}
-
-.map-section {
-    padding: 20px;
-    text-align: center;
-}
-
-#map {
-    height: 400px;
-    width: 90%;
-    margin-top: 20px;
-    display: block;
-    margin: 20px auto;
-    border-radius: 12px;
-}
-
-.property-image {
-    width: 100%;
-    max-width: 1000px;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Light Mode Overrides */
