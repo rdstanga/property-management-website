@@ -359,7 +359,7 @@ footer {
 @media (max-width: 768px) {
     .container {
         width: 100%;
-        padding: 0 5px;
+        padding: 0 1px;
     }
     .about-us-section {
         width: 100%;
