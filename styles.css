@@ -377,11 +377,12 @@ footer {
 }
 
 .office-image {
-    width: 95%;          /* Allow image to scale with its container */
+    width: 100%;          /* Allow image to scale with its container */
     max-width: 700px;     /* Cap it at 700px if the container is wider */
     height: auto;         /* Maintain aspect ratio */
     display: block;       /* Remove any inline gap */
     margin: 0 auto;       /* Center the image within its container */
+    border-radius: 12px;
 }
 
 .map-section {
