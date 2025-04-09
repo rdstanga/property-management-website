@@ -581,7 +581,7 @@ footer {
         color: #fff;
     }
 
-    .contact-info p {
-        color: #FF9933;
+    .contact-info a[href^="mailto:"] {
+        color: #ff924a;
     }
 }
