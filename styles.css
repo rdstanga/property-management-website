@@ -361,6 +361,11 @@ footer {
         width: 100%;
         padding: 0 1px;
     }
+
+    .hamburger {
+        top: 60px /* Limit height of hamburger menu on mobile */
+    }
+
     .about-us-section {
         width: 100%;
         max-width: 100%;
