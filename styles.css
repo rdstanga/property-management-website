@@ -362,10 +362,6 @@ footer {
         padding: 0 1px;
     }
 
-    .hamburger {
-        top: 60px /* Limit height of hamburger menu on mobile */
-    }
-
     .about-us-section {
         width: 100%;
         max-width: 100%;
@@ -408,28 +404,6 @@ footer {
         padding: 10px 15px;
       }
 
-}
-
-/* Contact page mobile formatting */
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-    }
-    .contact-info {
-        width: 90%;
-        max-width: 90%;
-        margin: 0 auto;
-        padding: 15px;
-    }
-    .contact-info img {
-        width: 100% !important;
-        max-width: 100%;
-        height: auto;
-    }
-    .hours-section, .map-section, #map {
-        width: 100%;
-        max-width: 100%;
-    }
 }
 
 /* Contact Page Styles */
@@ -482,6 +456,28 @@ footer {
     margin: 20px auto;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact page mobile formatting */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    .contact-info {
+        width: 90%;
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 15px;
+    }
+    .contact-info img {
+        width: 100% !important;
+        max-width: 100%;
+        height: auto;
+    }
+    .hours-section, .map-section, #map {
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 @media (prefers-color-scheme: light) {
