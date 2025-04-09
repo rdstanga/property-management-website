@@ -580,4 +580,8 @@ footer {
     .faq-answer-inner {
         color: #fff;
     }
+
+    .contact-info p {
+        color: #FF9933;
+    }
 }
