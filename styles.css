@@ -41,7 +41,7 @@ header h1 {
 
 /* Navigation Styles */
 .sidenav.hidden {
-    transform: translateX(-100%) /* Hide the menu by default */
+    transform: translateX(-100%); /* Hide the menu by default */
 }
 
 nav {
@@ -355,15 +355,31 @@ footer {
     color: #000000;
 }
 
-/* Media Queries */
+/* Combined Mobile Media Query */
 @media (max-width: 768px) {
+    /* Adjust container width and padding */
     .container {
-        width: 100%;
+        width: 95%;
         padding: 0 1px;
     }
+    /* Make header title font smaller */
     header h1 {
         font-size: 26px;
     }
+    /* Centered section adjustments */
+    .centered-section img.house-sketch {
+        width: 95%;
+        max-width: 400px;
+        height: auto;
+    }
+    .centered-section p {
+        max-width: 95%;
+        word-wrap: break-word;
+        margin: 0 auto 20px;
+        font-size: 0.9em;
+        line-height: 1.4;
+    }
+    /* About Us Section for mobile */
     .about-us-section {
         width: 100%;
         max-width: 100%;
@@ -378,32 +394,38 @@ footer {
         padding: 20px;
         box-sizing: border-box;
     }
-    .centered-section img.house-sketch {
-        width: 95%;
-        max-width: 400px;
-        height: auto;
-    }
-    .centered-section p {
-        max-width: 95%;
-        word-wrap: break-word;
-        margin: 0 auto 20px;
-        font-size: 0.9em;
-        line-height: 1.4;
-    }
-
+    /* FAQ Section adjustments for mobile */
     .faq-section {
         padding: 0 15px;
-        max-width: 100%;  /* Ensure it uses the full available width minus the padding */
-      }
-      
-      .faq-question {
-        padding: 15px 15px; /* Increase right and left padding */
-      }
-      
-      .faq-answer-inner {
+        max-width: 100%;
+    }
+    .faq-question {
+        padding: 15px 15px;
+    }
+    .faq-answer-inner {
         padding: 10px 15px;
-      }
-
+    }
+    /* Contact Page adjustments for mobile */
+    .contact-info {
+        width: 90%;
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 15px;
+    }
+    .contact-info img {
+        width: 100% !important;
+        max-width: 100%;
+        height: auto;
+    }
+    .hours-section,
+    .map-section,
+    #map {
+        width: 100%;
+        max-width: 100%;
+    }
+    .map-section, #map {
+        margin-bottom: 5px;
+    }
 }
 
 /* Contact Page Styles */
@@ -458,33 +480,7 @@ footer {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Contact page mobile formatting */
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-    }
-    .contact-info {
-        width: 90%;
-        max-width: 90%;
-        margin: 0 auto;
-        padding: 15px;
-    }
-    .contact-info img {
-        width: 100% !important;
-        max-width: 100%;
-        height: auto;
-    }
-    .hours-section {
-        width: 100%;
-        max-width: 100%;
-    }
-    .map-section, #map {
-        width: 100%;
-        max-width: 100%;
-        margin-bottom: 5px;
-    }
-}
-
+/* Light Mode Overrides */
 @media (prefers-color-scheme: light) {
     header, footer {
         background-color: #ffffff;
@@ -492,6 +488,7 @@ footer {
     }
 }
 
+/* Dark Mode Overrides */
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #162030;
@@ -563,21 +560,21 @@ footer {
     .property-description {
         color: #ffffff;
     }
-
+    
     .faq-question {
         background-color: #28333A; /* Darker background for question */
         color: #fff;
     }
-
+    
     .faq-question:hover {
         background-color: #3A4A55; /* Hover color for dark mode */
     }
-
+    
     .faq-answer {
         background-color: #162030; /* Darker background for answer */
         color: #fff;
     }
-
+    
     .faq-answer-inner {
         color: #fff;
     }
