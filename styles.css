@@ -377,7 +377,7 @@ footer {
 }
 
 .office-image {
-    width: 100%;          /* Allow image to scale with its container */
+    width: 90%;          /* Allow image to scale with its container */
     max-width: 700px;     /* Cap it at 700px if the container is wider */
     height: auto;         /* Maintain aspect ratio */
     display: block;       /* Remove any inline gap */
