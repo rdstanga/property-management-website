@@ -212,12 +212,12 @@ section.centered-section p + p {
     margin: 0 auto;
     padding: 20px;
     background-color: #ffffff;
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
 .about-us-box {
     background-color: #eaeaea;
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
     box-sizing: content-box;
@@ -362,13 +362,13 @@ footer {
     max-width: 800px;
     margin: 5px auto;
     background-color: #f1f1f1;
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: #333;
 }
 
 .contact-info p {
-    margin: 15px;
+    margin: 20px 10px;
 }
 
 .hours-section {
@@ -405,7 +405,7 @@ footer {
     height: auto;
     display: block;
     margin: 20px auto;
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
