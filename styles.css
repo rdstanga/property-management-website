@@ -35,7 +35,7 @@ header {
 header h1 {
     margin: 0;
     display: inline-block;  /* So the border only covers the text */
-    padding-bottom: 10px;   /* Optional: Adjust for spacing */
+    padding-bottom: 10px;
     border-bottom: 1px solid #ddd;
 }
 
@@ -90,7 +90,7 @@ nav .closebtn {
 }
 
 .nav-home-link {
-    margin-top: 20px; /* Adjust the value to create more space */
+    margin-top: 20px;
 }
 
 .nav-link-spacer {
@@ -114,8 +114,8 @@ main {
 .welcome-section {
     text-align: center; /* Align text in center of page */
     font-family: 'Cardo', serif; /* Apply Cardo font */
-    font-size: 28px; /* Adjust font size if needed */
-    color: #202020f6; /* Adjust text color if needed */
+    font-size: 28px;
+    color: #202020f6;
     max-width: 500px;
     margin: 0 auto;
 }
@@ -141,7 +141,7 @@ section.centered-section p.decades-section {
     color: #202020f6;
     max-width: 500px;
     margin: 0 auto;
-    margin-bottom: 20px; /* Adjust the value to create more space */
+    margin-bottom: 20px;
 }
 
 /* Apply more spacing between paragraphs */
@@ -176,8 +176,8 @@ section.centered-section p + p {
 .vacancy-section {
     text-align: center; /* Align text in center of page */
     font-family: 'Cardo', serif; /* Apply Cardo font */
-    font-size: 22px; /* Adjust font size if needed */
-    color: #202020f6; /* Adjust text color if needed */
+    font-size: 22px;
+    color: #202020f6;
     max-width: 500px;
     margin: 0 auto;
     margin-bottom: 100px;
@@ -208,7 +208,7 @@ section.centered-section p + p {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    max-width: 800px; /* Adjust the width if needed */
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     background-color: #ffffff;
@@ -238,7 +238,7 @@ section.centered-section p + p {
 }
 
 .icon {
-    width: 85px; /* Adjust size as needed */
+    width: 85px;
     height: auto;
     margin-left: 90px; /* Adjust this value to push the icon further right */
     border-radius: 12px;
@@ -361,7 +361,9 @@ footer {
         width: 100%;
         padding: 0 1px;
     }
-
+    header h1 {
+        font-size: 24px;
+    }
     .about-us-section {
         width: 100%;
         max-width: 100%;
@@ -394,12 +396,10 @@ footer {
         max-width: 100%;  /* Ensure it uses the full available width minus the padding */
       }
       
-      /* You can also adjust the question and answer paddings if needed */
       .faq-question {
         padding: 15px 15px; /* Increase right and left padding */
       }
       
-      /* If necessary, adjust the inner answer padding */
       .faq-answer-inner {
         padding: 10px 15px;
       }
