@@ -373,7 +373,7 @@ footer {
 /* 2) Envelope Anchor Positioned Top-Right */
 .email-animation-container {
     position: absolute;
-    top: 15px;         /* tweak as you like to move envelope up/down */
+    top: 5px;         /* tweak to move envelope up/down */
     right: 20px;       /* tweak for left/right */
     width: 200px;
     height: 200px;
