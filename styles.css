@@ -367,6 +367,34 @@ footer {
     color: #333;
 }
 
+/* Base style for the contact email link and icon */
+.contact-email {
+    position: relative;  /* (Optional) if we wanted to position the icon absolutely */
+    text-decoration: none; /* assume we handle link styling (underline, color) elsewhere */
+  }
+  .contact-email .email-icon {
+    display: inline-block;           /* make span act like an inline element containing the icon */
+    vertical-align: middle;          /* align icon vertically with text */
+    margin-left: 0.4em;              /* spacing between text and icon */
+    /* Hidden state (default) */
+    opacity: 0;                      /* make icon invisible, but still present in flow */
+    transform: translateY(20%) scale(0.8);  /* slightly lower and smaller for animation start */
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;  /* animate appearance */
+  }
+  
+  /* Hover and focus states: show and animate the icon */
+  .contact-email:hover .email-icon,
+  .contact-email:focus .email-icon,
+  .contact-email:active .email-icon {
+    opacity: 1; 
+    transform: translateY(0) scale(1);  /* move into place and full size */
+  }
+  
+  /* (Optional) Ensure the SVG icon inherits text color (if not set via inline attr) */
+  .contact-email .email-icon svg {
+    fill: currentColor;
+  }
+
 .contact-info p {
     margin: 20px 10px;
 }
