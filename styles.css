@@ -355,9 +355,12 @@ footer {
     color: #000000;
 }
 
-/* Contact Page Styles */
+/****************************************/
+/* 1) Ensure .contact-info can position children absolutely */
 .contact-info {
-    padding: 1px 20px;
+    position: relative; /* allows absolute positioning inside */
+    /* the rest of your existing .contact-info styles remain below */
+    padding: 1px 20px; 
     font-size: 18px;
     max-width: 800px;
     margin: 5px auto;
@@ -367,57 +370,45 @@ footer {
     color: #333;
 }
 
-/* --- New styles for the animated envelope next to the email link --- */
-
-/* Make the email link a positioning context */
-.contact-email {
-    position: relative;
-    text-decoration: none;
-    color: inherit; /* will inherit from your existing contact-info styles */
-  }
-  
-  /* Wrapper for the envelope animation */
-  .email-animation-container {
+/****************************************/
+/* 2) Envelope Anchor Positioned Top-Right */
+.email-animation-container {
     position: absolute;
-    top: 50%;           /* vertically center relative to the link */
-    right: -220px;      /* position to the right; adjust value as needed */
-    transform: translateY(-50%);
+    top: 20px;         /* tweak as you like to move envelope up/down */
+    right: 20px;       /* tweak for left/right */
     width: 200px;
     height: 200px;
     cursor: pointer;
+    text-decoration: none; /* remove underline, etc. */
     
-    /* Hidden by default */
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  /* Reveal the envelope animation on hover/tap of the email link */
-  .contact-email:hover .email-animation-container,
-  .contact-email:focus .email-animation-container,
-  .contact-email:active .email-animation-container {
-    opacity: 1;
-  }
-  
-  /* Adjusted envelope animation styles (converted from your SCSS) */
-  
-  /* Instead of positioning the envelope absolutely in the viewport,
-     we make .letter-image relative so it fits inside its container */
-  .letter-image {
+    /* By default, show the envelope. If you'd prefer it hidden
+       until hover, you could use opacity:0 and hover to fade in. */
+}
+
+/****************************************/
+/* 3) Flattened Envelope Animation Code */
+/* Borrowed from your SCSS snippet, but updated for standard CSS. */
+
+/* We removed 'body { background: #323641; }' from your snippet
+   so it won't override your page's white background. */
+
+/* .letter-image: Now relative to fill the .email-animation-container */
+.letter-image {
     position: relative;
     width: 200px;
     height: 200px;
-    cursor: pointer;
-  }
-  
-  .animated-mail {
+}
+
+/* Envelope parts */
+
+.animated-mail {
     position: relative;
     height: 150px;
     width: 200px;
     transition: 0.4s;
-  }
-  
-  /* Body (the red part of the envelope) */
-  .animated-mail .body {
+}
+
+.animated-mail .body {
     position: absolute;
     bottom: 0;
     width: 0;
@@ -426,10 +417,9 @@ footer {
     border-width: 0 0 100px 200px;
     border-color: transparent transparent #e95f55 transparent;
     z-index: 2;
-  }
-  
-  /* Top fold */
-  .animated-mail .top-fold {
+}
+
+.animated-mail .top-fold {
     position: absolute;
     top: 50px;
     width: 0;
@@ -440,20 +430,18 @@ footer {
     transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
     border-color: #cf4a43 transparent transparent transparent;
     z-index: 2;
-  }
-  
-  /* Back fold */
-  .animated-mail .back-fold {
+}
+
+.animated-mail .back-fold {
     position: absolute;
     bottom: 0;
     width: 200px;
     height: 100px;
     background: #cf4a43;
     z-index: 0;
-  }
-  
-  /* Left fold */
-  .animated-mail .left-fold {
+}
+
+.animated-mail .left-fold {
     position: absolute;
     bottom: 0;
     width: 0;
@@ -462,10 +450,9 @@ footer {
     border-width: 50px 0 50px 100px;
     border-color: transparent transparent transparent #e15349;
     z-index: 2;
-  }
-  
-  /* The letter (white content) */
-  .animated-mail .letter {
+}
+
+.animated-mail .letter {
     left: 20px;
     bottom: 0;
     position: absolute;
@@ -475,9 +462,8 @@ footer {
     z-index: 1;
     overflow: hidden;
     transition: 0.4s 0.2s;
-  }
-  
-  .animated-mail .letter .letter-border {
+}
+.animated-mail .letter .letter-border {
     height: 10px;
     width: 100%;
     background: repeating-linear-gradient(
@@ -487,25 +473,22 @@ footer {
       transparent 8px,
       transparent 18px
     );
-  }
-  
-  .animated-mail .letter .letter-title {
+}
+.animated-mail .letter .letter-title {
     margin-top: 10px;
     margin-left: 5px;
     height: 10px;
     width: 40%;
     background: #cb5a5e;
-  }
-  
-  .animated-mail .letter .letter-context {
+}
+.animated-mail .letter .letter-context {
     margin-top: 10px;
     margin-left: 5px;
     height: 10px;
     width: 20%;
     background: #cb5a5e;
-  }
-  
-  .animated-mail .letter .letter-stamp {
+}
+.animated-mail .letter .letter-stamp {
     margin-top: 30px;
     margin-left: 120px;
     border-radius: 100%;
@@ -513,10 +496,10 @@ footer {
     width: 30px;
     background: #cb5a5e;
     opacity: 0.3;
-  }
-  
-  /* Shadow below the envelope */
-  .shadow {
+}
+
+/* Shadow at bottom of envelope */
+.shadow {
     position: absolute;
     top: 200px;
     left: 50%;
@@ -525,32 +508,37 @@ footer {
     transition: 0.4s;
     transform: translateX(-50%);
     border-radius: 100%;
-    background: radial-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.0), rgba(0,0,0,0.0));
-  }
-  
-  /* Hover/tap animation for the envelope icon */
-  .email-animation-container:hover .animated-mail,
-  .email-animation-container:focus .animated-mail,
-  .email-animation-container:active .animated-mail {
+    background: radial-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0), rgba(0,0,0,0));
+}
+
+/****************************************/
+/* 4) Animate Envelope on Hover/Tap */
+/* Hovering .email-animation-container triggers the envelope to “open.” */
+.email-animation-container:hover .animated-mail,
+.email-animation-container:focus .animated-mail,
+.email-animation-container:active .animated-mail {
     transform: translateY(50px);
-  }
-  .email-animation-container:hover .animated-mail .top-fold,
-  .email-animation-container:focus .animated-mail .top-fold,
-  .email-animation-container:active .animated-mail .top-fold {
-    transform: rotateX(180deg);
+}
+
+.email-animation-container:hover .top-fold,
+.email-animation-container:focus .top-fold,
+.email-animation-container:active .top-fold {
     transition: transform 0.4s, z-index 0.2s;
+    transform: rotateX(180deg);
     z-index: 0;
-  }
-  .email-animation-container:hover .animated-mail .letter,
-  .email-animation-container:focus .animated-mail .letter,
-  .email-animation-container:active .animated-mail .letter {
+}
+
+.email-animation-container:hover .letter,
+.email-animation-container:focus .letter,
+.email-animation-container:active .letter {
     height: 180px;
-  }
-  .email-animation-container:hover .shadow,
-  .email-animation-container:focus .shadow,
-  .email-animation-container:active .shadow {
+}
+
+.email-animation-container:hover .shadow,
+.email-animation-container:focus .shadow,
+.email-animation-container:active .shadow {
     width: 250px;
-  }
+}
 
 .contact-info p {
     margin: 20px 10px;
