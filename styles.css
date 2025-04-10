@@ -385,6 +385,15 @@ footer {
        until hover, you could use opacity:0 and hover to fade in. */
 }
 
+
+/* 2) .letter-scale wrapper: it’s sized to 200px (same as .email-animation-container) */
+.letter-scale {
+    width: 100%;
+    height: 100%;
+    transform-origin: top right; /* So it scales from the top-right corner */
+    /* No transform by default on desktop */
+}
+
 /****************************************/
 /* 3) Flattened Envelope Animation Code */
 /* Borrowed from your SCSS snippet, but updated for standard CSS. */
@@ -639,6 +648,17 @@ footer {
         margin: 0 auto;
         padding: 15px;
     }
+
+    .letter-scale {
+        transform: scale(0.6); /* Adjust to your liking, e.g. 0.5, 0.7, etc. */
+    }
+    /* 
+   Explanation: 
+   - On screens narrower than 768px, we scale the entire letter (all shapes + shadow) down to 60%. 
+   - Because we set transform-origin: top right, it will “shrink” toward its top-right corner, 
+     staying in the same top-right position of .contact-info. 
+   - Tweak the scale factor if it’s still too large or too small. 
+    */
     .contact-info img {
         width: 100% !important;
         max-width: 100%;
