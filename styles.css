@@ -359,7 +359,6 @@ footer {
 /* 1) Ensure .contact-info can position children absolutely */
 .contact-info {
     position: relative; /* allows absolute positioning inside */
-    /* the rest of your existing .contact-info styles remain below */
     padding: 1px 20px; 
     font-size: 18px;
     max-width: 800px;
@@ -374,15 +373,12 @@ footer {
 /* 2) Envelope Anchor Positioned Top-Right */
 .email-animation-container {
     position: absolute;
-    top: 20px;         /* tweak as you like to move envelope up/down */
+    top: 15px;         /* tweak as you like to move envelope up/down */
     right: 20px;       /* tweak for left/right */
     width: 200px;
     height: 200px;
     cursor: pointer;
     text-decoration: none; /* remove underline, etc. */
-    
-    /* By default, show the envelope. If you'd prefer it hidden
-       until hover, you could use opacity:0 and hover to fade in. */
 }
 
 
@@ -396,10 +392,8 @@ footer {
 
 /****************************************/
 /* 3) Flattened Envelope Animation Code */
-/* Borrowed from your SCSS snippet, but updated for standard CSS. */
 
-/* We removed 'body { background: #323641; }' from your snippet
-   so it won't override your page's white background. */
+/* Removed 'body { background: #323641; }' so it won't override the page's white background. */
 
 /* .letter-image: Now relative to fill the .email-animation-container */
 .letter-image {
