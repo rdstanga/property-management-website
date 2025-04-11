@@ -822,6 +822,7 @@ footer {
     align-items: center;
     justify-content: center;
     height: 100%;
+    transform: translate(-5px, -5px);
 }
 
 .vacancies-title h1::after {
