@@ -777,30 +777,20 @@ footer {
     }
 }
 
-/* Vacancies Title Styles */
 .vacancies-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .vacancies-title h1 {
-    margin: 0;
-    font-size: 10vw;
-    position: relative;
-    font-weight: 400;
-    letter-spacing: 1rem;
-    font-family: "Decovar Draw";
-    font-variation-settings: 'RSEC' 60.00;
-    animation: draw 4s infinite;
-    background: linear-gradient(to bottom, #a67d83 0%,#616cd3 20%,#84fafc 43%,#fdfbf3 60%,#f9f697 82%,#f4d186 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
+  color: #333;                  /* Fallback for unsupported browsers */
+  -webkit-background-clip: text; /* WebKit clipping */
+  background-clip: text;        /* Standard property to satisfy linter */
+  -webkit-text-fill-color: transparent; /* Transparent text for effect */
+  margin: 0;
+  font-size: 10vw;
+  position: relative;
 }
 
 .vacancies-title h1::before {
