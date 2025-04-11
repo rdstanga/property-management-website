@@ -1,734 +1,774 @@
-.vacancies-page h1 {
-  margin: 0;
-  font-size: 30vw;
-  position: relative;
-  font-weight: 400;
-  letter-spacing: 1rem;
-  font-family: "Decovar Draw"; 
-  font-variation-settings: 'RSEC' 60.00;
-  animation: draw 4s infinite;
-  background: linear-gradient(to bottom, #a67d83 0%, #616cd3 20%, #84fafc 43%, #fdfbf3 60%, #f9f697 82%, #f4d186 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Global Box-Sizing Fix */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-.vacancies-page h1::before {
-  content: attr(data-text);
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  text-shadow: -1px -1px 0 #1d2b38, 1px -1px 0 #1d2b38, -1px 1px 0 #1d2b38,
-              1px 1px 0 #1d2b38, 1px 0px 0px #1d2b38, 0px 1px 0px #1d2b38, 2px 1px 0px #1d2b38,
-              1px 2px 0px #1d2b38, 3px 2px 0px #1d2b38, 2px 3px 0px #1d2b38, 4px 3px 0px #1d2b38,
-              3px 4px 0px #1d2b38, 5px 4px 0px #1d2b38, 3px 5px 0px #1d2b38,
-              6px 5px 0px #1d2b38, -1px 2px 0 #1d2b38, 0 3px 0 #1d2b38, 1px 4px 0 #1d2b38,
-              2px 5px 0px #1d2b38, 2px -1px 0 #1d2b38, 3px 0 0 #1d2b38, 4px 1px 0 #1d2b38,
-              5px 2px 0px #1d2b38, 6px 3px 0 #1d2b38, 7px 4px 0 #1d2b38, 7px 5px 0 #1d2b38;
-}
-
-.vacancies-page span::before {
-  content: attr(data-text);
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -3;
-  transform: translate(10px, 5px);
-  text-shadow: -1px -1px 0 #1d2b38, 1px -1px 0 #1d2b38, -1px 1px 0 #1d2b38,
-              1px 1px 0 #1d2b38, 1px 0px 0px #1d2b38, 0px 1px 0px #1d2b38, 2px 1px 0px #1d2b38,
-              1px 2px 0px #1d2b38, 3px 2px 0px #1d2b38, 2px 3px 0px #1d2b38, 4px 3px 0px #1d2b38,
-              3px 4px 0px #1d2b38, 5px 4px 0px #1d2b38, 3px 5px 0px #1d2b38,
-              6px 5px 0px #1d2b38, -1px 2px 0 #1d2b38, 0 3px 0 #1d2b38, 1px 4px 0 #1d2b38,
-              2px 5px 0px #1d2b38, 2px -1px 0 #1d2b38, 3px 0 0 #1d2b38, 4px 1px 0 #1d2b38,
-              5px 2px 0px #1d2b38, 6px 3px 0 #1d2b38, 7px 4px 0 #1d2b38, 7px 5px 0 #1d2b38;
-}
-
-.vacancies-page h1::after {
-  content: attr(data-text);
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform: translate(10px, 5px);
-  z-index: -2;
-  background: linear-gradient(to bottom, #a67d83 0%, #616cd3 20%, #84fafc 43%, #fdfbf3 60%, #f9f697 82%, #f4d186 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: draw 4.1s infinite;
-}
-
-@keyframes draw {
-  0% { font-variation-settings: 'DRAW' 1000; }
-  50% { font-variation-settings: 'DRAW' 0; }
-  100% { font-variation-settings: 'DRAW' 1000; }
-}
-
-/* Positioning for header text */
-html {
-  height: 100%;
-}
-
+/* General Styles */
 body {
-  background: radial-gradient(ellipse at center, #1d2b38 64%, #1f2e3a 100%);
-  height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333; /* Text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-div {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: visible;
 }
 
-h1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+/* Header Styles */
+header {
+    background: #ffffff;
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+    /* Remove the border from here */
 }
 
-/* --------------------------- */
-/* End New Header Design */
-/* --------------------------- */
-
-/* --- The rest of your existing vacancies.css follows --- */
+header h1 {
+    margin: 0;
+    display: inline-block;  /* So the border only covers the text */
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
 
 /* Navigation Styles */
 .sidenav.hidden {
-  transform: translateX(-100%);
+    transform: translateX(-100%); /* Hide the menu by default */
 }
 
 nav {
-  height: 100%;
-  width: 250px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #000000;
-  overflow-x: hidden;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
-  padding-top: 60px;
-}
-nav.open {
-  transform: translateX(0);
-}
-
-nav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #ffffff;
-  display: block;
-  transition: background-color 0.8s, color 0.3s;
-}
-
-nav a:not(.closebtn) {
-  transition: transform 0.4s ease-out;
-}
-nav a:not(.closebtn):hover {
-  transform: translateX(40px);
-  transition: transform 0.2s ease-in;
-}
-
-nav .closebtn {
-  position: absolute;
-  top: 5px;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-.nav-home-link {
-  margin-top: 20px;
-}
-
-.nav-link-spacer {
-  margin-top: 20px;
-}
-
-@media screen and (max-height: 450px) {
-  nav {
-    padding-top: 15px;
-  }
-  nav a {
-    font-size: 18px;
-  }
-}
-
-/* Main Content Styles */
-main {
-  padding: 20px 0;
-}
-
-.welcome-section {
-  text-align: center;
-  font-family: 'Cardo', serif;
-  font-size: 28px;
-  color: #202020f6;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.centered-section {
-  text-align: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.centered-section img.House Sketch {
-  width: 100%;
-  max-width: none;
-  height: auto;
-  display: block;
-  margin: 20px auto 0;
-}
-
-section.centered-section p.decades-section {
-  text-align: center;
-  font-family: 'Cardo', serif;
-  font-size: 23px;
-  color: #202020f6;
-  max-width: 500px;
-  margin: 0 auto;
-  margin-bottom: 20px;
-}
-
-section.centered-section p + p {
-  margin-top: 20px;
-}
-
-.centered-section p {
-  font-size: 1em;
-  color: #555;
-  margin-top: 10px;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.5;
-}
-
-/* Vacant Properties Section */
-.vacancy-title {
-  /* This rule now only applies to the secondary title in your content, not the animated header */
-  font-family: 'Cardo', serif;
-  text-align: center;
-}
-.vacancy-description {
-  font-size: 22px;
-  color: #202020f6;
-  margin-bottom: 100px;
-  font-family: 'Cardo', serif;
-}
-.vacancy-section {
-  text-align: center;
-  font-family: 'Cardo', serif;
-  font-size: 22px;
-  color: #202020f6;
-  max-width: 500px;
-  margin: 0 auto;
-  margin-bottom: 100px;
-}
-.property-description {
-  font-size: 18px;
-  color: #202020f6;
-  font-family: 'Helvetica', sans-serif;
-  margin-bottom: 10px;
-}
-.zillow-logo {
-  font-family: 'Helvetica', sans-serif;
-  width: 150px;
-  height: auto;
-  margin-top: 5px;
-  transition: transform 0.3s ease;
-}
-.zillow-logo:hover {
-  transform: scale(1.1);
-}
-
-/* About Us Section */
-.about-us-section {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 12px;
-}
-.about-us-box {
-  background-color: #eaeaea;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  padding: 20px;
-  box-sizing: content-box;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  text-align: left;
-  position: relative;
-}
-.about-us-title {
-  font-family: 'Cardo', serif;
-  font-size: 1.2em;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-.icon {
-  width: 85px;
-  height: auto;
-  margin-left: 90px;
-  border-radius: 12px;
-}
-.about-us-box p {
-  margin: 10px 0;
-  font-size: 0.9em;
-}
-
-/* Footer Styles */
-footer {
-  background: #ffffff;
-  color: #333;
-  text-align: center;
-  padding: 10px 0;
-  border-top: 1px solid #ddd;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
-/* Hamburger Menu Styles */
-.hamburger {
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  padding: 10px;
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 1001;
-}
-.hamburger div {
-  width: 25px;
-  height: 3px;
-  background: #777;
-  margin: 5px 0;
-  transition: background 0.3s ease;
-}
-.hamburger.nav-open div {
-  background: #ffffff !important;
-}
-
-/* FAQ Section Styles */
-.faq-section {
-  max-width: 800px;
-  width: 100%;
-  margin: 0 auto;
-}
-.faq-item {
-  margin-bottom: 10px;
-  width: 100%;
-}
-.faq-question {
-  background: #f9f9f9;
-  border: none;
-  width: 100%;
-  text-align: left;
-  font-size: 1rem;
-  line-height: 1.4;
-  padding: 15px 10px;
-  cursor: pointer;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 10px;
-  align-items: center;
-  box-sizing: border-box;
-  border-radius: 12px;
-  transition: background-color 0.4s ease-in-out;
-  position: relative;
-  color: #000000;
-}
-.faq-question::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 20px;
-  right: 20px;
-  border-bottom: 1px solid #ccc;
-}
-.faq-question:hover {
-  background: #e0e0e0;
-}
-.toggle-icon::before {
-  content: '+';
-  font-size: 1.2rem;
-}
-.faq-item.active .toggle-icon::before {
-  content: '-';
-}
-.faq-answer {
-  height: 0;
-  overflow: hidden;
-  transition: height 0.4s ease-in-out;
-  background-color: #ffffff;
-  border-radius: 12px;
-}
-.faq-answer-inner {
-  padding-top: 5px;
-  padding-right: 10px;
-  padding-bottom: 2px;
-  padding-left: 10px;
-  font-size: 0.95rem;
-  color: #000000;
-}
-
-/* ----------------------------- */
-/* Contact Page Styles */
-.contact-info {
-  position: relative;
-  padding: 1px 20px;
-  font-size: 18px;
-  max-width: 800px;
-  margin: 5px auto;
-  background-color: #f1f1f1;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  color: #333;
-}
-.contact-info p {
-  margin: 20px 10px;
-}
-.hours-section {
-  margin: 20px 0;
-  text-align: left;
-}
-
-/* Property Image */
-.office-image {
-  width: 100%;
-  max-width: 700px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: 12px;
-}
-.map-section {
-  padding: 20px;
-  text-align: center;
-}
-#map {
-  height: 400px;
-  width: 90%;
-  margin-top: 20px;
-  display: block;
-  margin: 20px auto;
-  border-radius: 12px;
-}
-.property-image {
-  width: 100%;
-  max-width: 1000px;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-/* ----------------------------- */
-/* Envelope Animation for Contact Page */
-.email-animation-container {
-  position: absolute;
-  top: 5px;
-  right: 20px;
-  width: 200px;
-  height: 200px;
-  cursor: pointer;
-  text-decoration: none;
-}
-.letter-scale {
-  width: 100%;
-  height: 100%;
-  transform-origin: top right;
-}
-.letter-image {
-  position: relative;
-  width: 200px;
-  height: 200px;
-}
-.animated-mail {
-  position: relative;
-  height: 150px;
-  width: 200px;
-  transition: 0.4s;
-}
-.animated-mail .body {
-  position: absolute;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 0 100px 200px;
-  border-color: transparent transparent #e95f55 transparent;
-  z-index: 2;
-}
-.animated-mail .top-fold {
-  position: absolute;
-  top: 50px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 50px 100px 0 100px;
-  transform-origin: 50% 0%;
-  transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
-  border-color: #cf4a43 transparent transparent transparent;
-  z-index: 2;
-}
-.animated-mail .back-fold {
-  position: absolute;
-  bottom: 0;
-  width: 200px;
-  height: 100px;
-  background: #cf4a43;
-  z-index: 0;
-}
-.animated-mail .left-fold {
-  position: absolute;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 50px 0 50px 100px;
-  border-color: transparent transparent transparent #e15349;
-  z-index: 2;
-}
-.animated-mail .letter {
-  left: 20px;
-  bottom: 0;
-  position: absolute;
-  width: 160px;
-  height: 60px;
-  background: white;
-  z-index: 1;
-  overflow: hidden;
-  transition: 0.4s 0.2s;
-}
-.animated-mail .letter .letter-border {
-  height: 10px;
-  width: 100%;
-  background: repeating-linear-gradient(
-    -45deg,
-    #cb5a5e,
-    #cb5a5e 8px,
-    transparent 8px,
-    transparent 18px
-  );
-}
-.animated-mail .letter .letter-title {
-  margin-top: 10px;
-  margin-left: 5px;
-  height: 10px;
-  width: 40%;
-  background: #cb5a5e;
-}
-.animated-mail .letter .letter-context {
-  margin-top: 10px;
-  margin-left: 5px;
-  height: 10px;
-  width: 20%;
-  background: #cb5a5e;
-}
-.animated-mail .letter .letter-stamp {
-  margin-top: 30px;
-  margin-left: 120px;
-  border-radius: 100%;
-  height: 30px;
-  width: 30px;
-  background: #cb5a5e;
-  opacity: 0.3;
-}
-/* (Shadow has been removed) */
-.email-animation-container:hover .animated-mail,
-.email-animation-container:focus .animated-mail,
-.email-animation-container:active .animated-mail {
-  transform: translateY(50px);
-}
-.email-animation-container:hover .top-fold,
-.email-animation-container:focus .top-fold,
-.email-animation-container:active .top-fold {
-  transition: transform 0.4s, z-index 0.2s;
-  transform: rotateX(180deg);
-  z-index: 0;
-}
-.email-animation-container:hover .letter,
-.email-animation-container:focus .letter,
-.email-animation-container:active .letter {
-  height: 180px;
-}
-
-/* ----------------------------- */
-/* Combined Mobile Media Query */
-@media (max-width: 768px) {
-  .container {
-    width: 95%;
-    padding: 0 1px;
-  }
-  header h1 {
-    font-size: 26px;
-  }
-  .centered-section img.house-sketch {
-    width: 95%;
-    max-width: 400px;
-    height: auto;
-  }
-  .centered-section p {
-    max-width: 95%;
-    word-wrap: break-word;
-    margin: 0 auto 20px;
-    font-size: 0.9em;
-    line-height: 1.4;
-  }
-  .about-us-section {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-  .about-us-box {
-    width: 100%;
-    max-width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  .faq-section {
-    padding: 0 15px;
-    max-width: 100%;
-  }
-  .faq-question {
-    padding: 15px 15px;
-  }
-  .faq-answer-inner {
-    padding: 10px 15px;
-  }
-  .contact-info {
-    width: 90%;
-    max-width: 90%;
-    margin: 0 auto;
-    padding: 15px;
-  }
-  .contact-info img {
-    width: 100% !important;
-    max-width: 100%;
-    height: auto;
-  }
-  .hours-section,
-  .map-section,
-  #map {
-    width: 100%;
-    max-width: 100%;
-  }
-  .map-section, #map {
-    margin-bottom: 5px;
-  }
-  /* Scale down the envelope on mobile */
-  .letter-scale {
-    transform: scale(0.6);
-  }
-}
-
-/* ----------------------------- */
-/* Light Mode Overrides */
-@media (prefers-color-scheme: light) {
-  header, footer {
-    background-color: #ffffff;
-    color: #333;
-  }
-}
-
-/* ----------------------------- */
-/* Dark Mode Overrides */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #162030;
-    color: #ffffff;
-  }
-  header, footer {
-    background-color: #162030;
-    color: #ffffff;
-  }
-  .hamburger div {
-    background: #ffffff !important;
-  }
-  .sidenav {
     height: 100%;
-    width: 250px;
+    width: 250px; /* Default width for the menu */
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
     background-color: #000000;
     overflow-x: hidden;
-    transform: translateX(-100%);
+    transform: translateX(-100%); /* Default state after load */
     transition: transform 0.3s ease-in-out;
     padding-top: 60px;
-    visibility: visible;
-  }
-  .sidenav.open {
-    transform: translateX(0);
-  }
-  nav a {
+}
+nav.open {
+    transform: translateX(0); /* Open state */
+}
+
+nav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
     color: #ffffff;
-  }
-  .welcome-section p,
-  .centered-section p.decades-section,
-  .centered-section p {
-    color: #ffffff !important;
-  }
-  .about-us-section {
-    background-color: #162030;
-  }
-  .about-us-box {
-    background-color: #28333A;
-    color: #ffffff;
-  }
-  .contact-info {
-    background-color: #28333A; 
-    color: #ffffff;
-  }
-  .house-sketch {
-    content: url("Website Images/HouseDarkMode.png");
-  }
-  .office-image {
-    content: url("Website Images/OfficeNight.jpg");
-  }
-  .vacancy-title,
-  .vacancy-description,
-  .vacancy-section,
-  .property-description {
-    color: #ffffff;
-  }
-  .faq-question {
-    background-color: #28333A;
-    color: #fff;
-  }
-  .faq-question:hover {
-    background-color: #3A4A55;
-  }
-  .faq-answer {
-    background-color: #162030;
-    color: #fff;
-  }
-  .faq-answer-inner {
-    color: #fff;
-  }
-  .contact-info a[href^="mailto:"] {
-    color: #ff924a;
-  }
+    display: block;
+    transition: background-color 0.8s, color 0.3s;
+}
+
+nav a:not(.closebtn) {
+    /* When not hovered, use a slower transition for the reverse (unhover) effect */
+    transition: transform 0.4s ease-out;
+}
+
+nav a:not(.closebtn):hover {
+    transform: translateX(40px);
+    /* When hovered, use a quicker transition to slide in */
+    transition: transform 0.2s ease-in;
+}
+
+nav .closebtn {
+    position: absolute;
+    top: 5px; /* Adjusted to more closely align with the center of the hamburger menu */
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.nav-home-link {
+    margin-top: 20px;
+}
+
+.nav-link-spacer {
+    margin-top: 20px;
+}
+
+@media screen and (max-height: 450px) {
+    nav {
+        padding-top: 15px;
+    }
+    nav a {
+        font-size: 18px;
+    }
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px 0;
+}
+
+.welcome-section {
+    text-align: center; /* Align text in center of page */
+    font-family: 'Cardo', serif; /* Apply Cardo font */
+    font-size: 28px;
+    color: #202020f6;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.centered-section {
+    text-align: center; /* Align text in center of page */
+    max-width: 1200px; /* This controls the size of the house sketch on the home page */
+    margin: 0 auto;
+}
+
+.centered-section img.House Sketch {
+    width: 100%; /* Increase the width to make the image larger */
+    max-width: none; /* Remove any previous max-width limitations */
+    height: auto; /* Maintains the aspect ratio of the image */
+    display: block; /* Ensures image behaves as a block element */
+    margin: 20px auto 0; /* Centers the image horizontally and adds top margin */
+}
+
+section.centered-section p.decades-section {
+    text-align: center;
+    font-family: 'Cardo', serif;
+    font-size: 23px; /* Increase the font size */
+    color: #202020f6;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/* Apply more spacing between paragraphs */
+section.centered-section p + p {
+    margin-top: 20px;
+}
+
+.centered-section p {
+    font-size: 1em; /* Reduced font size */
+    color: #555;
+    margin-top: 10px;
+    max-width: 700px; /* Adjust the max-width to control paragraph width */
+    margin: 0 auto; /* Center the paragraph */
+    line-height: 1.5;
+}
+
+/* Vacant Properties Section */
+.vacancy-title {
+    font-size: 28px; /* Adjust font size */
+    margin-bottom: 2px;
+    color: #202020f6; /* Adjust text color */
+    font-family: 'Cardo', serif; /* Apply Cardo font */
+}
+
+.vacancy-description {
+    font-size: 22px; /* Reduced font size */
+    color: #202020f6; /* Adjust text color */
+    margin-bottom: 100px;
+    font-family: 'Cardo', serif; /* Apply Cardo font */
+}
+
+.vacancy-section {
+    text-align: center; /* Align text in center of page */
+    font-family: 'Cardo', serif; /* Apply Cardo font */
+    font-size: 22px;
+    color: #202020f6;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+/* Property Description */
+.property-description {
+    font-size: 18px; /* Reduced font size */
+    color: #202020f6; /* Adjust text color */
+    font-family: 'Helvetica', sans-serif; /* Apply Helvetica font */
+    margin-bottom: 10px;
+}
+
+.zillow-logo {
+    font-family: 'Helvetica', sans-serif; /* Apply Helvetica font */
+    width: 150px;
+    height: auto;
+    margin-top: 5px;
+    transition: transform 0.3s ease;
+}
+
+.zillow-logo:hover {
+    transform: scale(1.1);
+}
+
+/* About Us Section */
+.about-us-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+.about-us-box {
+    background-color: #eaeaea;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    position: relative;
+}
+
+.about-us-title {
+    font-family: 'Cardo', serif; /* Apply Cardo font */
+    font-size: 1.2em; /* Increase the font size */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.icon {
+    width: 85px;
+    height: auto;
+    margin-left: 90px; /* Adjust this value to push the icon further right */
+    border-radius: 12px;
+}
+
+.about-us-box p {
+    margin: 10px 0;
+    font-size: 0.9em; /* Reduced font size */
+}
+
+/* Footer Styles */
+footer {
+    background: #ffffff; /* Set background color to white */
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1001;
+}
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background: #777; /* Gray when closed in light mode */
+    margin: 5px 0;
+    transition: background 0.3s ease;
+}
+.hamburger.nav-open div {
+    background: #ffffff !important;
+}
+
+/* FAQ Section Styles */
+.faq-section {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.faq-question {
+    background: #f9f9f9;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.4;
+    padding: 15px 10px;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 12px; /* Subtle squircle for question box */
+    transition: background-color 0.4s ease-in-out;
+    position: relative;
+    color: #000000;
+}
+
+.faq-question::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 20px;
+    right: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Hover effect for light mode */
+.faq-question:hover {
+    background: #e0e0e0; /* Slightly darker gray for light mode hover */
+}
+
+.toggle-icon::before {
+    content: '+';
+    font-size: 1.2rem;
+}
+
+.faq-item.active .toggle-icon::before {
+    content: '-';
+}
+
+.faq-answer {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s ease-in-out;
+    background-color: #ffffff;
+    border-radius: 12px; /* Subtle squircle for answer box */
+}
+
+.faq-answer-inner {
+    padding-top: 5px;    /* Space above the answer */
+    padding-right: 10px;
+    padding-bottom: 2px; /* Minimize space below the answer */
+    padding-left: 10px;
+    font-size: 0.95rem;
+    color: #000000;
+}
+
+/****************************************/
+/* 1) Ensure .contact-info can position children absolutely */
+.contact-info {
+    position: relative; /* allows absolute positioning inside */
+    padding: 1px 20px; 
+    font-size: 18px;
+    max-width: 800px;
+    margin: 5px auto;
+    background-color: #f1f1f1;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+/****************************************/
+/* 2) Envelope Anchor Positioned Top-Right */
+.email-animation-container {
+    position: absolute;
+    top: 5px;         /* tweak to move envelope up/down */
+    right: 20px;       /* tweak for left/right */
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    text-decoration: none; /* remove underline, etc. */
+}
+
+
+/* 2) .letter-scale wrapper: it’s sized to 200px (same as .email-animation-container) */
+.letter-scale {
+    width: 100%;
+    height: 100%;
+    transform-origin: top right; /* So it scales from the top-right corner */
+    /* No transform by default on desktop */
+}
+
+/****************************************/
+/* 3) Flattened Envelope Animation Code */
+
+/* Removed 'body { background: #323641; }' so it won't override the page's white background. */
+
+/* .letter-image: Now relative to fill the .email-animation-container */
+.letter-image {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+/* Envelope parts */
+
+.animated-mail {
+    position: relative;
+    height: 150px;
+    width: 200px;
+    transition: 0.4s;
+}
+
+.animated-mail .body {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 200px;
+    border-color: transparent transparent #e95f55 transparent;
+    z-index: 2;
+}
+
+.animated-mail .top-fold {
+    position: absolute;
+    top: 50px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 100px 0 100px;
+    transform-origin: 50% 0%;
+    transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
+    border-color: #cf4a43 transparent transparent transparent;
+    z-index: 2;
+}
+
+.animated-mail .back-fold {
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    height: 100px;
+    background: #cf4a43;
+    z-index: 0;
+}
+
+.animated-mail .left-fold {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 0 50px 100px;
+    border-color: transparent transparent transparent #e15349;
+    z-index: 2;
+}
+
+.animated-mail .letter {
+    left: 20px;
+    bottom: 0;
+    position: absolute;
+    width: 160px;
+    height: 60px;
+    background: white;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.4s 0.2s;
+}
+.animated-mail .letter .letter-border {
+    height: 10px;
+    width: 100%;
+    background: repeating-linear-gradient(
+      -45deg,
+      #cb5a5e,
+      #cb5a5e 8px,
+      transparent 8px,
+      transparent 18px
+    );
+}
+.animated-mail .letter .letter-title {
+    margin-top: 10px;
+    margin-left: 5px;
+    height: 10px;
+    width: 40%;
+    background: #cb5a5e;
+}
+.animated-mail .letter .letter-context {
+    margin-top: 10px;
+    margin-left: 5px;
+    height: 10px;
+    width: 20%;
+    background: #cb5a5e;
+}
+.animated-mail .letter .letter-stamp {
+    margin-top: 30px;
+    margin-left: 120px;
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    background: #cb5a5e;
+    opacity: 0.3;
+}
+
+/* Shadow at bottom of envelope */
+/* .shadow {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    width: 300px;
+    height: 30px;
+    transition: 0.4s;
+    transform: translateX(-50%);
+    border-radius: 100%;
+    background: radial-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0), rgba(0,0,0,0));
+} */
+
+/****************************************/
+/* 4) Animate Envelope on Hover/Tap */
+/* Hovering .email-animation-container triggers the envelope to “open.” */
+.email-animation-container:hover .animated-mail,
+.email-animation-container:focus .animated-mail,
+.email-animation-container:active .animated-mail {
+    transform: translateY(50px);
+}
+
+.email-animation-container:hover .top-fold,
+.email-animation-container:focus .top-fold,
+.email-animation-container:active .top-fold {
+    transition: transform 0.4s, z-index 0.2s;
+    transform: rotateX(180deg);
+    z-index: 0;
+}
+
+.email-animation-container:hover .letter,
+.email-animation-container:focus .letter,
+.email-animation-container:active .letter {
+    height: 180px;
+}
+
+/* .email-animation-container:hover .shadow,
+.email-animation-container:focus .shadow,
+.email-animation-container:active .shadow {
+    width: 250px;
+} */
+
+.contact-info p {
+    margin: 20px 10px;
+}
+
+.hours-section {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.office-image {
+    width: 100%;          /* Allow image to scale with its container */
+    max-width: 700px;     /* Cap it at 700px if the container is wider */
+    height: auto;         /* Maintain aspect ratio */
+    display: block;       /* Remove any inline gap */
+    margin: 0 auto;       /* Center the image within its container */
+    border-radius: 12px;
+}
+
+.map-section {
+    padding: 20px;
+    text-align: center;
+}
+
+#map {
+    height: 400px;
+    width: 90%;
+    margin-top: 20px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+}
+
+.property-image {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Combined Mobile Media Query */
+@media (max-width: 768px) {
+    /* Adjust container width and padding */
+    .container {
+        width: 95%;
+        padding: 0 1px;
+    }
+    /* Make header title font smaller */
+    header h1 {
+        font-size: 26px;
+    }
+    /* Centered section adjustments */
+    .centered-section img.house-sketch {
+        width: 95%;
+        max-width: 400px;
+        height: auto;
+    }
+    .centered-section p {
+        max-width: 95%;
+        word-wrap: break-word;
+        margin: 0 auto 20px;
+        font-size: 0.9em;
+        line-height: 1.4;
+    }
+    /* About Us Section for mobile */
+    .about-us-section {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .about-us-box {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    /* FAQ Section adjustments for mobile */
+    .faq-section {
+        padding: 0 15px;
+        max-width: 100%;
+    }
+    .faq-question {
+        padding: 15px 15px;
+    }
+    .faq-answer-inner {
+        padding: 10px 15px;
+    }
+    /* Contact Page adjustments for mobile */
+    .contact-info {
+        width: 90%;
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+    .letter-scale {
+        transform: scale(0.6); /* Adjust to your liking, e.g. 0.5, 0.7, etc. */
+    }
+    /* 
+   Explanation: 
+   - On screens narrower than 768px, scale the entire letter (all shapes + shadow) down to 60%. 
+   - Because transform-origin: top right, it will “shrink” toward its top-right corner, 
+     staying in the same top-right position of .contact-info. 
+   - Tweak the scale factor if it’s still too large or too small.
+    */
+    .contact-info img {
+        width: 100% !important;
+        max-width: 100%;
+        height: auto;
+    }
+    .hours-section,
+    .map-section,
+    #map {
+        width: 100%;
+        max-width: 100%;
+    }
+    .map-section, #map {
+        margin-bottom: 5px;
+    }
+}
+
+/* Light Mode Overrides */
+@media (prefers-color-scheme: light) {
+    header, footer {
+        background-color: #ffffff;
+        color: #333;
+    }
+}
+
+/* Dark Mode Overrides */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #162030;
+        color: #ffffff;
+    }
+    
+    header, footer {
+        background-color: #162030;
+        color: #ffffff;
+    }
+    
+    .hamburger div {
+        background: #ffffff !important;
+    }
+    
+    .sidenav {
+        height: 100%;
+        width: 250px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #000000;
+        overflow-x: hidden;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        padding-top: 60px;
+        visibility: visible;
+    }
+    .sidenav.open {
+        transform: translateX(0);
+    }
+    
+    nav a {
+        color: #ffffff;
+    }
+    
+    .welcome-section p,
+    .centered-section p.decades-section,
+    .centered-section p {
+        color: #ffffff !important;
+    }
+    
+    .about-us-section {
+        background-color: #162030;
+    }
+    
+    .about-us-box {
+        background-color: #28333A;
+        color: #ffffff;
+    }
+    
+    .contact-info {
+        background-color: #28333A; 
+        color: #ffffff;
+    }
+    
+    .house-sketch {
+        content: url("Website Images/HouseDarkMode.png");
+    }
+    
+    .office-image {
+        content: url("Website Images/OfficeNight.jpg");
+    }
+    
+    .vacancy-title, 
+    .vacancy-description, 
+    .vacancy-section,
+    .property-description {
+        color: #ffffff;
+    }
+    
+    .faq-question {
+        background-color: #28333A; /* Darker background for question */
+        color: #fff;
+    }
+    
+    .faq-question:hover {
+        background-color: #3A4A55; /* Hover color for dark mode */
+    }
+    
+    .faq-answer {
+        background-color: #162030; /* Darker background for answer */
+        color: #fff;
+    }
+    
+    .faq-answer-inner {
+        color: #fff;
+    }
+
+    .contact-info a[href^="mailto:"] {
+        color: #ff924a;
+    }
 }
