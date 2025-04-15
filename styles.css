@@ -864,6 +864,5 @@ footer {
 
 @keyframes draw {
     0% {font-variation-settings: 'DRAW' 1000;}
-    50% {font-variation-settings: 'DRAW' 0;}
     100% {font-variation-settings: 'DRAW' 1000;}
 }
