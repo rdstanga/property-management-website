@@ -876,48 +876,4 @@ nav a {
 }
 
 
-/* --- Vacancies Title Animated Layers (only for letters with class "animate") --- */
-.vacancies-title h1 span.animate {
-    position: relative;
-    display: inline-block;
-    /* Inherit font, size, color from the parent h1 if needed */
-  }
-  
-  /* Ghost layer behind the animated letter */
-  .vacancies-title h1 span.animate::before {
-    content: attr(data-text);
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    transform: translate(-5px, -5px); /* Adjust for desired offset */
-    color: rgba(0, 0, 0, 0.3);         /* Subtle ghost color */
-    animation: draw 4s forwards;
-  }
-  
-  /* Ghost layer in front of the animated letter */
-  .vacancies-title h1 span.animate::after {
-    content: attr(data-text);
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform: translate(10px, 5px);  /* Adjust for desired offset */
-    z-index: -2;
-    background: linear-gradient(
-      to bottom,
-      #833AB4 0%,     /* Purple */
-      #C72A60 42%,    /* Reddish */
-      #FD1D1D 74%,    /* Red */
-      #FCB045 100%    /* Gold */
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: draw 4.1s forwards;
-  }
-  
-  /* Keyframes remain unchanged from your updated version */
-  @keyframes draw {
-    0% { font-variation-settings: 'DRAW' 1000; }
-    100% { font-variation-settings: 'DRAW' 0; }
-  }
+
