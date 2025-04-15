@@ -793,7 +793,7 @@ footer {
     letter-spacing: 1rem;
     font-family: "Decovar Draw";
     font-variation-settings: 'RSEC' 60.00;
-    animation: draw 4s infinite;
+    animation: draw 6s;
     background: linear-gradient(to bottom, #a67d83 0%,#616cd3 20%,#84fafc 43%,#fdfbf3 60%,#f9f697 82%,#f4d186 100%);
     -webkit-background-clip: text;
     background-clip: text;
