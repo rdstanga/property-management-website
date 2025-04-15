@@ -850,7 +850,7 @@ footer {
     top: 0;
     transform: translate(10px, 5px); /* Offset for shadow */
     z-index: -2;
-    background: linear-gradient(to bottom, #a67d83 0%, #616cd3 20%, #84fafc 43%, #fdfbf3 60%, #f9f697 82%, #f4d86 100%);
+    background: linear-gradient(to bottom, #a67d83 0%, #616cd3 20%, #84fafc 43%, #fdfbf3 60%, #f9f697 82%, #f44d86 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
