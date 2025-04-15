@@ -793,7 +793,6 @@ footer {
     letter-spacing: 1rem;
     font-family: "Decovar Draw";
     font-variation-settings: 'RSEC' 60.00;
-    animation: draw 6s forwards;
     background: linear-gradient(to bottom, #a67d83 0%,#616cd3 20%,#84fafc 43%,#fdfbf3 60%,#f9f697 82%,#f4d186 100%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -803,6 +802,15 @@ footer {
     justify-content: center;
     align-content: center;
     text-align: center;
+    /* Remove animation from h1 itself */
+}
+
+/* Target specific letters to animate */
+.vacancies-title h1 span:nth-child(2), /* A */
+.vacancies-title h1 span:nth-child(4), /* A */
+.vacancies-title h1 span:nth-child(7), /* I */
+.vacancies-title h1 span:nth-child(9) { /* S */
+    animation: draw 6s forwards;
 }
 
 .vacancies-title h1::before {
