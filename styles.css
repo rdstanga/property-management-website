@@ -803,7 +803,6 @@ footer {
     justify-content: center;
     align-content: center;
     text-align: center;
-    overflow: visible;
 }
 
 .vacancies-title h1::before {
