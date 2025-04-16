@@ -870,7 +870,12 @@ nav a {
         5px 2px 0px #1d2b38, 6px 3px 0 #1d2b38, 7px 4px 0 #1d2b38, 7px 5px 0 #1d2b38; */
 }
 
-/* 1) Make sure the S can be clipped */
+@keyframes draw {
+    0% {font-variation-settings: 'DRAW' 1000;}
+    100% {font-variation-settings: 'DRAW' 0;}
+}
+
+/* 1) Hide the S completely to start, then unclip it over 6s */
 .vacancies-title .reveal {
     display: inline-block;            /* so clip-path only hits the S */
     clip-path: inset(0 100% 0 0);     /* completely hidden at start */
@@ -882,11 +887,6 @@ nav a {
     from { clip-path: inset(0 100% 0 0); }
     to   { clip-path: inset(0   0% 0 0); }
   }
-
-@keyframes draw {
-    0% {font-variation-settings: 'DRAW' 1000;}
-    100% {font-variation-settings: 'DRAW' 0;}
-}
 
 
 
