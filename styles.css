@@ -874,16 +874,3 @@ nav a {
     0% {font-variation-settings: 'DRAW' 1000;}
     100% {font-variation-settings: 'DRAW' 0;}
 }
-
-/* isolate the S for its own RSEC animation */
-.vacancies-title .reveal {
-    display: inline-block;           /* so it animates in place */
-    font-variation-settings: 'RSEC' 1000;  /* start fully “rough” */
-    animation: draw-s 6s forwards;   /* match your other timing */
-  }
-  
-  /* keyframes for the S, animating RSEC → 0 */
-  @keyframes draw-s {
-    from { font-variation-settings: 'RSEC' 1000; }
-    to   { font-variation-settings: 'RSEC'    0; }
-  }
