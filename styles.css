@@ -875,19 +875,15 @@ nav a {
     100% {font-variation-settings: 'DRAW' 0;}
 }
 
-/* 1) Hide the S completely to start, then unclip it over 6s */
+/* isolate the S for its own RSEC animation */
 .vacancies-title .reveal {
-    display: inline-block;            /* so clip-path only hits the S */
-    clip-path: inset(0 100% 0 0);     /* completely hidden at start */
-    animation: reveal-S 6s forwards;  /* match your other timing */
+    display: inline-block;           /* so it animates in place */
+    font-variation-settings: 'RSEC' 1000;  /* start fully “rough” */
+    animation: draw-s 6s forwards;   /* match your other timing */
   }
   
-  /* 2) Keyframes pull the right inset back to 0 */
-  @keyframes reveal-S {
-    from { clip-path: inset(0 100% 0 0); }
-    to   { clip-path: inset(0   0% 0 0); }
+  /* keyframes for the S, animating RSEC → 0 */
+  @keyframes draw-s {
+    from { font-variation-settings: 'RSEC' 1000; }
+    to   { font-variation-settings: 'RSEC'    0; }
   }
-
-
-
-
