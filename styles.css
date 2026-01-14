@@ -793,7 +793,7 @@ nav a {
     filter: drop-shadow(2px 2px 0 #333);
 }
 
-.vacancies-title h1 {
+/* .vacancies-title h1 {
     margin: 0;
     font-size: 8vw;
     position: relative;
@@ -873,4 +873,4 @@ nav a {
 @keyframes draw {
     0% {font-variation-settings: 'DRAW' 1000;}
     100% {font-variation-settings: 'DRAW' 0;}
-}
+} */
