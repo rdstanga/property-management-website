@@ -10,6 +10,13 @@
     src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/DecovarDRAW-VF.ttf');
 }
 
+@font-face {
+    font-family: 'Rousseau Deco';
+    src: url('fonts/RousseauDeco.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* General Styles */
 body {
     font-family: 'Open Sans', sans-serif;
@@ -163,6 +170,11 @@ section.centered-section p + p {
     margin: 0 auto; /* Center the paragraph */
     line-height: 1.5;
 }
+
+.vacancies-title {
+    font-family: 'Rousseau Deco', serif;
+}
+
 /* Vacant Properties Section */
 .vacancy-title {
     font-size: 28px; /* Adjust font size */
