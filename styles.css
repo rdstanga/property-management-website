@@ -127,8 +127,8 @@ nav .closebtn {
 @media (max-width: 768px) {
   .hamburger {
     position: fixed;          /* keep it pinned on mobile */
-    top: 10px;
-    left: 10px;
+    top: calc(env(safe-area-inset-top, 0px) + 10px);
+    left: calc(env(safe-area-inset-left, 0px) + 10px);
     z-index: 1001;
 
     width: 44px;
@@ -137,6 +137,8 @@ nav .closebtn {
 
     display: flex;
     flex-direction: column;   /* IMPORTANT: keep the 3 bars stacked */
+    cursor: pointer;
+    padding: 10px;
     justify-content: center;
     align-items: center;
 
