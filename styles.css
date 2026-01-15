@@ -202,10 +202,6 @@ section.centered-section p + p {
     margin-bottom: 50px;
 }
 
-/* Replace with this simpler version in your styles.css */
-
-/* Replace the entire gradient section in your styles.css with this */
-
 /* Gradient animation for Vacancies title */
 .vacancies-title {
     font-family: 'Rousseau Deco', serif;
@@ -775,7 +771,7 @@ footer {
     }
 
 .letter-scale {
-    transform: scale(0.6); /* Adjust to your liking, e.g. 0.5, 0.7, etc. */
+    transform: scale(0.6);
 }
 
 /* 
