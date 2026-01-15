@@ -159,7 +159,8 @@ nav .closebtn {
   /* Bars above the circle */
   .hamburger div {
     position: relative;
-    z-index: 1;               /* above ::before */
+    background-color: #ffffff;
+    z-index: 1;
   }
 
   /* Show circle when not at top */
