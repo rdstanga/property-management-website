@@ -203,7 +203,7 @@ section.centered-section p + p {
 /* Replace with this simpler version in your styles.css */
 
 /* Gradient animation for Vacancies title */
-body > h1:first-of-type {
+.vacancies-title {
     font-family: 'Rousseau Deco', serif;
     font-size: 72px;
     font-weight: bold;
