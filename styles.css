@@ -200,6 +200,48 @@ section.centered-section p + p {
     margin-bottom: 100px;
 }
 
+/* Add this to your styles.css */
+
+/* Gradient animation for Vacancies title */
+body > h1:first-of-type {
+    font-family: 'Rousseau Deco', serif;
+    font-size: 72px;
+    font-weight: bold;
+    text-align: center;
+    margin: 40px auto 20px;
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Light Mode - Cool Professional gradient */
+@media (prefers-color-scheme: light) {
+    body > h1:first-of-type {
+        background: linear-gradient(45deg, #2c3e50, #3498db, #5dade2, #85c1e2, #a8dadc);
+    }
+}
+
+/* Dark Mode - Autumn Warmth gradient */
+@media (prefers-color-scheme: dark) {
+    body > h1:first-of-type {
+        background: linear-gradient(45deg, #d4145a, #e67e22, #f39c12, #f1c40f, #ffeaa7);
+    }
+}
+
+/* Mobile responsive sizing */
+@media (max-width: 768px) {
+    body > h1:first-of-type {
+        font-size: 48px;
+    }
+}
+
 /* Property Description */
 .property-description {
     font-size: 18px; /* Reduced font size */
