@@ -402,6 +402,14 @@ footer {
     }
 }
 
+/* Dark mode: add a white border to the squircle background when it appears */
+@media (prefers-color-scheme: dark) and (max-width: 768px) {
+    .hamburger::before {
+        border: 1px solid rgba(255, 255, 255, 0.9);
+        box-sizing: border-box;
+    }
+}
+
 /* FAQ Section Styles */
 .faq-section {
     max-width: 800px;
