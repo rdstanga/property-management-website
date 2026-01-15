@@ -478,6 +478,130 @@ footer {
     color: #000000;
 }
 
+/* Contact page (new layout) */
+.contact-page {
+  width: min(1100px, 95%);
+  margin: 0 auto;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  align-items: start;
+  margin-top: 16px;
+}
+
+.office-card, .contact-card, .address-card {
+  background: rgba(0,0,0,0.03);
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.office-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.media-caption {
+  margin: 10px 0 0;
+  font-size: 14px;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.address-card {
+  margin-top: 14px;
+}
+
+.address-title {
+  margin: 0 0 8px;
+  font-family: 'Cardo', serif;
+  font-size: 20px;
+}
+
+.address-line {
+  margin: 0;
+}
+
+.address-line a {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.contact-card h2 {
+  margin: 0 0 6px;
+  font-family: 'Cardo', serif;
+  font-size: 28px;
+}
+
+.contact-cta {
+  margin: 10px 0 16px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* Form styling */
+.contact-form {
+  display: grid;
+  gap: 10px;
+}
+
+.contact-form label {
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.15);
+  padding: 12px 12px;
+  font-size: 16px;
+  background: rgba(255,255,255,0.9);
+}
+
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-submit {
+  margin-top: 10px;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.form-note {
+  margin: 10px 0 0;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* Honeypot hidden field */
+.hp-field {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Mobile stacking */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /****************************************/
 /* 1) Ensure .contact-info can position children absolutely */
 .contact-info {

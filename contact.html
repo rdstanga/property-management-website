@@ -1,110 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#ffffff">
-    <title>Contact Us - Rental Company LLC</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Contact Us - Rental Company LLC</title>
 
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <h1>Rental Company LLC</h1>
-        <p class="header-subtitle">Local rentals • Appointment-only showings • Fast response</p>
-        <div class="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </header>
+  <header>
+    <h1>Rental Company LLC</h1>
+    <p class="header-subtitle">Local rentals • Appointment-only showings • Fast response</p>
 
-    <nav id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn">&times;</a>
-        <a href="index.html" class="nav-link-spacer">Home</a>
-        <a href="faq.html">FAQ</a>
-        <a href="vacancies.html">Vacancies</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-    
-    <main class="contact-layout">
-        <section class="contact-info">
-            <h2>Contact Us</h2>
-            <p class="contact-cta">
-                Tap the envelope to email us, or email
-                <a href="mailto:rentals@gmail.com">rentals@gmail.com</a>.
+    <div class="hamburger" aria-label="Open navigation menu" role="button" tabindex="0">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <nav id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn">&times;</a>
+    <a href="index.html" class="nav-link-spacer">Home</a>
+    <a href="faq.html">FAQ</a>
+    <a href="vacancies.html">Vacancies</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main class="contact-page">
+    <section class="contact-grid">
+      <!-- Left: Office image -->
+      <div class="contact-left">
+        <div class="office-card">
+          <img src="Website Images/OfficeDay.jpg" alt="Office" class="office-image">
+          <p class="media-caption">Office location (appointment only)</p>
+
+          <div class="address-card" aria-label="Office address link">
+            <h3 class="address-title">Address</h3>
+            <p class="address-line">
+              <a
+                href="https://www.google.com/maps?q=Times+Square,+Manhattan,+NY"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Times Square, Manhattan, NY
+              </a>
             </p>
+          </div>
+        </div>
+      </div>
 
-            <div class="contact-chips" aria-label="Quick contact info">
-                <div class="chip">📞 (985) 555-1234</div>
-                <div class="chip">📍 Thibodaux, LA</div>
-                <div class="chip">✉️ rentals@gmail.com</div>
+      <!-- Right: Contact form -->
+      <div class="contact-right">
+        <section class="contact-card" aria-label="Contact form">
+          <h2>Contact Us</h2>
+          <p class="contact-cta">
+            Send us a message and we’ll get back to you as soon as we can.
+          </p>
+
+          <!--
+            IMPORTANT:
+            GitHub Pages can't send email by itself. Use a form backend.
+            Recommended: Formspree (action URL below).
+            Create a form on Formspree and replace YOUR_FORM_ID with your actual ID.
+            Formspree supports HTML forms and provides spam protection + validation server-side.
+          -->
+          <form
+            class="contact-form"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+            autocomplete="on"
+          >
+            <!-- Honeypot (anti-spam). Real users won't fill this. -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="company">Company</label>
+              <input id="company" name="company" type="text" tabindex="-1" autocomplete="off" />
             </div>
 
-            <div class="hours-section">
-                <h3>Office Hours (Appointment Only):</h3>
-                <p>Monday - Thursday: 9 AM - 5 PM</p>
-                <p>Friday: 9 AM - 4 PM</p>
-                <p>Saturday & Sunday: Closed</p>
-            </div>
+            <label for="email">Your email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              inputmode="email"
+              autocomplete="email"
+              required
+              maxlength="254"
+              placeholder="name@example.com"
+            />
 
-            <!-- Envelope anchor in top-right corner -->
-            <a href="mailto:rentals@gmail.com" class="email-animation-container" aria-label="Email rentals@gmail.com">
-              <!-- letter-scale wrapper -->
-              <div class="letter-scale">
-                <div class="letter-image">
-                  <div class="animated-mail">
-                    <div class="back-fold"></div>
-                    <div class="letter">
-                      <div class="letter-border"></div>
-                      <div class="letter-title"></div>
-                      <div class="letter-context"></div>
-                      <div class="letter-stamp">
-                        <div class="letter-stamp-inner"></div>
-                      </div>
-                    </div>
-                    <div class="top-fold"></div>
-                    <div class="body"></div>
-                    <div class="left-fold"></div>
-                  </div>
-                  <!-- <div class="shadow"></div> -->
-                </div>
-              </div>
-            </a>
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              minlength="10"
+              maxlength="2000"
+              placeholder="Tell us what you’re looking for…"
+            ></textarea>
+
+            <!-- Optional: subject field some providers use -->
+            <input type="hidden" name="subject" value="New website inquiry" />
+
+            <button type="submit" class="contact-submit">Send message</button>
+
+            <p class="form-note">
+              Please don’t include sensitive personal info (SSN, bank details, etc.).
+            </p>
+          </form>
         </section>
+      </div>
+    </section>
+  </main>
 
-        <section class="contact-media" aria-label="Office photo and map">
-            <div class="office-card">
-                <img src="Website Images/OfficeDay.jpg" alt="Office Location" class="office-image">
-                <p class="media-caption">Office location (appointment only)</p>
-            </div>
+  <footer>
+    <p>&copy; 2026 Rental Company LLC. All rights reserved.</p>
+  </footer>
 
-            <div class="map-card">
-                <h3 class="map-title">Find Us</h3>
-                <div id="map"></div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Rental Company LLC. All rights reserved.</p>
-    </footer>
-
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script>
-        var map = L.map('map').setView([29.79744675788219, -90.81922020378785], 14);
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-        L.marker([29.79744675788219, -90.81922020378785]).addTo(map)
-            .bindPopup('Stanga & Sons LLC')
-            .openPopup();
-    </script>
-
-    <script src="scripts.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
