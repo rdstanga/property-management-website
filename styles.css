@@ -192,6 +192,7 @@ section.centered-section p + p {
     color: #202020f6;
     max-width: 500px;
     margin: 0 auto;
+    margin-top: 0;
     margin-bottom: 100px;
 }
 
