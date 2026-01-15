@@ -158,6 +158,20 @@ nav .closebtn {
     z-index: 0;               /* behind bars */
   }
 
+  @media (max-width: 768px) {
+  .hamburger div {
+    background: #777 !important; /* visible on light headers */
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  @media (max-width: 768px) {
+    .hamburger div {
+      background: #fff !important; /* visible in dark mode */
+    }
+  }
+}
+
   /* Bars above the circle */
   .hamburger div {
     position: relative;
