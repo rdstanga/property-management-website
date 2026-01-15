@@ -206,7 +206,7 @@ section.centered-section p + p {
     font-size: 72px;
     font-weight: bold;
     text-align: center;
-    margin: 40px auto 20px;
+    margin: 10px auto 5px;
     background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
