@@ -193,7 +193,7 @@ section.centered-section p + p {
     max-width: 500px;
     margin: 0 auto;
     margin-top: 0;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 /* Replace with this simpler version in your styles.css */
