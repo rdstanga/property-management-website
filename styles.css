@@ -173,6 +173,7 @@ section.centered-section p + p {
 
 .vacancies-title {
     font-family: 'Rousseau Deco', serif;
+    margin-bottom: 10px; /* Reduced from default 20px */
 }
 
 /* Vacant Properties Section */
@@ -180,7 +181,7 @@ section.centered-section p + p {
 .vacancy-description {
     font-size: 22px; /* Reduced font size */
     color: #202020f6; /* Adjust text color */
-    margin-bottom: 100px;
+    margin-bottom: 20px;
     font-family: 'Cardo', serif; /* Apply Cardo font */
 }
 
