@@ -77,10 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    document.addEventListener("DOMContentLoaded", () => {
-        const hamburger = document.querySelector(".hamburger");
-        if (!hamburger) return;
-        
+    // Hamburger scroll background (mobile only)
+    const hamburger = document.querySelector(".hamburger");
+    
+    if (hamburger) {
         const updateHamburgerState = () => {
             if (window.innerWidth <= 768 && window.scrollY > 0) {
                 hamburger.classList.add("scrolled");
@@ -88,9 +88,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 hamburger.classList.remove("scrolled");
             }
         };
+
         window.addEventListener("scroll", updateHamburgerState, { passive: true });
         window.addEventListener("resize", updateHamburgerState);
         updateHamburgerState();
-    });
-
+    }
 });
