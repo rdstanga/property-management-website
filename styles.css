@@ -51,6 +51,11 @@ header h1 {
     border-bottom: 1px solid #ddd;
 }
 
+header h1.vacancies-title {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
 /* Navigation Styles */
 .sidenav.hidden {
     transform: translateX(-100%); /* Hide the menu by default */
@@ -117,6 +122,35 @@ nav .closebtn {
     nav a {
         font-size: 18px;
     }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999px;
+  }
+
+  .hamburger::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    transform: scale(0.85);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: -1;
+  }
+
+  .hamburger.scrolled::before {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* Main Content Styles */
