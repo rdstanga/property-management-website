@@ -1031,3 +1031,207 @@ nav a {
     align-items: center;
     filter: drop-shadow(2px 2px 0 #333);
 }
+
+/* =========================
+   Contact (NEW) – Stripe-ish
+   Uses classes: cnew__*
+   ========================= */
+.cnew {
+  width: min(1200px, 94%);
+  margin: 0 auto;
+  padding: 22px 0 28px;
+}
+
+.cnew__grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 26px;
+  align-items: start;
+}
+
+.cnew__headline {
+  font-size: 52px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 8px 0 12px;
+}
+
+.cnew__subhead {
+  font-size: 18px;
+  line-height: 1.55;
+  opacity: 0.85;
+  margin: 0 0 18px;
+  max-width: 56ch;
+}
+
+.cnew__imageCard {
+  border-radius: 18px;
+  padding: 14px;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.cnew__officeImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
+}
+
+.cnew__caption {
+  margin: 10px 0 0;
+  font-size: 14px;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.cnew__address {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(0, 0, 0, 0.10);
+  display: grid;
+  gap: 6px;
+}
+
+.cnew__addressLabel {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+
+.cnew__addressLink {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.cnew__card {
+  background: rgba(255, 255, 255, 0.90);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.14);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.cnew__cardTitle {
+  margin: 2px 0 6px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.cnew__cardSubtitle {
+  margin: 0 0 18px;
+  opacity: 0.75;
+}
+
+.cnew__form {
+  display: grid;
+  gap: 14px;
+}
+
+.cnew__field {
+  display: grid;
+  gap: 8px;
+}
+
+.cnew__label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.cnew__input,
+.cnew__textarea {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  padding: 12px 14px;
+  font-size: 16px;
+  background: #ffffff;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cnew__textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.cnew__input:focus,
+.cnew__textarea:focus {
+  border-color: rgba(80, 90, 255, 0.55);
+  box-shadow: 0 0 0 4px rgba(80, 90, 255, 0.18);
+}
+
+.cnew__button {
+  margin-top: 6px;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-weight: 800;
+  cursor: pointer;
+  align-self: end;
+  justify-self: end;
+  min-width: 160px;
+}
+
+.cnew__note {
+  margin: 4px 0 0;
+  font-size: 13px;
+  opacity: 0.72;
+}
+
+/* honeypot (anti-spam) */
+.cnew__hp {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Mobile stacking */
+@media (max-width: 900px) {
+  .cnew__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cnew__headline {
+    font-size: 40px;
+  }
+
+  .cnew__button {
+    justify-self: stretch;
+    width: 100%;
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .cnew__imageCard {
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .cnew__address {
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .cnew__card {
+    background: rgba(20, 26, 40, 0.90);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+  }
+
+  .cnew__input,
+  .cnew__textarea {
+    background: rgba(0, 0, 0, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    color: #ffffff;
+  }
+
+  .cnew__input:focus,
+  .cnew__textarea:focus {
+    border-color: rgba(140, 150, 255, 0.75);
+    box-shadow: 0 0 0 4px rgba(140, 150, 255, 0.20);
+  }
+}

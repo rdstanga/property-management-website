@@ -13,12 +13,9 @@
 <body>
   <header>
     <h1>Rental Company LLC</h1>
-    <p class="header-subtitle">Local rentals • Appointment-only showings • Fast response</p>
 
     <div class="hamburger" aria-label="Open navigation menu" role="button" tabindex="0">
-      <div></div>
-      <div></div>
-      <div></div>
+      <div></div><div></div><div></div>
     </div>
   </header>
 
@@ -30,88 +27,97 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <main class="contact-page">
-    <section class="contact-grid">
-      <!-- Left: Office image -->
-      <div class="contact-left">
-        <div class="office-card">
-          <img src="Website Images/OfficeDay.jpg" alt="Office" class="office-image">
-          <p class="media-caption">Office location (appointment only)</p>
+  <main class="cnew">
+    <section class="cnew__grid">
+      <!-- LEFT: Stripe-like headline + office image + address link -->
+      <div class="cnew__left">
+        <h2 class="cnew__headline">Tell us about what you’re looking for</h2>
+        <p class="cnew__subhead">
+          Send us your email and a short message. We’ll respond with next steps and availability.
+        </p>
 
-          <div class="address-card" aria-label="Office address link">
-            <h3 class="address-title">Address</h3>
-            <p class="address-line">
-              <a
-                href="https://www.google.com/maps?q=Times+Square,+Manhattan,+NY"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Times Square, Manhattan, NY
-              </a>
-            </p>
+        <div class="cnew__imageCard">
+          <img src="Website Images/OfficeDay.jpg" alt="Office" class="cnew__officeImg" />
+          <p class="cnew__caption">Office visits are appointment only.</p>
+
+          <div class="cnew__address">
+            <span class="cnew__addressLabel">Address</span>
+            <a
+              class="cnew__addressLink"
+              href="https://www.google.com/maps?q=Times+Square,+Manhattan,+NY"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Times Square, Manhattan, NY
+            </a>
           </div>
         </div>
       </div>
 
-      <!-- Right: Contact form -->
-      <div class="contact-right">
-        <section class="contact-card" aria-label="Contact form">
-          <h2>Contact Us</h2>
-          <p class="contact-cta">
-            Send us a message and we’ll get back to you as soon as we can.
-          </p>
+      <!-- RIGHT: Card form -->
+      <div class="cnew__right">
+        <div class="cnew__card" role="region" aria-label="Contact form">
+          <h3 class="cnew__cardTitle">Let’s get you to the right place</h3>
+          <p class="cnew__cardSubtitle">We just need a couple quick details.</p>
 
           <!--
-            IMPORTANT:
-            GitHub Pages can't send email by itself. Use a form backend.
-            Recommended: Formspree (action URL below).
-            Create a form on Formspree and replace YOUR_FORM_ID with your actual ID.
-            Formspree supports HTML forms and provides spam protection + validation server-side.
+            SECURITY NOTE:
+            GitHub Pages cannot securely send email by itself.
+            Use a form backend service and replace YOUR_FORM_ID.
+            Formspree example action format: https://formspree.io/f/abcdwxyz
           -->
           <form
-            class="contact-form"
+            class="cnew__form"
             action="https://formspree.io/f/YOUR_FORM_ID"
             method="POST"
             autocomplete="on"
           >
-            <!-- Honeypot (anti-spam). Real users won't fill this. -->
-            <div class="hp-field" aria-hidden="true">
+            <!-- Honeypot anti-spam field (bots fill it; humans won't) -->
+            <div class="cnew__hp" aria-hidden="true">
               <label for="company">Company</label>
               <input id="company" name="company" type="text" tabindex="-1" autocomplete="off" />
             </div>
 
-            <label for="email">Your email</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              inputmode="email"
-              autocomplete="email"
-              required
-              maxlength="254"
-              placeholder="name@example.com"
-            />
+            <div class="cnew__field">
+              <label class="cnew__label" for="email">Your email</label>
+              <input
+                class="cnew__input"
+                id="email"
+                name="email"
+                type="email"
+                inputmode="email"
+                autocomplete="email"
+                required
+                maxlength="254"
+                placeholder="name@example.com"
+              />
+            </div>
 
-            <label for="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              required
-              minlength="10"
-              maxlength="2000"
-              placeholder="Tell us what you’re looking for…"
-            ></textarea>
+            <div class="cnew__field">
+              <label class="cnew__label" for="message">Message</label>
+              <textarea
+                class="cnew__textarea"
+                id="message"
+                name="message"
+                required
+                minlength="10"
+                maxlength="2000"
+                placeholder="Tell us what you’re looking for…"
+              ></textarea>
+            </div>
 
-            <!-- Optional: subject field some providers use -->
+            <!-- Optional subject line for your inbox / provider -->
             <input type="hidden" name="subject" value="New website inquiry" />
 
-            <button type="submit" class="contact-submit">Send message</button>
+            <button class="cnew__button" type="submit">
+              Send message <span aria-hidden="true">›</span>
+            </button>
 
-            <p class="form-note">
+            <p class="cnew__note">
               Please don’t include sensitive personal info (SSN, bank details, etc.).
             </p>
           </form>
-        </section>
+        </div>
       </div>
     </section>
   </main>
