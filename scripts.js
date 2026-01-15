@@ -41,56 +41,53 @@ document.addEventListener('DOMContentLoaded', () => {
     // Listen for changes in the device's color scheme
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
     
-    // Hamburger Menu functionality
+    // ===== Hamburger Menu (single source of truth) =====
     const nav = document.getElementById("mySidenav");
     if (nav) {
         nav.classList.remove('hidden'); // Remove initial hide class
     }
+
     const hamburgerBtns = document.querySelectorAll('.hamburger');
-    
+    const closeBtn = document.querySelector('.closebtn');
+
+    function setNavOpen(isOpen) {
+        if (!nav) return;
+        nav.classList.toggle('open', isOpen);
+        hamburgerBtns.forEach(btn => btn.classList.toggle('nav-open', isOpen));
+    }
+
     function toggleNav(e) {
         e.stopPropagation();
-        nav.classList.toggle('open');
-        hamburgerBtns.forEach(btn => btn.classList.toggle('nav-open')); // Fix: Apply to all hamburger buttons
+        if (!nav) return;
+        setNavOpen(!nav.classList.contains('open'));
     }
-    
-    function closeNav() {
-        nav.classList.remove('open');
-        hamburgerBtns.forEach(btn => btn.classList.remove('nav-open')); // Ensure class is removed
-    }
-    
+
     hamburgerBtns.forEach(btn => {
         btn.addEventListener('click', toggleNav);
     });
-    
-    const closeBtn = document.querySelector('.closebtn');
+
     if (closeBtn) {
         closeBtn.addEventListener('click', (e) => {
             e.stopPropagation();
-            closeNav();
+            setNavOpen(false);
         });
     }
-    
+
+    // Close if click outside nav + hamburger
     document.addEventListener('click', (e) => {
         if (!e.target.closest('#mySidenav') && !e.target.closest('.hamburger')) {
-            closeNav();
+            setNavOpen(false);
         }
     });
 
-    // Hamburger scroll background (mobile only)
-    const hamburger = document.querySelector(".hamburger");
-    
-    if (hamburger) {
-        const updateHamburgerState = () => {
-            if (window.innerWidth <= 768 && window.scrollY > 0) {
-                hamburger.classList.add("scrolled");
-            } else {
-                hamburger.classList.remove("scrolled");
-            }
-        };
-
-        window.addEventListener("scroll", updateHamburgerState, { passive: true });
-        window.addEventListener("resize", updateHamburgerState);
-        updateHamburgerState();
+    // Mobile: add black circle when not at very top (applies to ALL hamburger buttons)
+    function updateHamburgerScrolled() {
+        const isMobile = window.matchMedia('(max-width: 768px)').matches;
+        const isScrolled = isMobile && window.scrollY > 0;
+        hamburgerBtns.forEach(btn => btn.classList.toggle('scrolled', isScrolled));
     }
+
+    window.addEventListener('scroll', updateHamburgerScrolled, { passive: true });
+    window.addEventListener('resize', updateHamburgerScrolled);
+    updateHamburgerScrolled();
 });

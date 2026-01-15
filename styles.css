@@ -124,67 +124,6 @@ nav .closebtn {
     }
 }
 
-@media (max-width: 768px) {
-  .hamburger {
-    position: fixed;          /* keep it pinned on mobile */
-    top: calc(env(safe-area-inset-top, 0px) + 10px);
-    left: calc(env(safe-area-inset-left, 0px) + 10px);
-    z-index: 1001;
-
-    width: 44px;
-    height: 44px;
-    padding: 10px;
-
-    display: flex;
-    flex-direction: column;   /* IMPORTANT: keep the 3 bars stacked */
-    cursor: pointer;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-
-    border-radius: 999px;
-  }
-
-  /* Circle behind the bars */
-  .hamburger::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 999px;
-    background: rgba(0, 0, 0, 0.85);
-    opacity: 0;
-    transform: scale(0.85);
-    transition: opacity 0.2s ease, transform 0.2s ease;
-    z-index: 0;               /* behind bars */
-  }
-
-  @media (max-width: 768px) {
-  .hamburger div {
-    background: #777 !important; /* visible on light headers */
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  @media (max-width: 768px) {
-    .hamburger div {
-      background: #fff !important; /* visible in dark mode */
-    }
-  }
-}
-
-  /* Bars above the circle */
-  .hamburger div {
-    position: relative;
-    background-color: #ffffff;
-    z-index: 1;
-  }
-
-  /* Show circle when not at top */
-  .hamburger.scrolled::before {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
 
 /* Main Content Styles */
 main {
@@ -387,29 +326,80 @@ footer {
     width: 100%;
 }
 
-/* Hamburger Menu Styles */
+/* Hamburger Menu Styles (single source of truth) */
 .hamburger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 10px;
     position: fixed;
     top: 10px;
     left: 10px;
     z-index: 1001;
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    cursor: pointer;
+    border-radius: 999px;
+    -webkit-tap-highlight-color: transparent;
+    isolation: isolate; /* ensures ::before stacks behind bars reliably */
 }
 
-
+/* The 3 bars */
 .hamburger div {
     width: 25px;
     height: 3px;
-    background: #777; /* Gray when closed in light mode */
-    margin: 5px 0;
+    border-radius: 2px;
+    background: #777; /* visible on light pages at the very top */
     transition: background 0.3s ease;
+    position: relative;
+    z-index: 2; /* always above the circle */
 }
 
+/* Black circle behind hamburger when not at top (mobile only, toggled by JS) */
+@media (max-width: 768px) {
+    .hamburger {
+        top: calc(env(safe-area-inset-top, 0px) + 10px);
+        left: calc(env(safe-area-inset-left, 0px) + 10px);
+    }
+
+    .hamburger::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 999px;
+        background: rgba(0, 0, 0, 0.85);
+        opacity: 0;
+        transform: scale(0.92);
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        z-index: 1; /* behind bars */
+        pointer-events: none;
+    }
+
+    .hamburger.scrolled::before {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    /* When the circle is visible, switch bars to white */
+    .hamburger.scrolled div {
+        background: #ffffff;
+    }
+}
+
+/* When the nav is open, keep bars white (all viewports) */
 .hamburger.nav-open div {
     background: #ffffff !important;
+}
+
+/* Dark mode: bars should be white even at the very top */
+@media (prefers-color-scheme: dark) {
+    .hamburger div {
+        background: #ffffff !important;
+    }
 }
 
 /* FAQ Section Styles */
