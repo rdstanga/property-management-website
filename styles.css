@@ -343,7 +343,7 @@ footer {
     gap: 6px;
 
     cursor: pointer;
-    border-radius: 999px;
+    border-radius: 14px;
     -webkit-tap-highlight-color: transparent;
     isolation: isolate; /* ensures ::before stacks behind bars reliably */
 }
@@ -370,7 +370,7 @@ footer {
         content: "";
         position: absolute;
         inset: 0;
-        border-radius: 999px;
+        border-radius: 14px;
         background: rgba(0, 0, 0, 0.85);
         opacity: 0;
         transform: scale(0.92);
