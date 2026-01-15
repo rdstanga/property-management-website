@@ -13,6 +13,7 @@
 <body>
     <header>
         <h1>Rental Company LLC</h1>
+        <p class="header-subtitle">Local rentals • Appointment-only showings • Fast response</p>
         <div class="hamburger">
             <div></div>
             <div></div>
@@ -28,20 +29,30 @@
         <a href="contact.html">Contact</a>
     </nav>
     
-    <main>
+    <main class="contact-layout">
         <section class="contact-info">
             <h2>Contact Us</h2>
-            <p>Click the letter</p>
+            <p class="contact-cta">
+                Tap the envelope to email us, or email
+                <a href="mailto:rentals@gmail.com">rentals@gmail.com</a>.
+            </p>
+
+            <div class="contact-chips" aria-label="Quick contact info">
+                <div class="chip">📞 (985) 555-1234</div>
+                <div class="chip">📍 Thibodaux, LA</div>
+                <div class="chip">✉️ rentals@gmail.com</div>
+            </div>
+
             <div class="hours-section">
                 <h3>Office Hours (Appointment Only):</h3>
                 <p>Monday - Thursday: 9 AM - 5 PM</p>
                 <p>Friday: 9 AM - 4 PM</p>
                 <p>Saturday & Sunday: Closed</p>
             </div>
-        
+
             <!-- Envelope anchor in top-right corner -->
             <a href="mailto:rentals@gmail.com" class="email-animation-container" aria-label="Email rentals@gmail.com">
-              <!-- NEW: letter-scale wrapper -->
+              <!-- letter-scale wrapper -->
               <div class="letter-scale">
                 <div class="letter-image">
                   <div class="animated-mail">
@@ -63,10 +74,18 @@
               </div>
             </a>
         </section>
-        <div style="text-align: center;">
-            <img src="Website Images/OfficeDay.jpg" alt="Office Location" class="office-image">
-        </div>
-        <div id="map"></div>
+
+        <section class="contact-media" aria-label="Office photo and map">
+            <div class="office-card">
+                <img src="Website Images/OfficeDay.jpg" alt="Office Location" class="office-image">
+                <p class="media-caption">Office location (appointment only)</p>
+            </div>
+
+            <div class="map-card">
+                <h3 class="map-title">Find Us</h3>
+                <div id="map"></div>
+            </div>
+        </section>
     </main>
 
     <footer>
