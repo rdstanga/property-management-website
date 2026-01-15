@@ -76,4 +76,21 @@ document.addEventListener('DOMContentLoaded', () => {
             closeNav();
         }
     });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const hamburger = document.querySelector(".hamburger");
+        if (!hamburger) return;
+        
+        const updateHamburgerState = () => {
+            if (window.innerWidth <= 768 && window.scrollY > 0) {
+                hamburger.classList.add("scrolled");
+            } else {
+                hamburger.classList.remove("scrolled");
+            }
+        };
+        window.addEventListener("scroll", updateHamburgerState, { passive: true });
+        window.addEventListener("resize", updateHamburgerState);
+        updateHamburgerState();
+    });
+
 });
